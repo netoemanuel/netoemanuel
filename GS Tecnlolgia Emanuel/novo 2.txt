@@ -1,0 +1,33 @@
+        '13/10/2022 - Emanuel - verifica��o da roteiriza��o para n�o poder mudar a quantidade de exios ap�s a confirma��o da roteiriza��o conforme solicita��o Thiago  chamado #4139 do Milvus.
+        If NumReg("OrdemEmbarque WHERE NumOrdemEmbarque = " & txtNumOrdemEmbarque.Text & " AND ISNULL(RotaSemParar, '') <> '' AND ISNULL(ValorPedagioSemParar, 0) > 0") > 0 Then
+            cboEixos.Enabled = False
+        Else
+            cboEixos.Enabled = True
+        End If
+        
+        '07/10/2022 - Emanuel -  verifica��o do Campo eixossemparar para que n�o posso mudar o numero de eixos ap�s a primeira confima��o, conforme solicita��o Thiago no chamado #4139 do Milvus.
+'        Dim rsRotas As New Recordset
+'        rsRotas.Open "SELECT ISNULL(RotaSemParar,"") <> "" RotaSemParar from OrdemEmbarque where NumOrdemEmbarque = " & txtNumOrdemEmbarque.Text & "", frmPrincipal.db, adOpenForwardOnly, adLockReadOnly
+'        If Not rsRotas.BOF Then
+'            If rsRotas!RotaSemParar <> "" Then
+
+txtInscEstadual
+
+Dim rsCheckANTT As New Recordset
+    rsCheckANTT.Open "SELECT dbo.Check_ANTT() AS ANTT_Ativa", frmPrincipal.db, adOpenForwardOnly, adLockReadOnly
+    If rsCheckANTT!ANTT_Ativa Then
+        If Not ValidaPisPasep(mkePisPasep.ClipText) Then
+            'Código antigo!
+            '    Dim PisPasep As String
+            '    PisPasep = TiraCaracter(mkePisPasep.Text, ".")
+            '    PisPasep = TiraCaracter(PisPasep, "-")
+            '    If Not ValidaPisPasep(PisPasep) Then
+        
+            MsgBox "Número do PIS inválido!", vbCritical, "Erro"
+            mkePisPasep.SetFocus
+        End If
+    
+    End If
+
+
+rsH.Open "EXEC ConsultarRNTRC 'frota', " & txtCodFornecedor.Text & ", " & CDbl(txtCodVeiculo.Text), frmPrincipal.db, adOpenForwardOnly, adLockReadOnly
