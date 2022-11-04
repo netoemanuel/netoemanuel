@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfRoteirizacaoResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<RoteirizacaoResult>
+		<Id>0</Id>
+		<Caminho>MAIS CURTO</Caminho>
+		<Valor>36,40</Valor>
+	</RoteirizacaoResult>
+	<RoteirizacaoResult>
+		<Id>1</Id>
+		<Caminho>VIAS PRIORITÁRIAS</Caminho>
+		<Valor>187,60</Valor>
+	</RoteirizacaoResult>
+	<RoteirizacaoResult>
+		<Id>2</Id>
+		<Caminho>MAIS RÁPIDO</Caminho>
+		<Valor>187,60</Valor>
+	</RoteirizacaoResult>
+</ArrayOfRoteirizacaoResult><?xml version="1.0" encoding="utf-16"?>
+<ArrayOfRoteirizacaoResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<RoteirizacaoResult>
+		<Id>0</Id>
+		<Caminho>MAIS CURTO</Caminho>
+		<Valor>36,40</Valor>
+	</RoteirizacaoResult>
+	<RoteirizacaoResult>
+		<Id>1</Id>
+		<Caminho>VIAS PRIORITÁRIAS</Caminho>
+		<Valor>187,60</Valor>
+	</RoteirizacaoResult>
+	<RoteirizacaoResult>
+		<Id>2</Id>
+		<Caminho>MAIS RÁPIDO</Caminho>
+		<Valor>187,60</Valor>
+	</RoteirizacaoResult>
+</ArrayOfRoteirizacaoResult>

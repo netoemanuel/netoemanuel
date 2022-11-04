@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<retEnviMDFe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" versao="3.00" xmlns="http://www.portalfiscal.inf.br/mdfe">
+	<tpAmb>1</tpAmb>
+	<cUF>52</cUF>
+	<verAplic>RS20220213141216</verAplic>
+	<cStat>103</cStat>
+	<xMotivo>Arquivo recebido com sucesso</xMotivo>
+	<infRec>
+		<nRec>529001135311737</nRec>
+		<dhRecbto>2022-03-31T16:28:42-04:00</dhRecbto>
+		<tMed>1</tMed>
+	</infRec>
+</retEnviMDFe>
