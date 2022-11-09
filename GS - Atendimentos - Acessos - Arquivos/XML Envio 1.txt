@@ -1,9 +1,0 @@
-<envio>
-	<rota>NOVO PLANALTO GO X ANAPOLIS GO</rota>
-	<placa>HBG4856</placa>
-	<eixo>3</eixo>
-	<inicio>07/10/2022 15:54:23</inicio>
-	<fim>22/10/2022 15:54:23</fim>
-	<valor>R$40,47</valor>
-	<sessao>-2135588327162634017</sessao>
-</envio>

@@ -1,7 +1,7 @@
 Declare @DataInicio as varchar(25) set @DataInicio = '2022-01-01 00:00:00'
 Declare @DataFim as varchar(25) set @DataFim = '2022-11-08 23:59:29'
 
-select  reg.titulo AS 'Região', new.CodFilialEmitente AS 'Fil. Emit.', ped.NumeroPedidoCliente as 'Número do Pedido',
+select  reg.titulo AS 'Região', cteori.CodFilialEmitente AS 'Fil. Emit.', ped.NumeroPedidoCliente as 'Número do Pedido',
 ori.coduf AS 'UF', ori.numconhecto AS 'CTCR', FORMAT (ori.ValorTotalFrete , 'N2','pt-br') as 'Valor' , convert(varchar(8),ori.dataemissao,3) AS Emissão, embori.nomecolaborador AS 'Func. Emitente',
 new.coduf AS 'UF', new.numconhecto AS 'CTRC', convert(varchar(8),new.dataemissao,3) AS Emissão, emb.nomecolaborador AS 'Func. Emitente Subst.',
 (ISNULL(new.ObsConhecto,isnull(convert(varchar(max),comp.xobs),convert(varchar(max),ctenew.infAdFisco)))+' '+ISNULL(convert(varchar(max),new.ComplementoObsICMS),'')) AS 'Observações CTe Substituto'
@@ -21,7 +21,7 @@ JOIN colaboradores emb on emb.codcolaborador = new.codusuariocriacao
 join Clientes cli on cli.CodCliente = new.CodClientePagto
 WHERE  new.DataEmissao between @DataInicio and @DataFim  and ctenew.tpcte not in (1,2) AND cteori.CFOP <> 1206 AND cteori.CFOP <> 2206
 union
-select  reg.titulo AS 'Região', new.CodFilialEmitente AS 'Fil. Emit.', ped.NumeroPedidoCliente as 'Número do Pedido',
+select  reg.titulo AS 'Região', cteori.CodFilialEmitente AS 'Fil. Emit.', ped.NumeroPedidoCliente as 'Número do Pedido',
 ori.coduf AS 'UF', ori.numconhecto AS 'CTCR', FORMAT (ori.ValorTotalFrete , 'N2','pt-br') as 'Valor', convert(varchar(8),ori.dataemissao,3) AS Emissão, embori.nomecolaborador AS 'Func. Emitente',
 new.coduf AS 'UF', new.numconhecto AS 'CTRC', convert(varchar(8),new.dataemissao,3) AS Emissão, emb.nomecolaborador AS 'Func. Emitente Subst.',
 (ISNULL(new.ObsConhecto,isnull(convert(varchar(max),comp.xobs),convert(varchar(max),ctenew.infAdFisco)))+' '+ISNULL(convert(varchar(max),new.ComplementoObsICMS),'')) AS 'Observações CTe Substituto'
