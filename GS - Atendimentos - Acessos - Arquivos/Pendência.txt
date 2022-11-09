@@ -1,0 +1,29 @@
+Private Sub Preenche_ComboBoxNormal()
+    cboClassifFiscal.AddItem "Física"
+    cboClassifFiscal.AddItem "Jurídica"
+    cboClassifFiscal.AddItem "Física Estrangeira"
+    cboClassifFiscal.AddItem "Jurídica Estrangeira"
+
+    cboSituacaoFornec.AddItem "Ativo"
+    cboSituacaoFornec.AddItem "Inativo"	
+
+Private Sub cboTipoPrograma_Validate(Cancel As Boolean)
+    If cboTipoPrograma = "" Then
+        Cancel = True
+        MsgBox "Campo de preenchimento obrigatório.", vbExclamation, "Atenção"
+    End If
+End Sub
+
+Private Function Verifica_Obrigatorio2() As Boolean
+    Verifica_Obrigatorio2 = True
+    If txtCodArquivo.Text = "" Then
+        Verifica_Obrigatorio2 = False
+        txtCodArquivo.SetFocus
+    ElseIf cboTipoAcesso = "" Then
+            Verifica_Obrigatorio2 = False
+            cboTipoAcesso.SetFocus
+    End If
+    If Not Verifica_Obrigatorio2 Then
+        MsgBox "Campo de preenchimento obrigatório.", vbExclamation, "Atenção"
+    End If
+End Function

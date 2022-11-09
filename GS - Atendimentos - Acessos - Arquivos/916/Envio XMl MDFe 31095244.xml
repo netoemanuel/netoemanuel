@@ -1,0 +1,209 @@
+<enviMDFe versao="3.00" xmlns="http://www.portalfiscal.inf.br/mdfe">
+	<idLote>1184900</idLote>
+	<MDFe>
+		<infMDFe versao="3.00" Id="MDFe52220311455829000367580030002798941010932494">
+			<ide>
+				<cUF>52</cUF>
+				<tpAmb>1</tpAmb>
+				<tpEmit>1</tpEmit>
+				<tpTransp>1</tpTransp>
+				<mod>58</mod>
+				<serie>3</serie>
+				<nMDF>279894</nMDF>
+				<cMDF>01093249</cMDF>
+				<cDV>4</cDV>
+				<modal>1</modal>
+				<dhEmi>2022-03-31T16:28:56-04:00</dhEmi>
+				<tpEmis>1</tpEmis>
+				<procEmi>0</procEmi>
+				<verProc>GS-e Versao 3.0</verProc>
+				<UFIni>GO</UFIni>
+				<UFFim>SP</UFFim>
+				<infMunCarrega>
+					<cMunCarrega>5214051</cMunCarrega>
+					<xMunCarrega>MUNDO NOVO</xMunCarrega>
+				</infMunCarrega>
+				<infPercurso>
+					<UFPer>MG</UFPer>
+				</infPercurso>
+			</ide>
+			<emit>
+				<CNPJ>11455829000367</CNPJ>
+				<IE>104953365</IE>
+				<xNome>LONTANO TRANSPORTES EIRELI</xNome>
+				<xFant>RIO VERDE</xFant>
+				<enderEmit>
+					<xLgr>RODOVIA BR 060 KM 388 SALA</xLgr>
+					<nro>07</nro>
+					<xBairro>PERIMETRO URBANO</xBairro>
+					<cMun>5218805</cMun>
+					<xMun>RIO VERDE</xMun>
+					<CEP>75906605</CEP>
+					<UF>GO</UF>
+					<fone>643612119</fone>
+					<email>rioverde@lontano.com.br</email>
+				</enderEmit>
+			</emit>
+			<infModal versaoModal="3.00">
+				<rodo xmlns="http://www.portalfiscal.inf.br/mdfe">
+					<infANTT>
+						<RNTRC>12396610</RNTRC>
+						<valePed>
+							<disp>
+								<CNPJForn>04088208000165</CNPJForn>
+								<nCompra>0</nCompra>
+								<vValePed>65.70</vValePed>
+								<tpValePed>01</tpValePed>
+							</disp>
+							<categCombVeic>12</categCombVeic>
+						</valePed>
+						<infContratante>
+							<xNome>LONTANO TRANSPORTES EIRELI</xNome>
+							<CNPJ>11455829000367</CNPJ>
+						</infContratante>
+					</infANTT>
+					<veicTracao>
+						<cInt>461944</cInt>
+						<placa>ELN8900</placa>
+						<RENAVAM>01175234386</RENAVAM>
+						<tara>20000</tara>
+						<prop>
+							<CNPJ>07009997000190</CNPJ>
+							<RNTRC>02887580</RNTRC>
+							<xNome>M B TRANSPORTES PIRANGI LTDA ME</xNome>
+							<IE>ISENTO</IE>
+							<UF>SP</UF>
+							<tpProp>2</tpProp>
+						</prop>
+						<condutor>
+							<xNome>ROBERTO MARTINS</xNome>
+							<CPF>08661182840</CPF>
+						</condutor>
+						<tpRod>03</tpRod>
+						<tpCar>00</tpCar>
+						<UF>SP</UF>
+					</veicTracao>
+					<veicReboque>
+						<cInt>461948</cInt>
+						<placa>ELN8910</placa>
+						<RENAVAM>01176275949</RENAVAM>
+						<tara>20000</tara>
+						<capKG>20000</capKG>
+						<prop>
+							<CNPJ>07009997000190</CNPJ>
+							<RNTRC>02887580</RNTRC>
+							<xNome>M B TRANSPORTES PIRANGI LTDA ME</xNome>
+							<IE>ISENTO</IE>
+							<UF>SP</UF>
+							<tpProp>2</tpProp>
+						</prop>
+						<tpCar>00</tpCar>
+						<UF>SP</UF>
+					</veicReboque>
+					<veicReboque>
+						<cInt>461949</cInt>
+						<placa>ELN8912</placa>
+						<RENAVAM>01176278670</RENAVAM>
+						<tara>20000</tara>
+						<capKG>20000</capKG>
+						<prop>
+							<CNPJ>07009997000190</CNPJ>
+							<RNTRC>02887580</RNTRC>
+							<xNome>M B TRANSPORTES PIRANGI LTDA ME</xNome>
+							<IE>ISENTO</IE>
+							<UF>SP</UF>
+							<tpProp>2</tpProp>
+						</prop>
+						<tpCar>00</tpCar>
+						<UF>SP</UF>
+					</veicReboque>
+					<veicReboque>
+						<cInt>461950</cInt>
+						<placa>ELN8911</placa>
+						<RENAVAM>01176274098</RENAVAM>
+						<tara>20000</tara>
+						<capKG>20000</capKG>
+						<prop>
+							<CNPJ>07009997000190</CNPJ>
+							<RNTRC>02887580</RNTRC>
+							<xNome>M B TRANSPORTES PIRANGI LTDA ME</xNome>
+							<IE>ISENTO</IE>
+							<UF>SP</UF>
+							<tpProp>2</tpProp>
+						</prop>
+						<tpCar>00</tpCar>
+						<UF>SP</UF>
+					</veicReboque>
+				</rodo>
+			</infModal>
+			<infDoc>
+				<infMunDescarga>
+					<cMunDescarga>3548500</cMunDescarga>
+					<xMunDescarga>SANTOS</xMunDescarga>
+					<infCTe>
+						<chCTe>52220311455829000367570000005073061005073064</chCTe>
+					</infCTe>
+				</infMunDescarga>
+			</infDoc>
+			<seg>
+				<infResp>
+					<respSeg>1</respSeg>
+					<CNPJ>11455829000367</CNPJ>
+				</infResp>
+				<infSeg>
+					<xSeg>AIG SEGUROS BRASIL S.A</xSeg>
+					<CNPJ>33040981000150</CNPJ>
+				</infSeg>
+				<nApol>2550010965</nApol>
+				<nAver>0599110221145582900036757000000507306174</nAver>
+			</seg>
+			<prodPred>
+				<tpCarga>01</tpCarga>
+				<xProd>SOJA EM GRAOS</xProd>
+				<infLotacao>
+					<infLocalCarrega>
+						<CEP>76530000</CEP>
+					</infLocalCarrega>
+					<infLocalDescarrega>
+						<CEP>11020300</CEP>
+					</infLocalDescarrega>
+				</infLotacao>
+			</prodPred>
+			<tot>
+				<qCTe>1</qCTe>
+				<vCarga>164289.00</vCarga>
+				<cUnid>01</cUnid>
+				<qCarga>47620.0000</qCarga>
+			</tot>
+			<autXML>
+				<CNPJ>04898488000177</CNPJ>
+			</autXML>
+			<infAdic>
+				<infCpl>Seq.MDFe Viagem: 1093249</infCpl>
+			</infAdic>
+		</infMDFe>
+		<infMDFeSupl>
+			<qrCodMDFe><![CDATA[https://dfe-portal.svrs.rs.gov.br/mdfe/qrCode?chMDFe=52220311455829000367580030002798941010932494&tpAmb=1]]></qrCodMDFe>
+		</infMDFeSupl>
+		<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+			<SignedInfo>
+				<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+				<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+				<Reference URI="#MDFe52220311455829000367580030002798941010932494">
+					<Transforms>
+						<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+						<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+					</Transforms>
+					<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+					<DigestValue>J8qUJsrS7M1YC0loRrapsm73LBk=</DigestValue>
+				</Reference>
+			</SignedInfo>
+			<SignatureValue>UuVFXBLncMxWK5YEuL/7s912YUvHJou6j/7ly1DAqeEt3vao3yKOwt0TbGpLqqMkvXXDNWZGhVLtE/I57OOzsPQlpGtq+9ENsBr1j9R4L3/HdekhH03xBj/cGWiS1bxItxJsH2apT5l5p1xVPm8bCkaRJhf2kxaKq/Ow4UiG3PbEOz1L29OLq5TPXt0LQ/QS+tOYH+xecTrOUZG/rSn4ifWkvfZc05oWrGsBVtpK53AJAjxxqPUDiL5qbCJr7LqQ2WsNXIOun7VKFUZEWEpuRium08oXDlTWEXN0GiQbOnSSRANP9WYtuwrI7R+y19Sx3EUIjhAOJB/Legw1cvbEJg==</SignatureValue>
+			<KeyInfo>
+				<X509Data>
+					<X509Certificate>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</X509Certificate>
+				</X509Data>
+			</KeyInfo>
+		</Signature>
+	</MDFe>
+</enviMDFe>

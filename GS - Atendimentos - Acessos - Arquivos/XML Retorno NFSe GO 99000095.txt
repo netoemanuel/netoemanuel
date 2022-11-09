@@ -1,0 +1,10 @@
+<GerarNfseResposta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.centi.com.br/files/nfse.xsd">
+  <ListaMensagemRetorno>
+    <MensagemRetorno>
+      <Mensagem>Cód. erro :0</Mensagem>
+    </MensagemRetorno>
+    <MensagemRetorno>
+      <Mensagem>Código do serviço (ItemListaServico) não esta preenchido ou não é um valor válido. Verifique!</Mensagem>
+    </MensagemRetorno>
+  </ListaMensagemRetorno>
+</GerarNfseResposta>
