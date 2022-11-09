@@ -1,8 +1,0 @@
-
-SQL TIPO FORNECEDOR LONTANO
-
-SELECT distinct(CodTipoFornecedor) From Fornecedores
-
-SELECT top (1) CodTipoFornecedor, * From Fornecedores where CodFornecedor = '1100343'
-
-SELECT top (1) CodTipoFornecedor, * From Fornecedores where CodTipoFornecedor = '12'
