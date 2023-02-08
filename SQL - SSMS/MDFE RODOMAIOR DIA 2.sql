@@ -4,7 +4,7 @@ USE RODOMAIOR
 
 exec MonitoraMDFe	18009832
 exec MonitoraMDFe  51006280
-exec rodomaior_gse.dbo.geramdfeviagem 51006280, 10005, 'CG'
+--exec rodomaior_gse.dbo.geramdfeviagem 51006280, 10005, 'CG'
 
 
 
@@ -52,25 +52,3 @@ exec rodomaior_gse.dbo.geramdfeviagem 51006280, 10005, 'CG'
 -------RODOMAIOR_GSe.dbo.MDFe set Id = '50221011595217000108580000000855111004149840', cDV = 0, nMDF = 85511, cMDF = '0414984' where Sequencial = 407715 -- exemplo!
 --update RODOMAIOR_GSe.dbo.MDFe_LOG set cStat = 204 where ID = 5208950
 --ORDEM COM MDFE ERRADO!
-
-
-	SELECT 'CTe COM PROBLEMA' as PROBLEMA, CTe.status, no_retorno, DS_Retorno, CTe.Sequencial, UF, nCT, dhEmi 
-	FROM Rodomaior_gse.dbo.CTe CTe
-	JOIN Rodomaior_gse.dbo.CTe_LOG ult on ult.Sequencial = CTe.Sequencial AND ult.ID = (SELECT MAX(u.ID) FROM Rodomaior_gse.dbo.CTe_LOG u WHERE u.Sequencial = CTe.Sequencial)
-	where CTe.status not in (1,5) AND isnull(ult.cStat,0) <> 735
-	GO
-
-	SELECT 'EVENTO DE CTe COM PROBLEMA' as PROBLEMA, ev.Sequencial_CTe, ev.status, cte.uf, cte.nct, dhEvento, ev.xJust, ev.tpEvento, canc.cStat, canc.xMotivo 
-	FROM Rodomaior_gse.dbo.Eventos_CTe ev WITH (NOLOCK) 
-	JOIN Rodomaior_gse.dbo.cte cte WITH (NOLOCK) ON cte.Sequencial = ev.Sequencial_CTe 
-	LEFT JOIN Rodomaior_gse.dbo.CTe_LOG canc WITH (NOLOCK) ON canc.Sequencial = ev.Sequencial_CTe AND canc.codLog = 32 AND canc.ID = (SELECT MAX(ult.ID) FROM Rodomaior_gse.dbo.CTe_LOG ult WITH (NOLOCK) WHERE ult.Sequencial = canc.Sequencial AND ult.codLog = 32)
-	WHERE ev.status IN (0,7,2) AND cte.dhemi >= GETDATE()-1 AND (canc.ID IS NULL OR ISNULL(canc.cStat,0) <> 528)
-	GO
-
-	SELECT 'EVENTO DE CTe REENVIANDO...' as PROBLEMA, ev.Sequencial_CTe, ev.status, cte.uf, cte.nct, dhEvento, ev.xJust, ev.tpEvento, canc.cStat, canc.xMotivo 
-	FROM Rodomaior_gse.dbo.Eventos_CTe ev 
-	JOIN Rodomaior_gse.dbo.cte cte ON cte.Sequencial = ev.Sequencial_CTe 
-	LEFT JOIN Rodomaior_gse.dbo.CTe_LOG canc ON canc.Sequencial = ev.Sequencial_CTe AND canc.codLog = 32 AND canc.ID = (SELECT MAX(ult.ID) FROM Rodomaior_gse.dbo.CTe_LOG ult WITH (NOLOCK) WHERE ult.Sequencial = canc.Sequencial AND ult.codLog = 32)
-	WHERE ev.status IN (0,7)
-	GO
-

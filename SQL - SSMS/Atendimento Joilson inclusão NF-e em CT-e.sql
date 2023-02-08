@@ -1,0 +1,8 @@
+--select * from ConhecimentosTransporte where NumConhecto = 31879 and CodUF = 'MT'  --lstNotasFiscais
+--select* from RODOMAIOR_GSe.dbo.CTe where Sequencial = 510000005777
+----select * from RODOMAIOR_GSe.dbo.NotaFiscal_CTe where Sequencial = 510000005777
+--select * from RODOMAIOR_GSe.dbo.NotaFiscalEletronica_CTe where Sequencial = 510000005777
+--select * from RODOMAIOR_GSe.dbo.NFe where ID = '51230132441636004586550020000518091246915027'
+--select * from ConhecimentosSubstituidos where SeqCTRCOriginal = 510000005777
+--insert into NotasFiscaisConhecimento (SequencialConhecimento, NumeroNF, Sequencial, DataEmissaoNF, ValorNF, PesoNF, CodUsuarioCriacao, CodFilialCriacao, DataCriacao, SerieNF, ValorProdutos, ChaveAcessoNFe, CodModelo)
+--select 510000005777, '51809', 1, '2023-01-07', 104958.01, 49980, 10001, 'CG', GETDATE(), '002', 104958.01, '51230132441636004586550020000518091246915027', '55'

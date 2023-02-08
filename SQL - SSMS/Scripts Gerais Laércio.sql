@@ -1,25 +1,31 @@
-USE Rodomaior
+USE Lontano
 EXEC COPAS_NFe.dbo.ListarNFeDistribuicao
+EXEC Lontano_GSe.dbo.ListarDFePorDemanda_Pendente
 SELECT GETDATE() AS Início
 GO
-
+exec VerificaCTe 280000166784 
 SELECT 'CTe COM PROBLEMA' as PROBLEMA, CTe.status, no_retorno, DS_Retorno, CTe.Sequencial, UF, nCT, dhEmi 
-FROM Rodomaior_gse.dbo.CTe CTe
-JOIN Rodomaior_GSe.dbo.CTe_LOG ult on ult.Sequencial = CTe.Sequencial AND ult.ID = (SELECT MAX(u.ID) FROM Rodomaior_GSe.dbo.CTe_LOG u WHERE u.Sequencial = CTe.Sequencial)
+FROM Lontano_gse.dbo.CTe CTe
+JOIN Lontano_GSe.dbo.CTe_LOG ult on ult.Sequencial = CTe.Sequencial AND ult.ID = (SELECT MAX(u.ID) FROM Lontano_GSe.dbo.CTe_LOG u WHERE u.Sequencial = CTe.Sequencial)
 where CTe.status not in (1,5) AND isnull(ult.cStat,0) <> 735
 GO
 
+SELECT Tipo, Sequencial, Filial, TipoCTe, UF, NumConhecto, DataEmissao, Cliente, Funcionario, Valor, Status, CodStatus, DataHoraAutorizacao, TempoEspera, Ambiente, TipoCTe, Servidor FROM LONTANO_GSe.dbo.ConsultaCTeNova WHERE (DataEmissao BETWEEN '02/01/2023 00:00:00' AND '02/02/2023 23:59:29') AND (CodStatus NOT IN (1, 4, 5, 9) OR (DataHoraAutorizacao IS NULL AND CodStatus NOT IN (5,9))) ORDER BY DataEmissao DESC
+
+
+
+
 SELECT 'EVENTO DE CTe COM PROBLEMA' as PROBLEMA, ev.Sequencial_CTe, ev.status, cte.uf, cte.nct, dhEvento, ev.xJust, ev.tpEvento, canc.cStat, canc.xMotivo 
-FROM Rodomaior_gse.dbo.Eventos_CTe ev WITH (NOLOCK) 
-JOIN Rodomaior_gse.dbo.cte cte WITH (NOLOCK) ON cte.Sequencial = ev.Sequencial_CTe 
-LEFT JOIN Rodomaior_GSe.dbo.CTe_LOG canc WITH (NOLOCK) ON canc.Sequencial = ev.Sequencial_CTe AND canc.codLog = 32 AND canc.ID = (SELECT MAX(ult.ID) FROM Rodomaior_GSe.dbo.CTe_LOG ult WITH (NOLOCK) WHERE ult.Sequencial = canc.Sequencial AND ult.codLog = 32)
+FROM Lontano_gse.dbo.Eventos_CTe ev WITH (NOLOCK) 
+JOIN Lontano_gse.dbo.cte cte WITH (NOLOCK) ON cte.Sequencial = ev.Sequencial_CTe 
+LEFT JOIN Lontano_GSe.dbo.CTe_LOG canc WITH (NOLOCK) ON canc.Sequencial = ev.Sequencial_CTe AND canc.codLog = 32 AND canc.ID = (SELECT MAX(ult.ID) FROM Lontano_GSe.dbo.CTe_LOG ult WITH (NOLOCK) WHERE ult.Sequencial = canc.Sequencial AND ult.codLog = 32)
 WHERE ev.status IN (0,7,2) AND cte.dhemi >= GETDATE()-1 AND (canc.ID IS NULL OR ISNULL(canc.cStat,0) <> 528)
 GO
 
 SELECT 'EVENTO DE CTe REENVIANDO...' as PROBLEMA, ev.Sequencial_CTe, ev.status, cte.uf, cte.nct, dhEvento, ev.xJust, ev.tpEvento, canc.cStat, canc.xMotivo 
-FROM Rodomaior_gse.dbo.Eventos_CTe ev 
-JOIN Rodomaior_gse.dbo.cte cte ON cte.Sequencial = ev.Sequencial_CTe 
-LEFT JOIN Rodomaior_GSe.dbo.CTe_LOG canc ON canc.Sequencial = ev.Sequencial_CTe AND canc.codLog = 32 AND canc.ID = (SELECT MAX(ult.ID) FROM Rodomaior_GSe.dbo.CTe_LOG ult WITH (NOLOCK) WHERE ult.Sequencial = canc.Sequencial AND ult.codLog = 32)
+FROM Lontano_gse.dbo.Eventos_CTe ev 
+JOIN Lontano_gse.dbo.cte cte ON cte.Sequencial = ev.Sequencial_CTe 
+LEFT JOIN Lontano_GSe.dbo.CTe_LOG canc ON canc.Sequencial = ev.Sequencial_CTe AND canc.codLog = 32 AND canc.ID = (SELECT MAX(ult.ID) FROM Lontano_GSe.dbo.CTe_LOG ult WITH (NOLOCK) WHERE ult.Sequencial = canc.Sequencial AND ult.codLog = 32)
 WHERE ev.status IN (0,7)
 GO
 
@@ -179,3 +185,7 @@ ORDER BY T.name ASC
 select program_name()
 select APP_NAME()
 */
+
+blk
+KILL 593
+wtf 593

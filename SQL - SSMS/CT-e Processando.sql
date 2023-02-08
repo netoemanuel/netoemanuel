@@ -4,14 +4,14 @@ select * from ConhecimentosTransporte where NumConhecto = 547494 AND CodUF = 'GO
 
 EXEC Grava_CTe 0000000000000
 --
-select * from LONTANO_GSe.dbo.CTe_LOG where Sequencial = 480000004718
+select * from LONTANO_GSe.dbo.CTe_LOG where Sequencial = 730000129506
 --UPDATE LONTANO_GSe.dbo.CTe SET STATUS = 0 WHERE Sequencial = 620000017455  --Reenviar sem mudar nenhuma alteração no CT-e
 exec grava_cte 0000000000000
 
 select top(100) Status, DT_Alteracao, * from lontano_gse.dbo.cte order by datacriacao desc -- Verificar ultimos CTes gerados
 
---delete from lontano_gse.dbo.cte where sequencial = 480000004718     --Deletar CT-e para regravar apenas em casos muitos especificos 
---delete from lontano_gse.dbo.CTe_LOG where sequencial = 620000017455 -- Deletar tabela de LOG
+--delete from lontano_gse.dbo.cte where sequencial = 730000129506     --Deletar CT-e para regravar apenas em casos muitos especificos 
+--delete from lontano_gse.dbo.CTe_LOG where sequencial = 730000129506 -- Deletar tabela de LOG
 exec Grava_cte 620000017455
 EXEC MonitoraMDFe 11018087
 	
