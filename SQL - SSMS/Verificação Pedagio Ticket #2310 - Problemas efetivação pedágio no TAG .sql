@@ -1,12 +1,12 @@
 
 --
-SELECT * from ConhecimentosTransporte where NumConhecto = 654966     and CodUF = 'Mg'
+SELECT CodOrdemEmbarque,* from ConhecimentosTransporte where NumConhecto = 54171   and CodUF = 'MG'
 --
-SELECT CodOrdemEmbarque FROM ConhecimentosTransporte WHERE CodUF = 'MG' AND NumConhecto = 367972
-SELECT RotaSemParar, ValorPedagioSemParar, TipoDispositivoValePedagio FROM OrdemEmbarque WHERE NumOrdemEmbarque = 30059092
+SELECT CodOrdemEmbarque FROM ConhecimentosTransporte WHERE CodUF = 'MG' AND NumConhecto = 54171
+SELECT RotaSemParar, ValorPedagioSemParar, TipoDispositivoValePedagio FROM OrdemEmbarque WHERE NumOrdemEmbarque = 53086909
 --
 SELECT RotaSemParar, ValorPedagioSemParar, EixosSemParar, TipoDispositivoValePedagio, NumCartaoValePedagio
-from OrdemEmbarque_Log where NumOrdemEmbarque = 30059092 ORDER BY datalog desc
+from OrdemEmbarque_Log where NumOrdemEmbarque = 53086909 ORDER BY datalog desc
 
 --update OrdemEmbarque set TipoDispositivoValePedagio = 1 where NumOrdemEmbarque = 30059092
 --update OrdemEmbarque set NumCartaoValePedagio = null where NumOrdemEmbarque = 30059092
@@ -15,14 +15,14 @@ SELECT TOP(1000) oe.CIOT, CTRC.CodOrdemEmbarque, CTRC.Sequencial, ctrc.CodUF + '
 INNER JOIN CartaFrete CF ON CF.Sequencial = CTRC.Sequencial
 INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'MG' AND CTRC.Numconhecto = 61186
+WHERE CTRC.SerieConhecto = '2' AND CTRC.CodUF = 'MG' AND CTRC.Numconhecto = 54171
 ORDER BY O.NumSeq DESC, O.SeqConsulta DESC
 
 SELECT TOP(100) oe.TipoDispositivoValePedagio, CTRC.SituacaoConhecto, oe.CIOT, oe.CodNaturezaCarga,  CTRC.CodOrdemEmbarque, CTRC.Sequencial, ctrc.CodUF + '-' + CONVERT(varchar(12), CTRC.NumConhecto) as 'CTRC', CTRC.CIOT, O.* FROM ConhecimentosTransporte CTRC
 INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 INNER JOIN CartaFrete CF ON CF.NumOrdemEmbarque = oe.NumOrdemEmbarque
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'MT' AND CTRC.Numconhecto = 654966 
+WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'MG' AND CTRC.Numconhecto = 54171 
 ORDER BY O.DataCriacao DESC, O.NumSeq DESC, O.SeqConsulta DESC
 
 
@@ -32,10 +32,10 @@ SELECT * FROM CartaFrete WHERE Id = 778459
 SELECT * FROM CartaFrete_Parcela WHERE IdCartaFrete = 778459
 
 --
-SELECT * FROM LogRoteirizacaoPedagio WHERE NumOrdemEmbarque = 4029380
+SELECT * FROM LogRoteirizacaoPedagio WHERE NumOrdemEmbarque = 58002657
 --
 SELECT RotaSemParar, ValorPedagioSemParar, EixosSemParar, TipoDispositivoValePedagio 
-from OrdemEmbarque_Log where NumOrdemEmbarque = 18010846 ORDER BY datalog desc
+from OrdemEmbarque_Log where NumOrdemEmbarque = 58002657 ORDER BY datalog desc
 --
 SELECT * FROM CartaFrete_Ocorrencia WHERE CodViagemPamcard = 778459 -- 73906459
 

@@ -17,38 +17,50 @@ EXEC MonitoraMdfe 22070755
 --select * from ConjuntosVeiculo where CodVeiculo = 9539
 --update ConjuntosVeiculo set CodVeiculoAdicional1 = 1930, CodVeiculoAdicional2 = 1934, CodVeiculoAdicional3 = 1931 WHERE CodVeiculo = 9539 and CodUsuarioCriacao = 10142
 
+
+
+select * from Veiculos where PlacaVeiculo = ''  --  CAVALO
+select * from Veiculos where PlacaVeiculo = '' --   CARRETA
+select * from ConjuntosVeiculo where CodVeiculo = 
+
+
+
+--PLANTÃO 11/02/2023
+
+--select * from Veiculos where PlacaVeiculo = 'Rhm0d89'  -- 555641 CAVALO
+--select * from Veiculos where PlacaVeiculo = 'BET6B15' -- 524650  CARRETA
+--select * from ConjuntosVeiculo where CodVeiculo = 555641
+--UPDATE ConjuntosVeiculo SET CodVeiculoAdicional1 = 524650, CodVeiculoAdicional2 = Null, CodVeiculoAdicional3 = Null WHERE CodVeiculo = 555641
+-- DADOS ORIGINAIS 
+--CodVeiculo	CodTipoConjunto	CodVeiculoAdicional1	CodVeiculoAdicional2	CodVeiculoAdicional3	ComprimentoConjunto	CodUsuarioCriacao	CodFilialCriacao	DataCriacao	CodUsuarioAlteracao	CodFilialAlteracao	DataAlteracao	CodTipoVeicConj	Eixos
+--	555641				2				524650					524651					524649					NULL				13377				RVD				2021-12-20 09:12:49.000	14115	AQR	2023-01-31 09:33:05.000	NULL	NULL
+
+
 -------------------------
 --02/01/2023 - Marilene #5565
 
 
-select * from Veiculos where PlacaVeiculo = 'OOM-9540'  -- 9385
-select * from ConjuntosVeiculo where CodVeiculo = 9540
---UPDATE ConjuntosVeiculo SET CodVeiculoAdicional1 = Null, CodVeiculoAdicional2 = Null, CodVeiculoAdicional3 = Null WHERE CodVeiculo = 9540
+--select * from Veiculos where PlacaVeiculo = 'OOM-9540'  -- 9385
+--select * from ConjuntosVeiculo where CodVeiculo = 9540
+----UPDATE ConjuntosVeiculo SET CodVeiculoAdicional1 = Null, CodVeiculoAdicional2 = Null, CodVeiculoAdicional3 = Null WHERE CodVeiculo = 9540
 
-select * from Veiculos where PlacaVeiculo = 'RWF3G81' 
-select * from ConjuntosVeiculo where CodVeiculo = 3681 
+--select * from Veiculos where PlacaVeiculo = 'RWF3G81' 
+--select * from ConjuntosVeiculo where CodVeiculo = 3681 
 
---UPDATE ConjuntosVeiculo SET CodVeiculoAdicional1 = 329, CodVeiculoAdicional2 = 321, CodVeiculoAdicional3 = 3717 WHERE CodVeiculo = 3681
+----UPDATE ConjuntosVeiculo SET CodVeiculoAdicional1 = 329, CodVeiculoAdicional2 = 321, CodVeiculoAdicional3 = 3717 WHERE CodVeiculo = 3681
 
-
--
 
 --10/01/2022 - Marilene 
 --select * from Veiculos where PlacaVeiculo = 'OOM-9540'
 --CodVeiculo	CodTipoConjunto	CodVeiculoAdicional1	CodVeiculoAdicional2	CodVeiculoAdicional3	ComprimentoConjunto	CodUsuarioCriacao	CodFilialCriacao	DataCriacao	CodUsuarioAlteracao	CodFilialAlteracao	DataAlteracao	CodTipoVeicConj
 --	9540			2				329						321						3717					25.00				10919				CG				2021-11-17 16:55:51.000	NULL	NULL	NULL	4
 
-
 --select * from ConjuntosVeiculo where CodVeiculo = 9385
 --CodVeiculo	CodTipoConjunto	CodVeiculoAdicional1	CodVeiculoAdicional2	CodVeiculoAdicional3	ComprimentoConjunto	CodUsuarioCriacao	CodFilialCriacao	DataCriacao	CodUsuarioAlteracao	CodFilialAlteracao	DataAlteracao	CodTipoVeicConj
 --	9385			2					1859					161						862						25.50				10142				CG					2019-05-16 12:41:42.000	12779	CG	2019-08-14 08:35:53.000	4
 
-
 --CodVeiculo	CodTipoConjunto	CodVeiculoAdicional1	CodVeiculoAdicional2	CodVeiculoAdicional3	ComprimentoConjunto	CodUsuarioCriacao	CodFilialCriacao	DataCriacao	CodUsuarioAlteracao	CodFilialAlteracao	DataAlteracao	CodTipoVeicConj
 --  99529				2				2064					2076					2075					25.50				10142				CG					2019-06-12 12:23:46.000	NULL	NULL	NULL	4
-
-
-
 
 --28/12/2022
 

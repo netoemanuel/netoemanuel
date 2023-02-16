@@ -1,10 +1,7 @@
---and isnull(ped.IndExportacao,'') = 'S' SOMENTE CASO SEJA PEDIDO  
+Declare @codclientematriz decimal set @codclientematriz = 1016347
 
-
-Declare @codclientematriz decimal set @codclientematriz = 1017453
-
-Declare @DataInicio as varchar(25) set @DataInicio = '2023-01-13 00:00:00'
-Declare @DataFim as varchar(25) set @DataFim = '2023-02-15 23:59:29'
+Declare @DataInicio as varchar(25) set @DataInicio = '2022-01-01 00:00:00'
+Declare @DataFim as varchar(25) set @DataFim = '2022-12-31 23:59:29'
 
 --> PARA CONFERIR O TOTAL (COMENTAR LINHA DO ORDER BY):
 select SUM(ValorTotalFrete) Total, COUNT(cte.Sequencial) AS Qtde
@@ -21,23 +18,20 @@ where
 	ctrc.DataEmissao BETWEEN @DataInicio AND @DataFim 
 	and ctrc.ModeloDocumento = 'CT-e'
 	and ctrc.SerieConhecto = '0' 
-	and ctrc.SituacaoConhecto = 'Emitido'
-	--and isnull(ped.IndExportacao,'') = 'S'
+	and isnull(ped.IndExportacao,'') = 'S'
 	and ctrc.SituacaoConhecto NOT IN ('Cancelado','Substituído') 
 	and comp.CodClienteMatriz = @codclientematriz
 
 --> PARA GERAR OS DADOS QUE SERÃO COPIADOS PARA A PLANILHA (DESCOMENTAR LINHA DO ORDER BY):
-select 
-	 ctrc.NumConhecto AS 'Nº CT-e'
-	,ctrc.CodUF AS 'UF'
-	,CONVERT(varchar(8),ctrc.DataEmissao,3) AS 'Data'	
-	,ped.CodPedidoFrete as 'Produto'
-	,nf.PesoNF as Peso
-	,sum(isnull(ctrc.ValorTotalFrete, 0 ) + isnull(ctrc.ValorICMSFrete, 0 )) as 'Valor Total Frete/ICMS'
-	,format(ctrc.ValorICMSFrete,'N2','pt-br') AS 'Valor ICMS'
-	,format(ctrc.ValorTotalFrete,'N2','pt-br') AS 'Valor Total Frete'
-	, cte.CNPJ as CNJP	
-	
+select CONVERT(varchar(8),ctrc.DataEmissao,3) AS Data, 
+	ctrc.CodUF AS UF, ctrc.NumConhecto AS 'Nº CT-e',
+	nf.NumeroNF AS 'Nº NF-e' 
+	,CidadeOrigem.NomeMunicipioIBGE as 'Cidade origem'
+	,CidadeDestino.NomeMunicipioIBGE as 'Cidade destino'
+	,NC.DescNaturezaCarga
+	,format(ctrc.ValorTotalFrete,'N2','pt-br') AS 'Valor Frete'
+	,format(ctrc.TarifaFreteEmpresa,'N2','pt-br') AS 'Tarifa Frete'
+	,ctrc.QuantidadeSaida 
 from ConhecimentosTransporte ctrc
 JOIN Rotas on rotas.CodRota = ctrc.CodRota
 JOIN Cidades dest1 ON dest1.CodCidade = Rotas.CodCidadeDestino
@@ -58,9 +52,7 @@ where
 	ctrc.DataEmissao BETWEEN @DataInicio AND @DataFim 
 	and ctrc.ModeloDocumento = 'CT-e'
 	and ctrc.SerieConhecto = '0' 
-	and ctrc.SituacaoConhecto = 'Emitido'
-	--and isnull(ped.IndExportacao,'') = 'S'
+	and isnull(ped.IndExportacao,'') = 'S'
 	and ctrc.SituacaoConhecto NOT IN ('Cancelado','Substituído') 
 	and comp.CodClienteMatriz = @codclientematriz
-
-GROUP BY ctrc.DataEmissao,ctrc.ValorICMSFrete,ctrc.ValorTotalFrete,ctrc.Sequencial,ctrc.NumConhecto,ctrc.CodUF,ped.CodPedidoFrete,cte.PesoLiquidoNFe,cte.CNPJ, nf.PesoNF
+order by ctrc.DataEmissao
