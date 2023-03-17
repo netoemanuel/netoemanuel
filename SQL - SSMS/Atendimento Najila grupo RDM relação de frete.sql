@@ -34,3 +34,8 @@ select Desconto, CodIndicadorDiferenca, * from RelacaoFretes where CodRelacaoFre
 --select * from ValoresRelacaoFretes where CodRelacaoFrete = 1086511
 
 SELECT CodRelacaoFrete, DataEntradaRelacao, ValorDiferenca FROM RelacaoFretes Where CodRelacaoFreteDiferenca = 1086511
+
+
+select  CodIndicadorDiferenca, ValorDiferenca, CodSituacao,  * from RelacaoFretes_log where CodRelacaoFrete = 16005924 order by DataLog desc
+
+select  CodIndicadorDiferenca, ValorDiferenca,CodSituacao, * from RelacaoFretes where CodRelacaoFrete = 16005924 

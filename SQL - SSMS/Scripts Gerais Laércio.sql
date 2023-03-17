@@ -186,6 +186,3 @@ select program_name()
 select APP_NAME()
 */
 
-blk
-KILL 593
-wtf 593

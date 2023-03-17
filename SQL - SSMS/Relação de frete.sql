@@ -12,10 +12,11 @@
 -- 6 - Diferença a Menor Paga.
 
 
-select  ValorDiferenca,   * from RelacaoFretes where CodRelacaoFrete = 1188309
+select  ValorDiferenca,   * from RelacaoFretes where CodRelacaoFrete = 1188727 
 --update RelacaoFretes set  Desconto = null, CodRelacaoFreteDiferenca = null where CodRelacaoFrete = 1188309
-select  Desconto,   * from RelacaoFretes where CodRelacaoFrete = 1189750
---update RelacaoFretes set CodRelacaoFreteDiferenca = 33002949, ValorDiferenca = 120.10, CodIndicadorDiferenca = 2 where CodRelacaoFrete = 33002926
+select  Desconto,   * from RelacaoFretes where CodRelacaoFrete = 1189190 
+--update RelacaoFretes set CodRelacaoFreteDiferenca = Null,  CodIndicadorDiferenca = 2 where CodRelacaoFrete = 1188727  --11900837
+--update RelacaoFretes set CodRelacaoFreteDiferenca = Null,  CodIndicadorDiferenca = 2 where CodRelacaoFrete = 1189190  --11900837
 
 
 --select * from RelacaoFretes where CodRelacaoFrete = 1078695
