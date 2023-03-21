@@ -1,17 +1,17 @@
 --
-SELECT CodOrdemEmbarque,* from ConhecimentosTransporte where NumConhecto = 34069    and CodUF = 'MT'
+SELECT CodOrdemEmbarque,* from ConhecimentosTransporte where NumConhecto = 88664    and CodUF = 'GO'
 --
-SELECT CodOrdemEmbarque FROM ConhecimentosTransporte WHERE CodUF = 'GO' AND NumConhecto = 538330
+SELECT CodOrdemEmbarque FROM ConhecimentosTransporte WHERE CodUF = 'GO' AND NumConhecto = 88664
 --
-SELECT RotaSemParar, ValorPedagioSemParar, TipoDispositivoValePedagio FROM OrdemEmbarque WHERE NumOrdemEmbarque = 92001280
+SELECT RotaSemParar, ValorPedagioSemParar, TipoDispositivoValePedagio FROM OrdemEmbarque WHERE NumOrdemEmbarque = 76018118
 --
 --update OrdemEmbarque set TipoDispositivoValePedagio = 1 where NumOrdemEmbarque = 30059092
 --update OrdemEmbarque set NumCartaoValePedagio = null where NumOrdemEmbarque = 30059092
 --
-SELECT * FROM LogRoteirizacaoPedagio WHERE NumOrdemEmbarque = 92001280
+SELECT * FROM LogRoteirizacaoPedagio WHERE NumOrdemEmbarque = 76018118
 --
 SELECT RotaSemParar, ValorPedagioSemParar, EixosSemParar, TipoDispositivoValePedagio, NumCartaoValePedagio, Situacao
-from OrdemEmbarque_Log where NumOrdemEmbarque = 92001280 ORDER BY datalog desc
+from OrdemEmbarque_Log where NumOrdemEmbarque = 76018118 ORDER BY datalog desc
 
 --
 select EmpresaValePedagio, NumCartaoValePedagio, TipoDispositivoValePedagio, *  FROM OrdemEmbarque WHERE NumOrdemEmbarque = 92001280 
@@ -20,14 +20,14 @@ SELECT TOP(1000) oe.CIOT, CTRC.CodOrdemEmbarque, CTRC.Sequencial, ctrc.CodUF + '
 INNER JOIN CartaFrete CF ON CF.Sequencial = CTRC.Sequencial
 INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'MT' AND CTRC.Numconhecto = 34069 
+WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'GO' AND CTRC.Numconhecto = 88664 
 ORDER BY O.NumSeq DESC, O.SeqConsulta DESC
 --
 SELECT TOP(100) oe.TipoDispositivoValePedagio, CTRC.SituacaoConhecto, oe.CIOT, oe.CodNaturezaCarga,  CTRC.CodOrdemEmbarque, CTRC.Sequencial, ctrc.CodUF + '-' + CONVERT(varchar(12), CTRC.NumConhecto) as 'CTRC', CTRC.CIOT, O.* FROM ConhecimentosTransporte CTRC
 INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 INNER JOIN CartaFrete CF ON CF.NumOrdemEmbarque = oe.NumOrdemEmbarque
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'MT' AND CTRC.Numconhecto = 34069  
+WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'GO' AND CTRC.Numconhecto = 88664  
 ORDER BY O.DataCriacao DESC, O.NumSeq DESC, O.SeqConsulta DESC
 --
 select * from ConhecimentosRelacaoFretes where NumSeqConhecto = 100000002297 

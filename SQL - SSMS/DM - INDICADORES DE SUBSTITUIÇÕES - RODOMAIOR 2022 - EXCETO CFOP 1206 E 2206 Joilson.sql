@@ -1,5 +1,5 @@
-Declare @DataInicio as varchar(25) set @DataInicio = '2023-01-01 00:00:00'
-Declare @DataFim as varchar(25) set @DataFim = '2023-01-11 23:59:29'
+Declare @DataInicio as varchar(25) set @DataInicio = '2023-02-28 00:00:00'
+Declare @DataFim as varchar(25) set @DataFim = '2023-03-20 23:59:29'
 
 select  reg.titulo AS 'Região', cteori.CodFilialEmitente AS 'Fil. Emit.', ped.NumeroPedidoCliente as 'Número do Pedido',
 ori.coduf AS 'UF', ori.numconhecto AS 'CTCR', FORMAT (ori.ValorTotalFrete , 'N2','pt-br') as 'Valor' , convert(varchar(8),ori.dataemissao,3) AS Emissão, embori.nomecolaborador AS 'Func. Emitente',
