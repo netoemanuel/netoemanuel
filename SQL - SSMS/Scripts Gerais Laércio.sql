@@ -10,7 +10,7 @@ JOIN Lontano_GSe.dbo.CTe_LOG ult on ult.Sequencial = CTe.Sequencial AND ult.ID =
 where CTe.status not in (1,5) AND isnull(ult.cStat,0) <> 735
 GO
 
-SELECT Tipo, Sequencial, Filial, TipoCTe, UF, NumConhecto, DataEmissao, Cliente, Funcionario, Valor, Status, CodStatus, DataHoraAutorizacao, TempoEspera, Ambiente, TipoCTe, Servidor FROM LONTANO_GSe.dbo.ConsultaCTeNova WHERE (DataEmissao BETWEEN '02/01/2023 00:00:00' AND '02/02/2023 23:59:29') AND (CodStatus NOT IN (1, 4, 5, 9) OR (DataHoraAutorizacao IS NULL AND CodStatus NOT IN (5,9))) ORDER BY DataEmissao DESC
+SELECT Tipo, Sequencial, Filial, TipoCTe, UF, NumConhecto, DataEmissao, Cliente, Funcionario, Valor, Status, CodStatus, DataHoraAutorizacao, TempoEspera, Ambiente, TipoCTe, Servidor FROM LONTANO_GSe.dbo.ConsultaCTeNova WHERE DataEmissao BETWEEN GETDATE () AND GETDATE () AND (CodStatus NOT IN (1, 4, 5, 9) OR (DataHoraAutorizacao IS NULL AND CodStatus NOT IN (5,9))) ORDER BY DataEmissao DESC
 
 
 

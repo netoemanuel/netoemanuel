@@ -21,7 +21,6 @@ where
 	and ct.SituacaoConhecto <> 'Cancelado'
 	and cte.Status = 1
 	and ct.dataemissao between '2022-12-01 00:00:00' and '2022-12-31 23:59:30' 
-	and f.ClassifFiscal = 'Física'
 	
 order by 
 	ct.DataEmissao

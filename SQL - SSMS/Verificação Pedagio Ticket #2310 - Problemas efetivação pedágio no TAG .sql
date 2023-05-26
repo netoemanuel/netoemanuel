@@ -1,33 +1,35 @@
 --
-SELECT CodOrdemEmbarque,* from ConhecimentosTransporte where NumConhecto = 88664    and CodUF = 'GO'
+SELECT CodOrdemEmbarque,* from ConhecimentosTransporte where NumConhecto = 179355    and CodUF = 'SP'
 --
-SELECT CodOrdemEmbarque FROM ConhecimentosTransporte WHERE CodUF = 'GO' AND NumConhecto = 88664
+SELECT CodOrdemEmbarque FROM ConhecimentosTransporte WHERE CodUF = 'SP' AND NumConhecto = 179355
 --
-SELECT RotaSemParar, ValorPedagioSemParar, TipoDispositivoValePedagio FROM OrdemEmbarque WHERE NumOrdemEmbarque = 76018118
+SELECT RotaSemParar, ValorPedagioSemParar, TipoDispositivoValePedagio FROM OrdemEmbarque WHERE NumOrdemEmbarque = 22075415
+SELECT EmpresaValePedagio, ValorPedagioSemParar, TipoDispositivoValePedagio FROM OrdemEmbarque WHERE NumOrdemEmbarque = 22075413
+--update OrdemEmbarque set TipoDispositivoValePedagio = 0 where NumOrdemEmbarque = 22075415
 --
 --update OrdemEmbarque set TipoDispositivoValePedagio = 1 where NumOrdemEmbarque = 30059092
 --update OrdemEmbarque set NumCartaoValePedagio = null where NumOrdemEmbarque = 30059092
 --
-SELECT * FROM LogRoteirizacaoPedagio WHERE NumOrdemEmbarque = 76018118
+SELECT * FROM LogRoteirizacaoPedagio WHERE NumOrdemEmbarque = 4034087
 --
-SELECT RotaSemParar, ValorPedagioSemParar, EixosSemParar, TipoDispositivoValePedagio, NumCartaoValePedagio, Situacao
-from OrdemEmbarque_Log where NumOrdemEmbarque = 76018118 ORDER BY datalog desc
+SELECT RotaSemParar, ValorPedagioSemParar, EixosSemParar, TipoDispositivoValePedagio, NumCartaoValePedagio, Situacao, DataLog
+from OrdemEmbarque_Log where NumOrdemEmbarque = 4034087 ORDER BY datalog desc
 
 --
-select EmpresaValePedagio, NumCartaoValePedagio, TipoDispositivoValePedagio, *  FROM OrdemEmbarque WHERE NumOrdemEmbarque = 92001280 
+select EmpresaValePedagio, NumCartaoValePedagio, TipoDispositivoValePedagio, *  FROM OrdemEmbarque WHERE NumOrdemEmbarque = 4034087 
 --
 SELECT TOP(1000) oe.CIOT, CTRC.CodOrdemEmbarque, CTRC.Sequencial, ctrc.CodUF + '-' + CONVERT(varchar(12), CTRC.NumConhecto) as 'CTRC', CTRC.CIOT, O.* FROM ConhecimentosTransporte CTRC
 INNER JOIN CartaFrete CF ON CF.Sequencial = CTRC.Sequencial
 INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'GO' AND CTRC.Numconhecto = 88664 
+WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'SP' AND CTRC.Numconhecto = 180687
 ORDER BY O.NumSeq DESC, O.SeqConsulta DESC
 --
 SELECT TOP(100) oe.TipoDispositivoValePedagio, CTRC.SituacaoConhecto, oe.CIOT, oe.CodNaturezaCarga,  CTRC.CodOrdemEmbarque, CTRC.Sequencial, ctrc.CodUF + '-' + CONVERT(varchar(12), CTRC.NumConhecto) as 'CTRC', CTRC.CIOT, O.* FROM ConhecimentosTransporte CTRC
 INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 INNER JOIN CartaFrete CF ON CF.NumOrdemEmbarque = oe.NumOrdemEmbarque
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'GO' AND CTRC.Numconhecto = 88664  
+WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'SP' AND CTRC.Numconhecto = 180687
 ORDER BY O.DataCriacao DESC, O.NumSeq DESC, O.SeqConsulta DESC
 --
 select * from ConhecimentosRelacaoFretes where NumSeqConhecto = 100000002297 
@@ -49,10 +51,11 @@ SELECT * FROM CartaFrete_Parcela WHERE IdCartaFrete = 778459
 --Mas pode dar divergência no valor que foi destacado no conhecimento.
 --
 --
-SELECT RotaSemParar, ValorPedagioSemParar  FROM OrdemEmbarque WHERE NumOrdemEmbarque = 92001280
+SELECT RotaSemParar, ValorPedagioSemParar  FROM OrdemEmbarque WHERE NumOrdemEmbarque = 74011946
+SELECT RotaSemParar, ValorPedagioSemParar  FROM OrdemEmbarque_log WHERE NumOrdemEmbarque = 74011946
 
---UPDATE OrdemEmbarque SET RotaSemParar = NULL, ValorPedagioSemParar = NULL WHERE NumOrdemEmbarque = 19036573
---update OrdemEmbarque set EmpresaValePedagio = null , NumCartaoValePedagio = null  where  NumOrdemEmbarque = 22072863 
+--UPDATE OrdemEmbarque SET RotaSemParar = NULL, ValorPedagioSemParar = NULL, NumCartaoValePedagio =  WHERE NumOrdemEmbarque = 000000
+--update OrdemEmbarque set EmpresaValePedagio = null , NumCartaoValePedagio = null  where  NumOrdemEmbarque = 22075415 
 
 --RotaSemParar	ValorPedagioSemParar
 --Aripuanã P/ Rondonopolis	514.80
@@ -68,4 +71,6 @@ SELECT * FROM CartaFrete_Ocorrencia WHERE IdCartaFrete = 1181647 AND NumSeq = 13
 SELECT ValorTotalFrete,* FROM ConhecimentosTransporte where NumConhecto = 22008589
 --UPDATE ConhecimentosTransporte SET ValorTotalFrete =  1847.20 WHERE Sequencial = 880000103622
 --
+
+
 
