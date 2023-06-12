@@ -1,35 +1,40 @@
 --
-SELECT CodOrdemEmbarque,* from ConhecimentosTransporte where NumConhecto = 179355    and CodUF = 'SP'
+SELECT CodOrdemEmbarque,* from ConhecimentosTransporte where NumConhecto = 671859    and CodUF = 'MT'
 --
 SELECT CodOrdemEmbarque FROM ConhecimentosTransporte WHERE CodUF = 'SP' AND NumConhecto = 179355
 --
-SELECT RotaSemParar, ValorPedagioSemParar, TipoDispositivoValePedagio FROM OrdemEmbarque WHERE NumOrdemEmbarque = 22075415
-SELECT EmpresaValePedagio, ValorPedagioSemParar, TipoDispositivoValePedagio FROM OrdemEmbarque WHERE NumOrdemEmbarque = 22075413
---update OrdemEmbarque set TipoDispositivoValePedagio = 0 where NumOrdemEmbarque = 22075415
+SELECT RotaSemParar, ValorPedagioSemParar, TipoDispositivoValePedagio FROM OrdemEmbarque WHERE NumOrdemEmbarque = 89035349
+SELECT EmpresaValePedagio, ValorPedagioSemParar, TipoDispositivoValePedagio FROM OrdemEmbarque WHERE NumOrdemEmbarque = 22075583
+
 --
---update OrdemEmbarque set TipoDispositivoValePedagio = 1 where NumOrdemEmbarque = 30059092
---update OrdemEmbarque set NumCartaoValePedagio = null where NumOrdemEmbarque = 30059092
+--Alterar dispositivo
+--update OrdemEmbarque set TipoDispositivoValePedagio = 1 where NumOrdemEmbarque = 22075583
+--update OrdemEmbarque set TipoDispositivoValePedagio = 0 where NumOrdemEmbarque = 89035349
+--
+--update OrdemEmbarque set NumCartaoValePedagio = null where NumOrdemEmbarque = 89035349
+--Limpar a Roteirzação
+--update OrdemEmbarque set EmpresaValePedagio = null , NumCartaoValePedagio = null  where  NumOrdemEmbarque = 22075583 
 --
 SELECT * FROM LogRoteirizacaoPedagio WHERE NumOrdemEmbarque = 4034087
 --
 SELECT RotaSemParar, ValorPedagioSemParar, EixosSemParar, TipoDispositivoValePedagio, NumCartaoValePedagio, Situacao, DataLog
-from OrdemEmbarque_Log where NumOrdemEmbarque = 4034087 ORDER BY datalog desc
+from OrdemEmbarque_Log where NumOrdemEmbarque = 51008715 ORDER BY datalog desc
 
 --
-select EmpresaValePedagio, NumCartaoValePedagio, TipoDispositivoValePedagio, *  FROM OrdemEmbarque WHERE NumOrdemEmbarque = 4034087 
+select EmpresaValePedagio, NumCartaoValePedagio, TipoDispositivoValePedagio, *  FROM OrdemEmbarque WHERE NumOrdemEmbarque = 51008715 
 --
 SELECT TOP(1000) oe.CIOT, CTRC.CodOrdemEmbarque, CTRC.Sequencial, ctrc.CodUF + '-' + CONVERT(varchar(12), CTRC.NumConhecto) as 'CTRC', CTRC.CIOT, O.* FROM ConhecimentosTransporte CTRC
 INNER JOIN CartaFrete CF ON CF.Sequencial = CTRC.Sequencial
 INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'SP' AND CTRC.Numconhecto = 180687
+WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'DF' AND CTRC.Numconhecto = 14289
 ORDER BY O.NumSeq DESC, O.SeqConsulta DESC
---
+--[ANTT] (PROTOCOLO: 482.448.925) ERRO ADICIONANDO OPERAÇÃO DE TRANSPORTE: ["REJEIÇÃO: O VEÍCULO DVT8J50 ESTÁ CONTRATADO PARA OUTRO CONTRATANTE."]
 SELECT TOP(100) oe.TipoDispositivoValePedagio, CTRC.SituacaoConhecto, oe.CIOT, oe.CodNaturezaCarga,  CTRC.CodOrdemEmbarque, CTRC.Sequencial, ctrc.CodUF + '-' + CONVERT(varchar(12), CTRC.NumConhecto) as 'CTRC', CTRC.CIOT, O.* FROM ConhecimentosTransporte CTRC
 INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 INNER JOIN CartaFrete CF ON CF.NumOrdemEmbarque = oe.NumOrdemEmbarque
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'SP' AND CTRC.Numconhecto = 180687
+WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'MG' AND CTRC.Numconhecto = 379645
 ORDER BY O.DataCriacao DESC, O.NumSeq DESC, O.SeqConsulta DESC
 --
 select * from ConhecimentosRelacaoFretes where NumSeqConhecto = 100000002297 
@@ -55,7 +60,7 @@ SELECT RotaSemParar, ValorPedagioSemParar  FROM OrdemEmbarque WHERE NumOrdemEmba
 SELECT RotaSemParar, ValorPedagioSemParar  FROM OrdemEmbarque_log WHERE NumOrdemEmbarque = 74011946
 
 --UPDATE OrdemEmbarque SET RotaSemParar = NULL, ValorPedagioSemParar = NULL, NumCartaoValePedagio =  WHERE NumOrdemEmbarque = 000000
---update OrdemEmbarque set EmpresaValePedagio = null , NumCartaoValePedagio = null  where  NumOrdemEmbarque = 22075415 
+--update OrdemEmbarque set EmpresaValePedagio = null , NumCartaoValePedagio = null  where  NumOrdemEmbarque = 89035349 
 
 --RotaSemParar	ValorPedagioSemParar
 --Aripuanã P/ Rondonopolis	514.80
