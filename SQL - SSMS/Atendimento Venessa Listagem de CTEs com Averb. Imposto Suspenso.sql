@@ -9,8 +9,12 @@ select cte.serie 'Série', cte.nCT 'Número'
 	 , FORMAT((cte.vCarga + (NF.ValorNF - NF.ValorProdutos)),'N2','pt-br') 'Valor Total'
 from RODOMAIOR_GSe.dbo.CTe cte
 JOIN RODOMAIOR.dbo.NotasFiscaisConhecimento NF ON NF.SequencialConhecimento = cte.Sequencial
-where cte.dhEmi between '2023-05-01' and '2023-05-31 23:59:29'
+where cte.dhEmi between '2023-08-01' and '2023-08-15 23:59:29'
 	and cte.status = 1
 	and cte.vCargaAverb > 0.01
 	and (NF.ValorNF - NF.ValorProdutos) > 0
 order by cte.dhEmi, cte.UFIni, cte.nCT
+
+
+--------------------------------------------------------------------------------------------------------------------
+

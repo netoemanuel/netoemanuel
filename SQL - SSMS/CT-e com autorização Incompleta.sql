@@ -1,15 +1,58 @@
 -- CT-e com autorização Incompleta!
 
+Select * from ConhecimentosTransporte where NumConhecto = 489411 and CodUF = 'MS'
+----select DataCriacao, Status, NO_Retorno, DS_Retorno, XML_Retorno,  * from Rodomaior_GSe.dbo.cte where Sequencial = 60000026643 -- EXEMPLO 
 
-----select DataCriacao, Status, NO_Retorno, DS_Retorno, XML_Retorno,  * from Lontano_GSe.dbo.cte where Sequencial = 60000026643 -- EXEMPLO 
+select * from ConhecimentosTransporte where NumConhecto = 587113 and CodUF = 'GO'
 
-select * from LONTANO_GSe.dbo.CTe_LOG where Sequencial = 20000146570
-select DataCriacao,Status, xml_enviado, xml_retorno, no_protocolo, dt_alteracao, * from Lontano_gse.dbo.cte where sequencial in (20000146570)
-exec verificacte 280000172594
+select * from Rodomaior_GSe.dbo.CTe_LOG where Sequencial =680000018168
+select DataCriacao,Status, xml_enviado, xml_retorno, no_protocolo, dt_alteracao, * from Rodomaior_GSe.dbo.cte where sequencial in (680000018168)
+select DataCriacao,Status, xml_enviado, xml_retorno, no_protocolo, dt_alteracao, * from Rodomaior_GSe.dbo.cte where sequencial in (680000018168)
 
 
---update Lontano_GSe.dbo.cte set NO_Retorno = 100, DS_Retorno = 'Autorizado o uso da CT-e', NO_Protocolo = 150230016085640, dt_alteracao = '2023-07-03 14:35:51.317' where sequencial = 950000020264
---update Lontano_gse.dbo.cte set xml_retorno = '<?xml version="1.0" encoding="utf-16"?>  <TProtCTe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" versao="4.00">    <infProt xmlns="http://www.portalfiscal.inf.br/cte">      <tpAmb>1</tpAmb>      <verAplic>MS_1.0.1</verAplic>      <chCTe>50230711455829000103570000004859741004859740</chCTe>      <dhRecbto>2023-07-03T14:35:24-04:00</dhRecbto>      <nProt>150230016085640</nProt>      <digVal>HCYtc2s6nNtYYNxUCDlUxxBk4Oo=</digVal>      <cStat>100</cStat>      <xMotivo>Autorizado o uso do CTe</xMotivo>    </infProt>  </TProtCTe>' where sequencial = 950000020264
+Select * from Rodomaior_GSe.dbo.cte where sequencial in (SELECT Sequencial FROM Rodomaior_GSe.dbo.ConsultaCTeNova 
+WHERE (DataEmissao BETWEEN '06/25/2023 00:00:00' AND '07/25/2023 23:59:29') AND (CodStatus NOT IN (1, 4, 5, 9) OR (DataHoraAutorizacao IS NULL AND CodStatus NOT IN (5,9))) )
+
+--UPDATE LONTANO_GSe.dbo.cte set Status = 0 where Sequencial = 760000054608
+exec verificacte 680000018168
+--
+select * from ConhecimentosTransporte where NumConhecto = 489411
+--select dt_alteracao, no_protocolo, xml_enviado, xml_retorno, * from RODOMAIOR_GSe.dbo.CTe where sequencial = 680000018168
+--
+--760000054840
+--800000027986
+
+
+
+update Rodomaior_GSe.dbo.CTe_LOG set Status = 1, cStat = 100, xMotivo = 'Autorizado o uso da CT-e', 
+nProt = 352230045346666, codLog = 22, ID_Servidor = 14, xmlEnvolvido ='	<protCTe versao="4.00" xmlns="http://www.portalfiscal.inf.br/cte">
+		<infProt Id="CTe352230045346666">
+			<tpAmb>1</tpAmb>
+			<verAplic>RS20230731144235</verAplic>
+			<chCTe>52230811595217000531570000000992701000992700</chCTe>
+			<dhRecbto>2023-08-01T15:48:25-03:00</dhRecbto>
+			<nProt>352230045346666</nProt>
+			<digVal>wx1r1VciFJp73pDPG/dwZP+A2TI=</digVal>
+			<cStat>100</cStat>
+			<xMotivo>Autorizado o uso do CT-e</xMotivo>
+		</infProt>
+	</protCTe>'  where sequencial = 680000018168 and ID = 6132773
+
+update Rodomaior_GSe.dbo.cte set NO_Retorno = 100, DS_Retorno = 'Autorizado o uso da CT-e', 
+NO_Protocolo = 352230045346666, dt_alteracao = '2023-08-01 14:48:25.617',Status = 1  where sequencial = 680000018168
+
+update Rodomaior_GSe.dbo.cte set   XML_Retorno= '	<protCTe versao="4.00" xmlns="http://www.portalfiscal.inf.br/cte">
+		<infProt Id="CTe352230045346666">
+			<tpAmb>1</tpAmb>
+			<verAplic>RS20230731144235</verAplic>
+			<chCTe>52230811595217000531570000000992701000992700</chCTe>
+			<dhRecbto>2023-08-01T15:48:25-03:00</dhRecbto>
+			<nProt>352230045346666</nProt>
+			<digVal>wx1r1VciFJp73pDPG/dwZP+A2TI=</digVal>
+			<cStat>100</cStat>
+			<xMotivo>Autorizado o uso do CT-e</xMotivo>
+		</infProt>
+	</protCTe>' where Sequencial = 680000018168
 
 
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Retorno xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Numero>96914</Numero>
+	<Serie>0</Serie>
+	<Filial>0005</Filial>
+	<CNPJCli>11595217000531</CNPJCli>
+	<TpDoc>2</TpDoc>
+	<Erros>
+		<Erro>
+			<Codigo>004</Codigo>
+			<Descricao>Valor da IS maior que o limite permitido.</Descricao>
+			<ValorEsperado>2000000.00</ValorEsperado>
+			<ValorInformado>6171837.00</ValorInformado>
+		</Erro>
+	</Erros>
+</Retorno>

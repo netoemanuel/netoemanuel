@@ -1,5 +1,5 @@
-Declare @DataInicio as varchar(25) set @DataInicio = '2023-04-01 00:00:00'
-Declare @DataFim as varchar(25) set @DataFim = '2023-05-31 23:59:29'
+Declare @DataInicio as varchar(25) set @DataInicio = '2023-01-01 00:00:00'
+Declare @DataFim as varchar(25) set @DataFim = '2023-08-03 23:59:29'
 
 select  reg.titulo AS 'Região', cteori.CodFilialEmitente AS 'Fil. Emit.', ped.NumeroPedidoCliente as 'Número do Pedido',
 ori.coduf AS 'UF', ori.numconhecto AS 'CTCR', FORMAT (ori.ValorTotalFrete , 'N2','pt-br') as 'Valor' , convert(varchar(8),ori.dataemissao,3) AS Emissão, embori.nomecolaborador AS 'Func. Emitente',
@@ -19,7 +19,7 @@ JOIN Rodomaior_gse.dbo.cte ctenew on ctenew.sequencial = new.sequencial
 JOIN Rodomaior_GSe.dbo.Complemento_CTe comp on comp.Sequencial = ctenew.Sequencial
 JOIN colaboradores emb on emb.codcolaborador = new.codusuariocriacao
 join Clientes cli on cli.CodCliente = new.CodClientePagto
-WHERE  new.DataEmissao between @DataInicio and @DataFim  and ctenew.tpcte not in (1,2) AND cteori.CFOP <> 1206 AND cteori.CFOP <> 2206
+WHERE  ori.DataEmissao between @DataInicio and @DataFim  and ctenew.tpcte not in (1,2) AND cteori.CFOP <> 1206 AND cteori.CFOP <> 2206 -- and new.SituacaoConhecto = 'substituído'
 union
 select  reg.titulo AS 'Região', cteori.CodFilialEmitente AS 'Fil. Emit.', ped.NumeroPedidoCliente as 'Número do Pedido',
 ori.coduf AS 'UF', ori.numconhecto AS 'CTCR', FORMAT (ori.ValorTotalFrete , 'N2','pt-br') as 'Valor', convert(varchar(8),ori.dataemissao,3) AS Emissão, embori.nomecolaborador AS 'Func. Emitente',
@@ -39,5 +39,5 @@ JOIN ParamDespRecFilial reg ON reg.NumCol = filreg.NumCol
 JOIN Rodomaior_GSe.dbo.Complemento_CTe comp on comp.Sequencial = ctenew.Sequencial
 JOIN colaboradores emb on emb.codcolaborador = new.codusuariocriacao
 join Clientes cli on cli.CodCliente = new.CodClientePagto
-WHERE  new.DataEmissao between @DataInicio and @DataFim and ctenew.tpcte not in (1,2) AND cteori.CFOP <> 1206 AND cteori.CFOP <> 2206
+WHERE  ori.DataEmissao between @DataInicio and @DataFim and ctenew.tpcte not in (1,2) AND cteori.CFOP <> 1206 AND cteori.CFOP <> 2206 --and new.SituacaoConhecto = 'substituído'
 order by 1,2

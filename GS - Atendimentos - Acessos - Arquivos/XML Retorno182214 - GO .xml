@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfFieldTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<fieldTO>
+		<key>mensagem.codigo</key>
+		<value>5</value>
+	</fieldTO>
+	<fieldTO>
+		<key>mensagem.descricao</key>
+		<value>Viagem já Cadastrada [80191582]</value>
+	</fieldTO>
+</ArrayOfFieldTO>

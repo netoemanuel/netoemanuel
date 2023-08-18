@@ -1,0 +1,274 @@
+<cteProc xmlns="http://www.portalfiscal.inf.br/cte" versao="3.00">
+	<CTe xmlns="http://www.portalfiscal.inf.br/cte">
+		<infCte Id="CTe51230316903492000165570300048319071072363138" versao="3.00">
+			<ide>
+				<cUF>51</cUF>
+				<cCT>07236313</cCT>
+				<CFOP>5359</CFOP>
+				<natOp>Outros</natOp>
+				<mod>57</mod>
+				<serie>30</serie>
+				<nCT>4831907</nCT>
+				<dhEmi>2023-03-07T10:16:36-04:00</dhEmi>
+				<tpImp>1</tpImp>
+				<tpEmis>1</tpEmis>
+				<cDV>8</cDV>
+				<tpAmb>1</tpAmb>
+				<tpCTe>0</tpCTe>
+				<procEmi>0</procEmi>
+				<verProc>1.0</verProc>
+				<cMunEnv>5103403</cMunEnv>
+				<xMunEnv>CUIABA</xMunEnv>
+				<UFEnv>MT</UFEnv>
+				<modal>01</modal>
+				<tpServ>0</tpServ>
+				<cMunIni>5107602</cMunIni>
+				<xMunIni>RONDONOPOLIS</xMunIni>
+				<UFIni>MT</UFIni>
+				<cMunFim>5103353</cMunFim>
+				<xMunFim>CONFRESA</xMunFim>
+				<UFFim>MT</UFFim>
+				<retira>1</retira>
+				<indIEToma>1</indIEToma>
+				<toma3>
+					<toma>0</toma>
+				</toma3>
+			</ide>
+			<compl>
+				<Entrega>
+					<comData>
+						<tpPer>2</tpPer>
+						<dProg>2023-03-10</dProg>
+					</comData>
+					<semHora>
+						<tpHor>0</tpHor>
+					</semHora>
+				</Entrega>
+				<xObs>CST: 51 - Apolice seguro: 54017402 - Seguradora: 33164021000100 TOKIO MARINE SEGURADORA S A ICMS DIFERIDO CONF. DEC. 2212/14 (RICMS/MT) ART 37, ANEXO VII, CAP. VII, INC XII</xObs>
+				<ObsCont xCampo="1">
+					<xTexto>CST: 51 - Apolice seguro: 54017402 - Seguradora: 33164021000100 TOKIO MARINE SEGURADORA S A</xTexto>
+				</ObsCont>
+				<ObsCont xCampo="2">
+					<xTexto>ICMS DIFERIDO CONF. DEC. 2212/14 (RICMS/MT) ART 37, ANEXO VII, CAP. VII, INC XII</xTexto>
+				</ObsCont>
+				<ObsCont xCampo="RESPSEG">
+					<xTexto>16903492000165</xTexto>
+				</ObsCont>
+				<ObsCont xCampo="4">
+					<xTexto>TABELA: PROMOCIONAL  PR812843 - ROTA: ROOP/CFRP - TARIF: 090 - TIPO MERCAD: DIVERSOS</xTexto>
+				</ObsCont>
+				<ObsCont xCampo="5">
+					<xTexto>Tratamento de dados pessoais pode ser dado para execucao de contrato de transporte (LGPD art. 7, V).</xTexto>
+				</ObsCont>
+			</compl>
+			<emit>
+				<CNPJ>16903492000165</CNPJ>
+				<IE>134663179</IE>
+				<xNome>OTI BRASIL TRANSPORTES LTDA</xNome>
+				<enderEmit>
+					<xLgr>AV MANOEL JOSE DE ARRUDA</xLgr>
+					<nro>2866</nro>
+					<xBairro>JARDIM EUROPA</xBairro>
+					<cMun>5103403</cMun>
+					<xMun>CUIABA</xMun>
+					<CEP>78065443</CEP>
+					<UF>MT</UF>
+					<fone>6533192800</fone>
+				</enderEmit>
+			</emit>
+			<rem>
+				<CNPJ>11455829000286</CNPJ>
+				<IE>133987337</IE>
+				<xNome>LONTANO TRANSPORTES RODOVIARIOS LTDA</xNome>
+				<fone>6634230077</fone>
+				<enderReme>
+					<xLgr>R SERVIDAO</xLgr>
+					<nro>S/N</nro>
+					<xCpl>A</xCpl>
+					<xBairro>AREAS INTERNAS</xBairro>
+					<cMun>5107602</cMun>
+					<xMun>RONDONOPOLIS</xMun>
+					<CEP>78700001</CEP>
+					<UF>MT</UF>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+				</enderReme>
+			</rem>
+			<exped>
+				<CNPJ>11455829000286</CNPJ>
+				<IE>133987337</IE>
+				<xNome>LONTANO TRANSPORTES RODOVIARIOS LTDA</xNome>
+				<fone>6634230077</fone>
+				<enderExped>
+					<xLgr>R SERVIDAO</xLgr>
+					<nro>S/N</nro>
+					<xCpl>A</xCpl>
+					<xBairro>AREAS INTERNAS</xBairro>
+					<cMun>5107602</cMun>
+					<xMun>RONDONOPOLIS</xMun>
+					<CEP>78700001</CEP>
+					<UF>MT</UF>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+				</enderExped>
+			</exped>
+			<receb>
+				<CNPJ>11455829000286</CNPJ>
+				<IE>133987337</IE>
+				<xNome>11455829000286</xNome>
+				<fone>6634230077</fone>
+				<enderReceb>
+					<xLgr>RETIRA</xLgr>
+					<nro>SN</nro>
+					<xBairro>CLIENTE RETIRA</xBairro>
+					<cMun>5103353</cMun>
+					<xMun>CONFRESA</xMun>
+					<CEP>78652000</CEP>
+					<UF>MT</UF>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+				</enderReceb>
+			</receb>
+			<dest>
+				<CNPJ>11455829000286</CNPJ>
+				<IE>133987337</IE>
+				<xNome>LONTANO TRANSPORTES RODOVIARIOS LTDA</xNome>
+				<fone>6634230077</fone>
+				<enderDest>
+					<xLgr>R SERVIDAO</xLgr>
+					<nro>S/N</nro>
+					<xCpl>A</xCpl>
+					<xBairro>AREAS INTERNAS</xBairro>
+					<cMun>5107602</cMun>
+					<xMun>RONDONOPOLIS</xMun>
+					<CEP>78700001</CEP>
+					<UF>MT</UF>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+				</enderDest>
+			</dest>
+			<vPrest>
+				<vTPrest>99.85</vTPrest>
+				<vRec>99.85</vRec>
+				<Comp>
+					<xNome>FRETE PESO</xNome>
+					<vComp>86.25</vComp>
+				</Comp>
+				<Comp>
+					<xNome>FRETE VALOR</xNome>
+					<vComp>3.60</vComp>
+				</Comp>
+				<Comp>
+					<xNome>PEDAGIO</xNome>
+					<vComp>6.00</vComp>
+				</Comp>
+				<Comp>
+					<xNome>CAT</xNome>
+					<vComp>4.00</vComp>
+				</Comp>
+			</vPrest>
+			<imp>
+				<ICMS>
+					<ICMS45>
+						<CST>51</CST>
+					</ICMS45>
+				</ICMS>
+				<vTotTrib>0.00</vTotTrib>
+				<ICMSUFFim>
+					<vBCUFFim>0.00</vBCUFFim>
+					<pFCPUFFim>0.00</pFCPUFFim>
+					<pICMSUFFim>0.00</pICMSUFFim>
+					<pICMSInter>0.00</pICMSInter>
+					<vFCPUFFim>0.00</vFCPUFFim>
+					<vICMSUFFim>0.00</vICMSUFFim>
+					<vICMSUFIni>0.00</vICMSUFIni>
+				</ICMSUFFim>
+			</imp>
+			<infCTeNorm>
+				<infCarga>
+					<vCarga>300.00</vCarga>
+					<proPred>DIVERSOS</proPred>
+					<infQ>
+						<cUnid>03</cUnid>
+						<tpMed>UNIDADE</tpMed>
+						<qCarga>1</qCarga>
+					</infQ>
+					<infQ>
+						<cUnid>03</cUnid>
+						<tpMed>PARES</tpMed>
+						<qCarga>0</qCarga>
+					</infQ>
+					<infQ>
+						<cUnid>00</cUnid>
+						<tpMed>M3</tpMed>
+						<qCarga>0.0000</qCarga>
+					</infQ>
+					<infQ>
+						<cUnid>01</cUnid>
+						<tpMed>PESO REAL</tpMed>
+						<qCarga>8.0000</qCarga>
+					</infQ>
+					<infQ>
+						<cUnid>01</cUnid>
+						<tpMed>PESO BASE DE CALCULO</tpMed>
+						<qCarga>8.0000</qCarga>
+					</infQ>
+					<vCargaAverb>300.00</vCargaAverb>
+				</infCarga>
+				<infDoc>
+					<infOutros>
+						<tpDoc>99</tpDoc>
+						<descOutros>Outros</descOutros>
+						<nDoc>180457</nDoc>
+					</infOutros>
+				</infDoc>
+				<infModal versaoModal="3.00">
+					<rodo>
+						<RNTRC>45961696</RNTRC>
+					</rodo>
+				</infModal>
+			</infCTeNorm>
+			<infRespTec>
+				<CNPJ>01446320000132</CNPJ>
+				<xContato>Suporte SSW</xContato>
+				<email>suporte@ssw.inf.br</email>
+				<fone>04133360877</fone>
+			</infRespTec>
+		</infCte>
+		<infCTeSupl>
+			<qrCodCTe>https://www.sefaz.mt.gov.br/cte/qrcode?chCTe=51230316903492000165570300048319071072363138&amp;tpAmb=1</qrCodCTe>
+		</infCTeSupl>
+		<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+			<SignedInfo>
+				<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+				<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+				<Reference URI="#CTe51230316903492000165570300048319071072363138">
+					<Transforms>
+						<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+						<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+					</Transforms>
+					<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+					<DigestValue>ySNL1CzJH4vJKMibSVucFgDIt94=</DigestValue>
+				</Reference>
+			</SignedInfo>
+			<SignatureValue>E8grhgj36EfTx2m8K7hV4yArtsuI+6ca73I4JVNnalEqJ3cWrsc3Da6soAamHXMU0Z0bBWDryoBKvTLhP4Y+G9TCjVtTKI10j/yK6m8GdyUdogeBjiVrIAaKbxutRYPvhJG28+qdjPHTbls2Q/v07rjW5WU+uwxCZC4z74SyLhxwXujCYFej9AHlKAlQrmwciM6ywqftamr8ty0KU4Yzx2bhDJqx1hBOgsTznnfaqj9e8eiSQNQv4UzD9oJFryGwuyY96sswzREwa4bGlz2bHuctz5OVnILyphP0dZa1ROtnjL4IqdMfhZeTT7zkOg1d0wgytufaFzk7icNuHuja3w==</SignatureValue>
+			<KeyInfo>
+				<X509Data>
+					<X509Certificate>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</X509Certificate>
+				</X509Data>
+			</KeyInfo>
+		</Signature>
+	</CTe>
+	<protCTe versao="3.00">
+		<infProt>
+			<tpAmb>1</tpAmb>
+			<verAplic>MT20200708016</verAplic>
+			<chCTe>51230316903492000165570300048319071072363138</chCTe>
+			<dhRecbto>2023-03-07T10:16:37-04:00</dhRecbto>
+			<nProt>151230598949630</nProt>
+			<digVal>ySNL1CzJH4vJKMibSVucFgDIt94=</digVal>
+			<cStat>100</cStat>
+			<xMotivo>Autorizado o Uso do CT-e</xMotivo>
+		</infProt>
+	</protCTe>
+</cteProc>

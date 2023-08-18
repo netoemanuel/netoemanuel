@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-16"?>
+<execute xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<arg0>
+		<context>CancelTrip</context>
+		<fields>
+			<key>viagem.antt.cancelamento.motivo</key>
+			<value>Cancelamento do CTe.</value>
+		</fields>
+		<fields>
+			<key>viagem.contratante.documento.numero</key>
+			<value>11595217000108</value>
+		</fields>
+		<fields>
+			<key>viagem.id</key>
+			<value>80527295</value>
+		</fields>
+	</arg0>
+</execute>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AdicionarOperacaoTransporteResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Versao xmlns="http://schemas.ipc.adm.br/efrete/objects">1</Versao>
+	<Sucesso xmlns="http://schemas.ipc.adm.br/efrete/objects">false</Sucesso>
+	<Excecao xmlns="http://schemas.ipc.adm.br/efrete/objects">
+		<Mensagem>Sistema efrete (www.efrete.com.br): [Negócio] (Protocolo: 495.210.157) Erro adicionando operação de transporte: Erro validando Viagens:    O campo PesoCarga na raíz da Operação de Transporte não confere com o somatório declarado nos campos QuantidadeDaMercadoriaNoEmbarque das notas fiscais com mesmo NCM informado na raíz.</Mensagem>
+		<Codigo>Peso.Embarque.Difere.Peso.Notas.Fiscais</Codigo>
+	</Excecao>
+	<ProtocoloServico xmlns="http://schemas.ipc.adm.br/efrete/objects">495210157</ProtocoloServico>
+</AdicionarOperacaoTransporteResponse>

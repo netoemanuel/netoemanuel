@@ -22,3 +22,8 @@ select CodIndicadorDiferenca, * from RelacaoFretes where CodRelacaoFrete = 70060
 -- 6 - Diferença a Menor Paga.
 
 --UPDATE RelacaoFretes set Desconto = Null, CodRelacaoFreteDiferenca = null, CodIndicadorDiferenca = 2 WHERE (CodRelacaoFrete = 000000) --excluir desconto
+
+
+select CodIndicadorDiferenca, Desconto, * from RelacaoFretes where CodRelacaoFrete = 2008587 -- 2008705
+--UPDATE RelacaoFretes set CodIndicadorDiferenca = 2, CodRelacaoFreteDiferenca = null where CodRelacaoFrete = 2008587 
+

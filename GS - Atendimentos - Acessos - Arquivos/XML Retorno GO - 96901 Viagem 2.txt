@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfFieldTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<fieldTO>
+		<key>mensagem.codigo</key>
+		<value>0</value>
+	</fieldTO>
+	<fieldTO>
+		<key>mensagem.descricao</key>
+		<value>Operação realizada com sucesso</value>
+	</fieldTO>
+	<fieldTO>
+		<key>viagem.digito</key>
+		<value>7</value>
+	</fieldTO>
+	<fieldTO>
+		<key>viagem.id</key>
+		<value>80527348</value>
+	</fieldTO>
+	<fieldTO>
+		<key>viagem.pedagio.km</key>
+		<value>266.00</value>
+	</fieldTO>
+	<fieldTO>
+		<key>viagem.pedagio.qtde</key>
+		<value>1</value>
+	</fieldTO>
+	<fieldTO>
+		<key>viagem.pedagio.tempo.percurso</key>
+		<value>3 h 29 m</value>
+	</fieldTO>
+	<fieldTO>
+		<key>viagem.pedagio.valor</key>
+		<value>63.00</value>
+	</fieldTO>
+</ArrayOfFieldTO>

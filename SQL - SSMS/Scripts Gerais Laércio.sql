@@ -3,7 +3,7 @@ EXEC COPAS_NFe.dbo.ListarNFeDistribuicao
 EXEC Lontano_GSe.dbo.ListarDFePorDemanda_Pendente
 SELECT GETDATE() AS Início
 GO
-exec VerificaCTe 280000166784 
+exec VerificaCTe 910000041806 
 SELECT 'CTe COM PROBLEMA' as PROBLEMA, CTe.status, no_retorno, DS_Retorno, CTe.Sequencial, UF, nCT, dhEmi 
 FROM Lontano_gse.dbo.CTe CTe
 JOIN Lontano_GSe.dbo.CTe_LOG ult on ult.Sequencial = CTe.Sequencial AND ult.ID = (SELECT MAX(u.ID) FROM Lontano_GSe.dbo.CTe_LOG u WHERE u.Sequencial = CTe.Sequencial)

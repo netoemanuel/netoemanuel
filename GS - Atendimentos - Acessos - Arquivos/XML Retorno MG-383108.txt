@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TProtCTe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" versao="3.00">
+	<infProt xmlns="http://www.portalfiscal.inf.br/cte">
+		<tpAmb>1</tpAmb>
+		<verAplic>SP-CTe-2023-07-06-2</verAplic>
+		<chCTe>31230711455829000529570000003831088003831083</chCTe>
+		<dhRecbto>2023-07-07T16:13:03-03:00</dhRecbto>
+		<nProt>831230015936314</nProt>
+		<digVal>SnX7uzs9XD1GtAxc3MEBs0Lou/w=</digVal>
+		<cStat>100</cStat>
+		<xMotivo>Autorizado o uso do CT-e</xMotivo>
+	</infProt>
+</TProtCTe>

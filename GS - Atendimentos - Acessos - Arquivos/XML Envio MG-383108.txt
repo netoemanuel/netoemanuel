@@ -1,0 +1,208 @@
+<enviCTe versao="3.00" xmlns="http://www.portalfiscal.inf.br/cte">
+	<idLote>2674835</idLote>
+	<CTe xmlns="http://www.portalfiscal.inf.br/cte">
+		<infCte versao="3.00" Id="CTe31230711455829000529570000003831088003831083">
+			<ide>
+				<cUF>31</cUF>
+				<cCT>00383108</cCT>
+				<CFOP>5353</CFOP>
+				<natOp>PRESTACAO DE SERVICO DE TRANSPORTE A ESTABELECIMENTO COMERCI</natOp>
+				<mod>57</mod>
+				<serie>0</serie>
+				<nCT>383108</nCT>
+				<dhEmi>2023-07-07T15:13:16-04:00</dhEmi>
+				<tpImp>1</tpImp>
+				<tpEmis>8</tpEmis>
+				<cDV>3</cDV>
+				<tpAmb>1</tpAmb>
+				<tpCTe>0</tpCTe>
+				<procEmi>0</procEmi>
+				<verProc>GS-e Versao 3.0</verProc>
+				<cMunEnv>5002704</cMunEnv>
+				<xMunEnv>CAMPO GRANDE</xMunEnv>
+				<UFEnv>MS</UFEnv>
+				<modal>01</modal>
+				<tpServ>0</tpServ>
+				<cMunIni>3148103</cMunIni>
+				<xMunIni>PATROCINIO</xMunIni>
+				<UFIni>MG</UFIni>
+				<cMunFim>3130200</cMunFim>
+				<xMunFim>IGARATINGA</xMunFim>
+				<UFFim>MG</UFFim>
+				<retira>1</retira>
+				<indIEToma>1</indIEToma>
+				<toma3>
+					<toma>3</toma>
+				</toma3>
+			</ide>
+			<compl>
+				<xEmi>GENIVALDO</xEmi>
+				<fluxo>
+					<xOrig>PTC</xOrig>
+				</fluxo>
+				<Entrega>
+					<semData>
+						<tpPer>0</tpPer>
+					</semData>
+					<semHora>
+						<tpHor>0</tpHor>
+					</semHora>
+				</Entrega>
+				<xObs>PAGTO SALDO FRETE CARTA FRETE/CIOT, DACTE E TICKET DE DESCARGA. - PAGAR SALDO DE FRETE SOBRE PESO DE CHEGADA.... Placas: MBU4D20 / OPB8B91. Motorista: JOAO PAULO DE SOUZA CPF:116.292.296-60.</xObs>
+			</compl>
+			<emit>
+				<CNPJ>11455829000529</CNPJ>
+				<IE>0017118090034</IE>
+				<xNome>LONTANO TRANSPORTES LTDA</xNome>
+				<xFant>UBERLANDIA</xFant>
+				<enderEmit>
+					<xLgr>ROD. BR452 N 9999 KM 128 5 SALA 5</xLgr>
+					<nro>S/N</nro>
+					<xBairro>CUSTODIO PEREIRA</xBairro>
+					<cMun>3170206</cMun>
+					<xMun>UBERLANDIA</xMun>
+					<CEP>38405230</CEP>
+					<UF>MG</UF>
+					<fone>3432177717</fone>
+				</enderEmit>
+			</emit>
+			<rem>
+				<CPF>54257263849</CPF>
+				<IE>0013947620241</IE>
+				<xNome>AGOSTINHO MANSANO PERES</xNome>
+				<xFant>AGOSTINHO MANSANO PERES</xFant>
+				<fone>3499929366</fone>
+				<enderReme>
+					<xLgr>FAZENDA BOA VISTA</xLgr>
+					<nro>S/N</nro>
+					<xBairro>ZONA RURAL</xBairro>
+					<cMun>3148103</cMun>
+					<xMun>PATROCINIO</xMun>
+					<CEP>38740000</CEP>
+					<UF>MG</UF>
+					<cPais>1058</cPais>
+					<xPais>Brasil</xPais>
+				</enderReme>
+			</rem>
+			<exped>
+				<CNPJ>01614771000212</CNPJ>
+				<IE>4813291250154</IE>
+				<xNome>REGIONAL NUTRICAO QUIMICA LTDA</xNome>
+				<fone>3438391930</fone>
+				<enderExped>
+					<xLgr>RUA JOAO CANDIDO DE AGUIAR 2001</xLgr>
+					<nro>S/N</nro>
+					<xBairro>DISTRITO INDUSTRIAL</xBairro>
+					<cMun>3148103</cMun>
+					<xMun>PATROCINIO</xMun>
+					<CEP>38740000</CEP>
+					<UF>MG</UF>
+					<cPais>1058</cPais>
+					<xPais>Brasil</xPais>
+				</enderExped>
+			</exped>
+			<receb>
+				<CNPJ>07150233000110</CNPJ>
+				<IE>3021461800007</IE>
+				<xNome>GRANJA BRASILIA AGROIND. AVICOLA SA</xNome>
+				<fone>3732316012</fone>
+				<enderReceb>
+					<xLgr>RODOVIA BR 262 KM 429 S/N</xLgr>
+					<nro>S/N</nro>
+					<xBairro>ZONA RURAL</xBairro>
+					<cMun>3130200</cMun>
+					<xMun>IGARATINGA</xMun>
+					<CEP>35695000</CEP>
+					<UF>MG</UF>
+					<cPais>1058</cPais>
+					<xPais>Brasil</xPais>
+				</enderReceb>
+			</receb>
+			<dest>
+				<CNPJ>07150233000110</CNPJ>
+				<IE>3021461800007</IE>
+				<xNome>GRANJA BRASILIA AGROIND. AVICOLA SA</xNome>
+				<fone>3732316012</fone>
+				<enderDest>
+					<xLgr>RODOVIA BR 262 KM 429 S/N</xLgr>
+					<nro>S/N</nro>
+					<xBairro>ZONA RURAL</xBairro>
+					<cMun>3130200</cMun>
+					<xMun>IGARATINGA</xMun>
+					<CEP>35695000</CEP>
+					<UF>MG</UF>
+					<cPais>1058</cPais>
+					<xPais>Brasil</xPais>
+				</enderDest>
+			</dest>
+			<vPrest>
+				<vTPrest>3456.00</vTPrest>
+				<vRec>3456.00</vRec>
+				<Comp>
+					<xNome>Frete Peso</xNome>
+					<vComp>3456.00</vComp>
+				</Comp>
+			</vPrest>
+			<imp>
+				<ICMS>
+					<ICMS45>
+						<CST>40</CST>
+					</ICMS45>
+				</ICMS>
+				<infAdFisco>ICMS ISENTO NOS TERMOS DO ITEM 144, PARTE I DO ANEXO I DO RICMS/MG ALTERADO PELO DECRETO 48.308/2021</infAdFisco>
+			</imp>
+			<infCTeNorm>
+				<infCarga>
+					<vCarga>26665.60</vCarga>
+					<proPred>MILHO EM GRAOS</proPred>
+					<xOutCat>GRANEL</xOutCat>
+					<infQ>
+						<cUnid>01</cUnid>
+						<tpMed>PESO BRUTO</tpMed>
+						<qCarga>32000.0000</qCarga>
+					</infQ>
+					<vCargaAverb>0.01</vCargaAverb>
+				</infCarga>
+				<infDoc>
+					<infNFe>
+						<chave>31230716907746000113558900395258826583225189</chave>
+					</infNFe>
+				</infDoc>
+				<infModal versaoModal="3.00">
+					<rodo>
+						<RNTRC>12396610</RNTRC>
+					</rodo>
+				</infModal>
+			</infCTeNorm>
+			<autXML>
+				<CNPJ>04898488000177</CNPJ>
+			</autXML>
+			<autXML>
+				<CPF>11629229660</CPF>
+			</autXML>
+		</infCte>
+		<infCTeSupl>
+			<qrCodCTe><![CDATA[https://cte.fazenda.mg.gov.br/portalcte/sistema/qrcode.xhtml?chCTe=31230711455829000529570000003831088003831083&tpAmb=1]]></qrCodCTe>
+		</infCTeSupl>
+		<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+			<SignedInfo>
+				<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+				<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+				<Reference URI="#CTe31230711455829000529570000003831088003831083">
+					<Transforms>
+						<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+						<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+					</Transforms>
+					<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+					<DigestValue>SnX7uzs9XD1GtAxc3MEBs0Lou/w=</DigestValue>
+				</Reference>
+			</SignedInfo>
+			<SignatureValue>1hemg4XrFJ6KBlDsCL1Cbe9FoYX947K6Dz+8NlUWoWUWgT8DY+eyG6NKEFwSORFe04Kgiap40+C65V1U/N9nj3M3B8pQaUvYea/SbgLPvWdvuijXI1CaGM14rAmH6NGENam2T09D0RYPZK4w2UWD5Dw+FtNS8/pcWHnj4hsEB4OO42CddK7D+g8EWYNsoZu8vZq6ft+oE6ozp78CH6qMTkoVhYPImK8bJK/JvS0R+aL6HmShoPQwTBhgQ8ZHfHHmPZZIHFqJ8opvL24MSMgBLGxzM/6uTTzfGv8+bko20BAyfeXa26j9dwQZnvwu5qD0NeRH/9F56f15MHaJnDB1dA==</SignatureValue>
+			<KeyInfo>
+				<X509Data>
+					<X509Certificate>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</X509Certificate>
+				</X509Data>
+			</KeyInfo>
+		</Signature>
+	</CTe>
+</enviCTe>

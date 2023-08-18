@@ -1,0 +1,169 @@
+<enviNFe versao="4.00" xmlns="http://www.portalfiscal.inf.br/nfe">
+	<idLote>1161</idLote>
+	<indSinc>1</indSinc>
+	<NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+		<infNFe versao="4.00" Id="NFe50230611455829000103550010000003701000006930">
+			<ide>
+				<cUF>50</cUF>
+				<cNF>00000693</cNF>
+				<natOp>VENDA DE BEM DO ATIVO IMOBILIZADO</natOp>
+				<mod>55</mod>
+				<serie>1</serie>
+				<nNF>370</nNF>
+				<dhEmi>2023-06-29T00:00:00-04:00</dhEmi>
+				<dhSaiEnt>2023-06-29T00:00:00-04:00</dhSaiEnt>
+				<tpNF>1</tpNF>
+				<idDest>2</idDest>
+				<cMunFG>5002704</cMunFG>
+				<tpImp>1</tpImp>
+				<tpEmis>1</tpEmis>
+				<cDV>0</cDV>
+				<tpAmb>1</tpAmb>
+				<finNFe>1</finNFe>
+				<indFinal>0</indFinal>
+				<indPres>1</indPres>
+				<procEmi>0</procEmi>
+				<verProc>GS-e Versao 4.0</verProc>
+			</ide>
+			<emit>
+				<CNPJ>11455829000103</CNPJ>
+				<xNome>LONTANO TRANSPORTES LTDA</xNome>
+				<xFant>CAMPO GRANDE</xFant>
+				<enderEmit>
+					<xLgr>AV. ZILA CORREA MACHADO</xLgr>
+					<nro>7044</nro>
+					<xBairro>MORENINHA</xBairro>
+					<cMun>5002704</cMun>
+					<xMun>CAMPO GRANDE</xMun>
+					<UF>MS</UF>
+					<CEP>79065900</CEP>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+					<fone>6733981900</fone>
+				</enderEmit>
+				<IE>283559578</IE>
+				<CRT>3</CRT>
+			</emit>
+			<dest>
+				<CNPJ>15279788000194</CNPJ>
+				<xNome>FUBA CAMINHOES COMERCIO DE VEICULOS LTDA</xNome>
+				<enderDest>
+					<xLgr>RUA DOUTOR BELARMINO DE MENEZES</xLgr>
+					<nro>9</nro>
+					<xBairro>SAO VICENTE</xBairro>
+					<cMun>3132404</cMun>
+					<xMun>ITAJUBA</xMun>
+					<UF>MG</UF>
+					<CEP>37502034</CEP>
+					<cPais>1058</cPais>
+					<xPais>Brasil</xPais>
+					<fone>3536228091</fone>
+				</enderDest>
+				<indIEDest>1</indIEDest>
+				<IE>19378080030</IE>
+			</dest>
+			<det nItem="1">
+				<prod>
+					<cProd>00000000130346</cProd>
+					<cEAN>SEM GTIN</cEAN>
+					<xProd>CAVALO MECANIO SCANIA A6X4 PLACA OOM 2636</xProd>
+					<NCM>87042390</NCM>
+					<CFOP>6551</CFOP>
+					<uCom>UN</uCom>
+					<qCom>1.0000</qCom>
+					<vUnCom>170000.0000000000</vUnCom>
+					<vProd>170000.00</vProd>
+					<cEANTrib>SEM GTIN</cEANTrib>
+					<uTrib>UN</uTrib>
+					<qTrib>1.0000</qTrib>
+					<vUnTrib>170000.0000000000</vUnTrib>
+					<indTot>1</indTot>
+				</prod>
+				<imposto>
+					<ICMS>
+						<ICMS20>
+							<orig>0</orig>
+							<CST>20</CST>
+							<modBC>3</modBC>
+							<pRedBC>91.67</pRedBC>
+							<vBC>14166.10</vBC>
+							<pICMS>12.00</pICMS>
+							<vICMS>1699.93</vICMS>
+						</ICMS20>
+					</ICMS>
+					<PIS>
+						<PISNT>
+							<CST>08</CST>
+						</PISNT>
+					</PIS>
+					<COFINS>
+						<COFINSNT>
+							<CST>08</CST>
+						</COFINSNT>
+					</COFINS>
+				</imposto>
+			</det>
+			<total>
+				<ICMSTot>
+					<vBC>14166.10</vBC>
+					<vICMS>1699.93</vICMS>
+					<vICMSDeson>0.00</vICMSDeson>
+					<vFCP>0.00</vFCP>
+					<vBCST>0.00</vBCST>
+					<vST>0.00</vST>
+					<vFCPST>0.00</vFCPST>
+					<vFCPSTRet>0.00</vFCPSTRet>
+					<vProd>170000.00</vProd>
+					<vFrete>0.00</vFrete>
+					<vSeg>0.00</vSeg>
+					<vDesc>0.00</vDesc>
+					<vII>0.00</vII>
+					<vIPI>0.00</vIPI>
+					<vIPIDevol>0.00</vIPIDevol>
+					<vPIS>0.00</vPIS>
+					<vCOFINS>0.00</vCOFINS>
+					<vOutro>0.00</vOutro>
+					<vNF>170000.00</vNF>
+				</ICMSTot>
+			</total>
+			<transp>
+				<modFrete>9</modFrete>
+			</transp>
+			<pag>
+				<detPag>
+					<tPag>90</tPag>
+					<vPag>0.00</vPag>
+				</detPag>
+			</pag>
+			<infAdic>
+				<infCpl>CODIGO100000693 CAVALO MECANIO SCANIA A6X4 PLACA OOM 2636 9BSR6X400E3849054</infCpl>
+			</infAdic>
+			<infRespTec>
+				<CNPJ>11455829000103</CNPJ>
+				<xContato>Clovis Glienke</xContato>
+				<email>gsti@terra.com.br</email>
+				<fone>6733419008</fone>
+			</infRespTec>
+		</infNFe>
+		<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+			<SignedInfo>
+				<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+				<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+				<Reference URI="#NFe50230611455829000103550010000003701000006930">
+					<Transforms>
+						<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+						<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+					</Transforms>
+					<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+					<DigestValue>l9hzdI0YEj6+pFPMtuKrc5LpsYw=</DigestValue>
+				</Reference>
+			</SignedInfo>
+			<SignatureValue>g+1P/r6VmkClcKwfUQwKIfUg8j7U1iMMQ9zFxkvci5PnMmORxtvK1kbv1N84a1gz3I/MQjGLtlUuNC4TtoBHld9nM58E7SC7m5saJbBpyP4veoZGHoYyKpbPWLGFQvOkcAHkYG4ANvAFFyoCxmm+Q7iZrkc5cnQ5MfCMRDxVbmzH5Su14kQ/G18ZlpzewgQ6bpXvVKuycgyNYHc6t0Vjx0eCaNla3pC5N2xgO9ti1g2/pt/nw1Q/Q0N+AYbiApgwwV3aiN08Y+rO8XXzNeXoGRT05vCu5Fsc3/af4YFT6MboDHx/a/o1nVFvNj1/oQ2SjioOheBmO0gRD1/Ym9jIkg==</SignatureValue>
+			<KeyInfo>
+				<X509Data>
+					<X509Certificate>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</X509Certificate>
+				</X509Data>
+			</KeyInfo>
+		</Signature>
+	</NFe>
+</enviNFe>

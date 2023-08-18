@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AdicionarOperacaoTransporteRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Token xmlns="http://schemas.ipc.adm.br/efrete/objects">39-E5-7F-C3-FD-38-8C-48-CD-CC-B2-44-DE-66-62-EE-0A-C2-BA-99</Token>
+	<Integrador xmlns="http://schemas.ipc.adm.br/efrete/objects">0b1e4742-ffe2-49c1-a85f-d29830a206d3</Integrador>
+	<Versao xmlns="http://schemas.ipc.adm.br/efrete/objects">7</Versao>
+	<TipoViagem xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">Padrao</TipoViagem>
+	<EmissaoGratuita xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">false</EmissaoGratuita>
+	<TipoPagamento xsi:nil="true" xmlns="http://schemas.ipc.adm.br/efrete/pef/objects"/>
+	<BloquearNaoEquiparado xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">false</BloquearNaoEquiparado>
+	<MatrizCNPJ xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">11455829000103</MatrizCNPJ>
+	<FilialCNPJ xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">11455829002904</FilialCNPJ>
+	<IdOperacaoCliente xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">640000055261</IdOperacaoCliente>
+	<DataInicioViagem xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">2023-07-07T12:32:00</DataInicioViagem>
+	<DataFimViagem xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">2023-08-06T09:27:00</DataFimViagem>
+	<CodigoNCMNaturezaCarga xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">1905</CodigoNCMNaturezaCarga>
+	<PesoCarga xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">25647.53600</PesoCarga>
+	<TipoEmbalagem xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">Pallet</TipoEmbalagem>
+	<Viagens xmlns="http://schemas.ipc.adm.br/efrete/pef/AdicionarOperacaoTransporte">
+		<DocumentoViagem>PR-182694/0</DocumentoViagem>
+		<CodigoMunicipioOrigem>4101408</CodigoMunicipioOrigem>
+		<CodigoMunicipioDestino>5211503</CodigoMunicipioDestino>
+		<CepOrigem>86800-330</CepOrigem>
+		<CepDestino>75520-900</CepDestino>
+		<DistanciaPercorrida>739</DistanciaPercorrida>
+		<Valores xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">
+			<TotalOperacao>0</TotalOperacao>
+			<TotalViagem>0</TotalViagem>
+			<TotalDeAdiantamento>3580.00</TotalDeAdiantamento>
+			<TotalDeQuitacao>1201.47</TotalDeQuitacao>
+			<Combustivel>0</Combustivel>
+			<Pedagio>381.46</Pedagio>
+			<OutrosCreditos>0</OutrosCreditos>
+			<JustificativaOutrosCreditos/>
+			<Seguro>0.00</Seguro>
+			<OutrosDebitos>0.00</OutrosDebitos>
+			<JustificativaOutrosDebitos/>
+		</Valores>
+		<TipoPagamento xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">eFRETE</TipoPagamento>
+		<InformacoesBancarias xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">
+			<InstituicaoBancaria>237</InstituicaoBancaria>
+			<Agencia>000000-0</Agencia>
+			<Conta>00000000-0</Conta>
+			<TipoConta>ContaCorrente</TipoConta>
+		</InformacoesBancarias>
+		<NotasFiscais>
+			<NotaFiscal>
+				<Numero>203014</Numero>
+				<Serie>1</Serie>
+				<Data>2023-07-07T00:00:00</Data>
+				<ValorTotal>54193.55</ValorTotal>
+				<ValorDaMercadoriaPorUnidade>5318.307</ValorDaMercadoriaPorUnidade>
+				<CodigoNCMNaturezaCarga>1905</CodigoNCMNaturezaCarga>
+				<DescricaoDaMercadoria>Diversos</DescricaoDaMercadoria>
+				<UnidadeDeMedidaDaMercadoria>Tonelada</UnidadeDeMedidaDaMercadoria>
+				<TipoDeCalculo>QuebraIntegral</TipoDeCalculo>
+				<ValorDoFretePorUnidadeDeMercadoria>186.42999</ValorDoFretePorUnidadeDeMercadoria>
+				<QuantidadeDaMercadoriaNoEmbarque>10.19000</QuantidadeDaMercadoriaNoEmbarque>
+				<ToleranciaDePerdaDeMercadoria>
+					<Tipo>Porcentagem</Tipo>
+					<Valor>0.00</Valor>
+				</ToleranciaDePerdaDeMercadoria>
+				<DiferencaDeFrete>
+					<Tipo xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">Integral</Tipo>
+					<Base xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">QuantidadeDesembarque</Base>
+					<Tolerancia xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">
+						<Tipo>Nenhum</Tipo>
+						<Valor>0</Valor>
+					</Tolerancia>
+					<MargemGanho xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">
+						<Tipo>Porcentagem</Tipo>
+						<Valor>100</Valor>
+					</MargemGanho>
+					<MargemPerda xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">
+						<Tipo>Porcentagem</Tipo>
+						<Valor>100</Valor>
+					</MargemPerda>
+				</DiferencaDeFrete>
+			</NotaFiscal>
+			<NotaFiscal>
+				<Numero>203015</Numero>
+				<Serie>1</Serie>
+				<Data>2023-07-07T00:00:00</Data>
+				<ValorTotal>30141.95</ValorTotal>
+				<ValorDaMercadoriaPorUnidade>1949.983</ValorDaMercadoriaPorUnidade>
+				<CodigoNCMNaturezaCarga>1905</CodigoNCMNaturezaCarga>
+				<DescricaoDaMercadoria>Diversos</DescricaoDaMercadoria>
+				<UnidadeDeMedidaDaMercadoria>Tonelada</UnidadeDeMedidaDaMercadoria>
+				<TipoDeCalculo>QuebraIntegral</TipoDeCalculo>
+				<ValorDoFretePorUnidadeDeMercadoria>186.42999</ValorDoFretePorUnidadeDeMercadoria>
+				<QuantidadeDaMercadoriaNoEmbarque>15.45754</QuantidadeDaMercadoriaNoEmbarque>
+				<ToleranciaDePerdaDeMercadoria>
+					<Tipo>Porcentagem</Tipo>
+					<Valor>0.00</Valor>
+				</ToleranciaDePerdaDeMercadoria>
+				<DiferencaDeFrete>
+					<Tipo xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">Integral</Tipo>
+					<Base xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">QuantidadeDesembarque</Base>
+					<Tolerancia xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">
+						<Tipo>Nenhum</Tipo>
+						<Valor>0</Valor>
+					</Tolerancia>
+					<MargemGanho xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">
+						<Tipo>Porcentagem</Tipo>
+						<Valor>100</Valor>
+					</MargemGanho>
+					<MargemPerda xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">
+						<Tipo>Porcentagem</Tipo>
+						<Valor>100</Valor>
+					</MargemPerda>
+				</DiferencaDeFrete>
+			</NotaFiscal>
+		</NotasFiscais>
+	</Viagens>
+	<Impostos xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">
+		<IRRF>0.00</IRRF>
+		<SestSenat>0.00</SestSenat>
+		<INSS>0.00</INSS>
+		<ISSQN>0</ISSQN>
+		<OutrosImpostos>0</OutrosImpostos>
+	</Impostos>
+	<Pagamentos xmlns="http://schemas.ipc.adm.br/efrete/pef/AdicionarOperacaoTransporte">
+		<IdPagamentoCliente>640000055261/1</IdPagamentoCliente>
+		<DataDeLiberacao>2023-07-07T11:31:35.34</DataDeLiberacao>
+		<Valor>3580.00</Valor>
+		<TipoPagamento xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">eFRETE</TipoPagamento>
+		<Categoria xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">Adiantamento</Categoria>
+		<Documento>PR-182694/0</Documento>
+		<CnpjFilialAbastecimento>11455829002904</CnpjFilialAbastecimento>
+	</Pagamentos>
+	<Pagamentos xmlns="http://schemas.ipc.adm.br/efrete/pef/AdicionarOperacaoTransporte">
+		<IdPagamentoCliente>640000055261/3</IdPagamentoCliente>
+		<DataDeLiberacao>2023-07-07T11:31:35.357</DataDeLiberacao>
+		<Valor>1201.47</Valor>
+		<TipoPagamento xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">eFRETE</TipoPagamento>
+		<Categoria xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">Quitacao</Categoria>
+		<Documento>PR-182694/0</Documento>
+		<CnpjFilialAbastecimento>11455829002904</CnpjFilialAbastecimento>
+	</Pagamentos>
+	<Contratado xmlns="http://schemas.ipc.adm.br/efrete/pef/AdicionarOperacaoTransporte">
+		<CpfOuCnpj>13295684000148</CpfOuCnpj>
+		<RNTRC>44249151</RNTRC>
+	</Contratado>
+	<Motorista xmlns="http://schemas.ipc.adm.br/efrete/pef/AdicionarOperacaoTransporte">
+		<CpfOuCnpj>70604738900</CpfOuCnpj>
+		<CNH>1491658622</CNH>
+		<Celular xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">
+			<DDD xmlns="http://schemas.ipc.adm.br/efrete/objects">43</DDD>
+			<Numero xmlns="http://schemas.ipc.adm.br/efrete/objects">999340903</Numero>
+		</Celular>
+	</Motorista>
+	<Destinatario xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">
+		<NomeOuRazaoSocial>Caramuru Alimentos S/A</NomeOuRazaoSocial>
+		<CpfOuCnpj>80671000100</CpfOuCnpj>
+		<Endereco>
+			<Bairro xmlns="http://schemas.ipc.adm.br/efrete/objects">Nossa Senhora da Saúde </Bairro>
+			<Rua xmlns="http://schemas.ipc.adm.br/efrete/objects">Via Expressa Júlio Borges de Souza, 4240</Rua>
+			<Numero xmlns="http://schemas.ipc.adm.br/efrete/objects">0</Numero>
+			<CEP xmlns="http://schemas.ipc.adm.br/efrete/objects">75520-900</CEP>
+			<CodigoMunicipio xmlns="http://schemas.ipc.adm.br/efrete/objects">5211503</CodigoMunicipio>
+		</Endereco>
+		<EMail>email@dominio.com.br</EMail>
+		<ResponsavelPeloPagamento>false</ResponsavelPeloPagamento>
+	</Destinatario>
+	<Contratante xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">
+		<NomeOuRazaoSocial>Lontano Transportes Ltda</NomeOuRazaoSocial>
+		<CpfOuCnpj>11455829002904</CpfOuCnpj>
+		<Endereco>
+			<Bairro xmlns="http://schemas.ipc.adm.br/efrete/objects">Parque Manela</Bairro>
+			<Rua xmlns="http://schemas.ipc.adm.br/efrete/objects">Rodovia Celso Garcia Cid</Rua>
+			<Numero xmlns="http://schemas.ipc.adm.br/efrete/objects">KM 83 - Sala 6</Numero>
+			<CEP xmlns="http://schemas.ipc.adm.br/efrete/objects">87181-000</CEP>
+			<CodigoMunicipio xmlns="http://schemas.ipc.adm.br/efrete/objects">4103701</CodigoMunicipio>
+		</Endereco>
+		<ResponsavelPeloPagamento>true</ResponsavelPeloPagamento>
+		<RNTRC>0</RNTRC>
+	</Contratante>
+	<TomadorServico xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">
+		<NomeOuRazaoSocial>Caramuru Alimentos S/A</NomeOuRazaoSocial>
+		<CpfOuCnpj>80671000100</CpfOuCnpj>
+		<Endereco>
+			<Bairro xmlns="http://schemas.ipc.adm.br/efrete/objects">Nossa Senhora da Saúde </Bairro>
+			<Rua xmlns="http://schemas.ipc.adm.br/efrete/objects">Via Expressa Júlio Borges de Souza, 4240</Rua>
+			<Numero xmlns="http://schemas.ipc.adm.br/efrete/objects">0</Numero>
+			<CEP xmlns="http://schemas.ipc.adm.br/efrete/objects">75520-900</CEP>
+			<CodigoMunicipio xmlns="http://schemas.ipc.adm.br/efrete/objects">5211503</CodigoMunicipio>
+		</Endereco>
+		<EMail>email@dominio.com.br</EMail>
+		<ResponsavelPeloPagamento>false</ResponsavelPeloPagamento>
+	</TomadorServico>
+	<Veiculos xmlns="http://schemas.ipc.adm.br/efrete/pef/AdicionarOperacaoTransporte">
+		<Placa>ALG6740</Placa>
+	</Veiculos>
+	<ObservacoesAoTransportador xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">
+		<string/>
+	</ObservacoesAoTransportador>
+	<ObservacoesAoCredenciado xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">
+		<string>ATENÇAO POSTOS..... NAO PAGAR SALDO DE FRETE SEM O CANHOTO DA NOTA FISCAL  CARIMBADO, DATADO E ASSINADO PELO RECEBEDOR DA MERCADORIA OU NOME POR EXTENSO E CPF. " Senhor (a) Motorista em caso de atraso na entrega favor avisar de imediato a filial. VERIFICAR OBSERVAÇÕES DE AGENDAMENTO DO TERMINAL : DESCONTAR DO SALDO DE FRETE O VALOR DE R$ 250,00 (DUZENTOS E CINQUENTA REAIS) SE O VEÍCULO CHEGAR  30 MIN DE ANTECIPAÇÃO OU 02 HORAS ATRASADO DO HORÁRIO AGENDADO CONSTANTE NO TICKET DE DESCARGA</string>
+	</ObservacoesAoCredenciado>
+	<EntregaDocumentacao xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">RedeCredenciada</EntregaDocumentacao>
+	<QuantidadeSaques xsi:nil="true" xmlns="http://schemas.ipc.adm.br/efrete/pef/objects"/>
+	<QuantidadeTransferencias xsi:nil="true" xmlns="http://schemas.ipc.adm.br/efrete/pef/objects"/>
+	<ValorSaques xsi:nil="true" xmlns="http://schemas.ipc.adm.br/efrete/pef/objects"/>
+	<ValorTransferencias xsi:nil="true" xmlns="http://schemas.ipc.adm.br/efrete/pef/objects"/>
+	<CodigoTipoCarga xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">0</CodigoTipoCarga>
+	<AltoDesempenho xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">false</AltoDesempenho>
+	<DestinacaoComercial xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">true</DestinacaoComercial>
+	<FreteRetorno xmlns="http://schemas.ipc.adm.br/efrete/pef/objects">false</FreteRetorno>
+	<DistanciaRetorno xsi:nil="true" xmlns="http://schemas.ipc.adm.br/efrete/pef/objects"/>
+</AdicionarOperacaoTransporteRequest>

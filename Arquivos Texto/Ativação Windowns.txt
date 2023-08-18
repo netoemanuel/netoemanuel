@@ -1,0 +1,8 @@
+Ativação Windowns 
+
+https://www.youtube.com/watch?v=8hMjnnEQyf0
+
+1ª Abrir o Power Shell como ADM
+2ª digitar o comando : irm https://massgrave.dev/get | iex
+3ª Digitar o numero 1
+4ª Aguardar a conclusão do procedimento

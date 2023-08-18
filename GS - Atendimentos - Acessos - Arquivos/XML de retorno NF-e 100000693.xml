@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TProtNFe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" versao="4.00">
+	<infProt xmlns="http://www.portalfiscal.inf.br/nfe">
+		<tpAmb>1</tpAmb>
+		<verAplic>MS_6.0.15</verAplic>
+		<chNFe>50230611455829000103550010000003701000006930</chNFe>
+		<dhRecbto>2023-06-29T10:03:17-04:00</dhRecbto>
+		<digVal>l9hzdI0YEj6+pFPMtuKrc5LpsYw=</digVal>
+		<cStat>210</cStat>
+		<xMotivo>Rejeicao: IE do destinatario invalida</xMotivo>
+	</infProt>
+</TProtNFe>
