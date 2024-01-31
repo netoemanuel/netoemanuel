@@ -40,21 +40,21 @@ DECLARE @banco			VARCHAR(50) = '',		--> nome do banco a filtrar
 --SET @programa		= 'Embarque%'
 
 --Matar TODOS usando o banco LONTANO (fins específicos), exceto os processos do SITEGS e exceto o usuário "Laercio" (cê é loco!)
---SET @banco			= 'LONTANO'
---SET @login			= ''
---SET @login_nao		= 'Laercio'
---SET @hostname_nao1	= 'SITEGS%'
---SET @hostname_nao2	= ''
---SET @programa		= ''
+SET @banco			= 'LONTANO'
+SET @login			= ''
+SET @login_nao		= 'Laercio'
+SET @hostname_nao1	= 'SITEGS%'
+SET @hostname_nao2	= ''
+SET @programa		= ''
 
 
 
 --> PADRÃO MAIS COMUM PARA RODOMAIOR:
-SET @banco			= 'RODOMAIOR'
-SET @login			= 'Manutencao'
-SET @hostname_nao1	= 'SRVAPP%'
-SET @hostname_nao2	= '%GR%'
-SET @programa		= 'Embarque%'
+--SET @banco			= 'RODOMAIOR'
+--SET @login			= 'Manutencao'
+--SET @hostname_nao1	= 'SRVAPP%'
+--SET @hostname_nao2	= '%GR%'
+--SET @programa		= 'Embarque%'
 
 
 --Altamente recomendável rodar com 'N' ANTES!!! Ninguém morre! Dá tempo de rever os critérios!

@@ -2,12 +2,12 @@ use RODOMAIOR
 select * FROM Usuarios where NomeUsuario LIKE '%Billerbeck%'
 
 -- CT-e que precisam ser subistituidos, pegar o sequencial para puxar a ChaveAcessoNFE, pois ela da a critica no projeto.
-SELECT * from ConhecimentosTransporte where NumConhecto = 86947  and CodUF = 'GO' -- Sequencial CT-e Antigo
+SELECT * from ConhecimentosTransporte where NumConhecto = 77014    and CodUF = 'MG' -- Sequencial CT-e Antigo
 SELECT * from ConhecimentosTransporte where NumConhecto = 76524 and CodUF = 'pr' -- Sequencial CT-e Novo
 -- Apos pegar a chave, deixar ela guardada para voltar apos finalizar o processo, deixa o campo ChaveAcessoNFE para evitar a critica no manifestar
 -- depois de terminar todo o processo e autorizar o novo CTe retornar a chave.
-SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where SequencialConhecimento = 340000023842 
---UPDATE NotasFiscaisConhecimento SET ChaveAcessoNFe = Null WHERE SequencialConhecimento = 340000023842 
+SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where SequencialConhecimento in ( 670000001128) 
+--UPDATE NotasFiscaisConhecimento SET ChaveAcessoNFe = Null WHERE SequencialConhecimento = 670000001128 
 
 --UPDATE NotasFiscaisConhecimento SET ChaveAcessoNFe = 'CHAVE' WHERE SequencialConhecimento = 00000000 
 -- Apos gerar o CT-e no manifestar caso não autorize devido a CFOP, faze o updade abaixo. (caso precise apenas)
@@ -15,10 +15,39 @@ SELECT * from ConhecimentosTransporte where NumConhecto = 00000 and CodUF = 'UF'
 --update ConhecimentosTransporte SET CodigoCFOP = '5.932' WHERE Sequencial = 000000000
 --UPDATE RODOMAIOR_GSe.dbo.CTe SET CFOP = '5932', Status = 0 WHERE Sequencial = 000000000
 EXEC VerificaCTe 000000000000
+
+SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where SequencialConhecimento in  (180000014330,180000014329,180000014326,180000014342,180000014386,180000014387,180000014385)
+--UPDATE NotasFiscaisConhecimento set ChaveAcessoNFe = null where SequencialConhecimento in  (180000014330,180000014329,180000014326,180000014342,180000014386,180000014387,180000014385)
+
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--Exclusão da Chave de acesso
+--670000001128 - 31231207571116001282550010000487091633070704 -  NF 48709
+
+--EXCLUSÃO DA CHAVE NF-e Filial -PR - NFS 744
+--410000027051 - 41231092660604013837550500001258231255398128 - NF 125823
+--410000027051 - 41231092660604013837550500001258241548594262 - NF 125824
+
+--EXCLUSÃO CHAVE DA NF-e CT-ES
+
+--180000014330 11231107571116000391550010000011591634992609 - NF 1159
+--180000014329 11231107571116000391550010000011601634992650 - NF 1160
+--180000014326 11231107571116000391550010000011611349227353 - NF 1161
+--180000014342 11231107571116000391550010000011631927885965 - NF 1163
+--180000014386 11231107571116000391550010000011671492778442 - NF 1167
+--180000014387 11231107571116000391550010000011681349227362 - NF 1168
+--180000014385 11231107571116000391550010000011691634999103 - NF 1169
+
+--Fwd: RECUSA / CTE COMPLEMENTAR / CAMINHAO PLACA PUU9J75 -NF VITERRA ( 15187 -15188 )/NF SIPAL (13322 - 13321 ) COLETA FAZ MAURINA SANTA CARME-MT / BERTOLINE
+
+--40000036527 - 51231107670089001890550010000133221100963310 - NF 13322
+--40000036528 - 51231107670089001890550010000133211154289300 - NF 13321
+
+--Bloqueio na emissão de CT-e substituição Filial -TO
+--970000003725 - 17231007571116001363550010000001691634929106 - NF 169
+
 --20/07/2023
 --EXCLUSÃO DA CHAVE DE ACESSO DA NF-E 2933 REFERENTE AO CT-E 76526
-
 -- 340000023844 - 41230708013648000295550020000029331006984270 - NF 2933
 -- 340000023842 - 41230708013648000295550020000029321006902357 - NF 2932
 
@@ -43,6 +72,8 @@ EXEC VerificaCTe 000000000000
 --72229.
 --770000001099 - 31220760498706013488550640000104091024516344
 
+
+select * from NotasFiscaisConhecimento where ChaveAcessoNFe = '50231260498706028752550500000692501044524740'
 
 
 

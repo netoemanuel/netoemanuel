@@ -1,0 +1,16 @@
+--O CAMPO PESOCARGA NA RAÍZ DA OPERAÇÃO DE TRANSPORTE NÃO CONFERE
+--SISTEMA EFRETE (WWW.EFRETE.COM.BR): [NEGÓCIO] (PROTOCOLO: 490.895.433) ERRO ADICIONANDO OPERAÇÃO DE TRANSPORTE: ERRO VALIDANDO VIAGENS:    O CAMPO PESOCARGA NA RAÍZ DA OPERAÇÃO DE TRANSPORTE NÃO CONFERE COM O SOMATÓRIO DECLARADO NOS CAMPOS QUANTIDADEDAMERCADORIANOEMBARQUE DAS NOTAS FISCAIS COM MESMO NCM INFORMADO NA RAÍZ.
+
+SELECT TOP(100) O.IdCartaFrete, CTRC.Pedagio, oe.CIOT,  CTRC.CodOrdemEmbarque, CTRC.Sequencial, ctrc.CodUF + '-' + CONVERT(varchar(12), CTRC.NumConhecto) as 'CTRC', CTRC.CIOT, O.* FROM ConhecimentosTransporte CTRC
+INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
+INNER JOIN CartaFrete CF ON CF.NumOrdemEmbarque = oe.NumOrdemEmbarque
+LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
+WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'PR' AND CTRC.Numconhecto = 185701 
+ORDER BY O.DataCriacao DESC, O.NumSeq DESC, O.SeqConsulta DESC
+
+exec EmiteContrato 430000006059 ----carga_peso
+
+--QUANDO O VALOR DA 3 CASA DESCIMAL ESTA DIFERENTE DE 0 ESTA DANDO REJEIÇÃO NA EFRETE NA HORA DE GERAR O CIOT
+--FAZER O UPDATE NA TERCEIRA CASA DECIMAL PARA ZERO
+select QuantidadeSaida, * from ConhecimentosTransporte where sequencial = 430000006059
+--update ConhecimentosTransporte set QuantidadeSaida = 24017.500 where sequencial = 430000006059 --24017.504

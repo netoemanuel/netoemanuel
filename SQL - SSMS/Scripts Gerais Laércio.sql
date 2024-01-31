@@ -124,7 +124,7 @@ END
 --Verificar bloqueios e planos de execução de processos em andamento:
 sp_who4
 blk
-wtf 307
+wtf 949
 kill 307
 KILL 307 with statusonly
 exec UsoCPU
@@ -153,7 +153,7 @@ exec ProcuraTrigger
   , @TrgStat = 0	--> Status: -1=Qualquer um / 0=Habilitadas / 1=Desabilitadas
 
 exec MASTER.dbo.ProcuraObjetos 'Rodomaior', 'outros', 'Tudo'
---exec MASTER.dbo.ProcuraObjetos 'ZDA', 'Rodomaior', 'Objetos'
+exec MASTER.dbo.ProcuraObjetos 'LONTANO', 'LONTANO', 'VALIDA_CTE_DESPESA'
 --exec MASTER.dbo.ProcuraObjetos 'ZDA', 'COPAS', 'Objetos'
 --exec MASTER.dbo.ProcuraObjetos 'ZDA_GSe', 'Rodomaior', 'Objetos'
 --exec MASTER.dbo.ProcuraObjetos 'ZDA_GSe', 'COPAS', 'Objetos'

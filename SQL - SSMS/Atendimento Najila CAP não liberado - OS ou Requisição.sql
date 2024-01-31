@@ -64,3 +64,8 @@ select * from ContasPagar where CodContasPagar = 1356244
 select ValorDocumento, Situacao,* from ContasPagar_log where CodContasPagar = 1356244
 select  * from ConhecimentosRelacaoFretes_log where CodRelacaoFrete = 1088678 order by DataLog desc
 select * from ConhecimentosRelacaoFretes where CodRelacaoFrete = 1088678
+
+
+select DataCriacao,* from ContasPagar where codcontaspagar in (1377810,1377811)
+select DataCriacao,* from ContasPagar_RequisicaoProdutos where CodRequisicao = 1339011
+

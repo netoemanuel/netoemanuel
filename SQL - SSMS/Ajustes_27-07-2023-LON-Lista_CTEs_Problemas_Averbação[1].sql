@@ -1,0 +1,107 @@
+exec verificacte 20000147005
+--delete from lontano_gse.dbo.averbacaofrete where sequencialcte = 180000005916 and tipo is null
+select * from lontano_gse.dbo.averbacaofrete where sequencialcte = 180000005916 and tipo is null
+select status, dt_alteracao, no_protocolo, xml_enviado, xml_retorno, * from lontano_gse.dbo.cte where sequencial = 180000005916
+--update lontano_gse.dbo.cte set status = status where sequencial = 180000005916
+exec VerificaCTe 180000005916
+
+--update lontano_gse.dbo.CTe_LOG set Status = 1, cStat = 100, xMotivo = 'Autorizado o uso da CT-e', 
+--nProt = 151220579457849, codLog = 22,  xmlEnvolvido ='
+--	<protCTe> 
+--	<infProt>
+--			<tpAmb>1</tpAmb>
+--			<verAplic>MT20200708016</verAplic>
+--			<chCTe>51221211455829000286570000006495161006495160</chCTe>
+--			<dhRecbto>2022-12-08T16:00:54-04:00</dhRecbto>
+--			<nProt>151220579457849</nProt>
+--			<digVal>H5MNekpbVhA7iLz7kxAH5pDLbWQ=</digVal>
+--			<cStat>100</cStat>
+--			<xMotivo>Autorizado o Uso do CT-e</xMotivo>
+--		</infProt>
+--		</protCTe>'  where sequencial = 180000005916 and ID = 7002529
+
+--update lontano_gse.dbo.cte set NO_Retorno = 100, DS_Retorno = 'Autorizado o uso da CT-e', 
+--NO_Protocolo = 151220579457849, dt_alteracao = '2022-12-08 16:01:21.717',Status = 1  where sequencial = 180000005916
+
+--update lontano_gse.dbo.cte set   XML_Retorno= '
+--	<protCTe> 
+--	<infProt>
+--			<tpAmb>1</tpAmb>
+--			<verAplic>MT20200708016</verAplic>
+--			<chCTe>51221211455829000286570000006495161006495160</chCTe>
+--			<dhRecbto>2022-12-08T16:00:54-04:00</dhRecbto>
+--			<nProt>151220579457849</nProt>
+--			<digVal>H5MNekpbVhA7iLz7kxAH5pDLbWQ=</digVal>
+--			<cStat>100</cStat>
+--			<xMotivo>Autorizado o Uso do CT-e</xMotivo>
+--		</infProt>
+--		</protCTe>'  
+--				where Sequencial = 180000005916 
+
+--100000079704
+--100000079705
+--800000027995
+--800000027996
+--20000147004  
+--20000147003  
+--20000147002
+--20000147001
+--20000147000
+--20000146999   
+--650000023547 
+--650000023546 
+--180000006970 
+--180000006969  
+--180000006968
+--180000006967
+--500000005802
+--110000018392
+--230000040993 
+--230000040993
+--530000154376  Valor da Mercadoria Invalida
+--30000152908 
+--250000072002 -- Cancelado
+--180000005916 2017
+--730000129826 CTe orginal nao localizado
+--280000166837 --  2022 
+--280000166835 cancelado 2022
+--280000166834 cancelado 2022
+--270000036157 -- 2016
+--exec VerificaCTe 30000143013 Cancelado 2022
+--exec VerificaCTe  30000143013 Cancelado
+--exec VerificaCTe 240000043424 2022
+--exec VerificaCTe 60000022790 cancelado
+--exec VerificaCTe 420000014576 cancelado
+--exec VerificaCTe 420000014576 cancelado
+--exec VerificaCTe 350000001301 2021
+--exec VerificaCTe 350000001253 2021
+--exec VerificaCTe 350000001252 2021
+--exec VerificaCTe 30000134134 2021
+--exec VerificaCTe 30000134134 2021
+--delete from lontano_gse.dbo.cte_log where sequencial = 30000134134 and id in (
+--16105916,16105914,16104856,16104855,16104852,16104851,16104850,16104849,16104845,16104844,16104804,16104803,16104772,16104771,16104750,16104749,16104748,16104747,16104729,16104728,16104707,16104706,16104691,16104690,16104689,16104688,16104609,16104608,16104589,16104588,16104587,16104586,16104568,16104566,16104563,16104562,16104557,16104556,16104553,16104540)
+--exec VerificaCTe 10000017189
+--exec VerificaCTe 10000017187
+--exec VerificaCTe 30000132853
+--exec VerificaCTe 480000003091
+--exec VerificaCTe 530000116162 2021
+--exec VerificaCTe 780000004878 2020
+--exec VerificaCTe 620000005022 2020
+--exec VerificaCTe 620000004909 2020
+--exec VerificaCTe 620000003726 2020
+--exec VerificaCTe 620000003719 2020
+--exec VerificaCTe 100000064774 2020
+--exec VerificaCTe 620000001285 2020
+--exec VerificaCTe 60000016493 2020
+--60000016490 2020
+--250000054826 2020
+--890000019088 2020
+--890000019128 2020
+--720000026085 2020
+--720000026083 2020 
+--600000012310 2020 
+--880000032353 -- 2019
+--890000018237 2020
+--20000106040 2020
+--20000106040 2020
+

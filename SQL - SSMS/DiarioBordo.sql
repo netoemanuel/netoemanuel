@@ -10,19 +10,70 @@ SELECT DiarioBordo.*, Feriados.DescFeriado AS DiaSemana FROM DiarioBordo LEFT OU
 ON Feriados.Data = DiarioBordo.DataCompleta 
 WHERE (CodMotorista = 1105489   ) AND (MesAno = '05/2015') ORDER BY Dia, HoraInicial
 
-SELECT * FROM DiarioBordoMotorista WHERE MesAno = '06/2022' AND Dia = 31
+SELECT * FROM DiarioBordoMotorista WHERE MesAno = '09/2023' AND Dia = 31
 
 
 SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 1105489 AND MesAno = '03/2022' ORDER BY Dia
 SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 1105489 AND MesAno = '04/2022' ORDER BY Dia
 SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 1105489 AND MesAno = '05/2022' ORDER BY Dia
 SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 91003077 AND MesAno = '06/2023' ORDER BY Dia
+SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 1040394 AND MesAno = '09/2023' ORDER BY Dia
+SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 1106118 AND MesAno = '09/2023' ORDER BY Dia
+
+SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 1106116 AND MesAno = '09/2023' ORDER BY Dia
+SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 1104187 AND MesAno = '09/2023' ORDER BY Dia
+SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 1045274 AND MesAno = '09/2023' ORDER BY Dia
+SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 1004475 AND MesAno = '09/2023' ORDER BY Dia
+SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 1004475 AND MesAno = '09/2023' ORDER BY Dia
+SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 1105666 AND MesAno = '11/2023' ORDER BY Dia
+SELECT * FROM DiarioBordoMotorista WHERE MesAno = '11/2023' and Dia = 31 ORDER BY Dia
+SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 1105835 AND MesAno = '11/2023' ORDER BY Dia
+SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 1104730 AND MesAno = '11/2023' ORDER BY Dia
+SELECT * FROM DiarioBordoMotorista WHERE dia = 31 AND MesAno = '11/2023' ORDER BY Dia
+
+
+----DELETE FROM DiarioBordoMotorista WHERE Sequencial = 7024679
+--DELETE FROM DiarioBordoMotorista WHERE Sequencial = 6997264
+
+--update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 7024679
+
+--update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 6978045 
+--update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 6740665 
+--update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 6766110 
+--update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 6791016 
+--update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 6740665 
+--update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 6747225 
+--update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 6801160 
+--update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 6747030 
+--update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 6815231
+--update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 6758011 
+--update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 6749677 
+--update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 6756400 
+--update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 6786103 
+--update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 6774553 
+
+--update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 6740665 
+--update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 6815733 
+
+
+SELECT DiarioBordo.*, Feriados.DescFeriado AS DiaSemana FROM DiarioBordo
+LEFT OUTER JOIN Feriados ON Feriados.Data = DiarioBordo.DataCompleta 
+WHERE (CodMotorista = 1040394) AND (MesAno = '09/2023') ORDER BY Dia, HoraInicial
+
+
 SELECT SituacaoVeiculo, * FROM Veiculos WHERE CodVeiculo = 4466
 
 
 --SELECT * FROM DiarioBordoMotorista WHERE MesAno = '01/2016' ORDER BY Dia DESC --06/2017	31	18:35	21:35
-SELECT * FROM DiarioBordoMotorista WHERE MesAno = '06/2023' AND Dia = 31 
---DELETE FROM DiarioBordoMotorista WHERE MesAno = '06/2023' AND Dia = 31
+SELECT * FROM DiarioBordoMotorista WHERE MesAno = '09/2023' AND Dia = 31 
+--DELETE FROM DiarioBordoMotorista WHERE MesAno = '09/2023' AND Dia = 31
+
+------
+--DELETE FROM DiarioBordoMotorista WHERE MesAno = '09/2023' AND Dia = 31
+--08/09/2023 - Atendimento Clovis, Grupo GS: 
+--Sequencial	CodMotorista	MesAno	Dia	HoraInicial	HoraFinal	Tipo	CodVeiculo	CodUsuarioCriacao	CodFilialCriacao	DataCriacao	CodUsuarioAlteracao	CodFilialAlteracao	DataAlteracao	SeqJornadaOmnilink	IndConferencia
+--6737650	1040394	09/2023	31	15:01	16:54	D	22034	20044	RO	2023-09-08 07:52:11.000	20044	RO	2023-09-08 07:53:38.000	NULL	N
+---------
 
 
 --DELETE FROM DiarioBordoMotorista WHERE CodMotorista = 1105489     AND MesAno = '09/2016' 

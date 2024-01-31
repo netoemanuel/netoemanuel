@@ -1,0 +1,14 @@
+----Emanuel/Paola (#14298):
+-- select * from ContasPagar where CodContasPagar = 1893236
+-- SELECT saldo, Situacao, *
+-- -- DELETE
+-- FROM ContasPagar
+-- WHERE DataVencimento = '2024-01-04'
+-- 	AND NumDocumento = '01/2024 Mensal'
+-- SELECT rat.*
+-- --DELETE FROM RateioContasPagar
+-- FROM RateioContasPagar rat
+-- JOIN ContasPagar cap ON cap.CodContasPagar = rat.CodContasPagar
+-- WHERE DataVencimento = '2024-01-04'
+-- 	AND NumDocumento = '01/2024 Mensal'
+
