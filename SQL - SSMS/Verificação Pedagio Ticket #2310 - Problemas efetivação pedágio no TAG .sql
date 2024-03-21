@@ -1,125 +1,51 @@
 	--
-SELECT CodOrdemEmbarque,CIOT, * from ConhecimentosTransporte where NumConhecto = 700760   and CodUF = 'MT' --2023-05-02 20:20:00
+SELECT CodOrdemEmbarque,CIOT, * from ConhecimentosTransporte where NumConhecto = 614469 and CodUF = 'GO' --2023-05-02 20:20:00
 --update ConhecimentosTransporte set DataEmissao = '2023-05-02 20:20:00' where sequencial = 450000023531
 --
 SELECT CodOrdemEmbarque FROM ConhecimentosTransporte WHERE CodUF = 'SP' AND NumConhecto = 179355
 --
-SELECT EmpresaValePedagio, ValorPedagioSemParar, TipoDispositivoValePedagio,CIOT FROM OrdemEmbarque WHERE NumOrdemEmbarque = 81011801
-
-SELECT EmpresaValePedagio, NumCartaoValePedagio, RotaSemParar,ValorPedagioSemParar FROM OrdemEmbarque WHERE NumOrdemEmbarque = 40014451
-
-
---
 --Alterar dispositivo
-select TipoDispositivoValePedagio  from OrdemEmbarque where NumOrdemEmbarque = 53101266 -- 0
---update OrdemEmbarque set TipoDispositivoValePedagio = 1 where NumOrdemEmbarque = 78029340
+select TipoDispositivoValePedagio,NumCartaoValePedagio  from OrdemEmbarque where NumOrdemEmbarque = 31118498 -- 0 / 07384514
+--update OrdemEmbarque set TipoDispositivoValePedagio = 1 where NumOrdemEmbarque = 31118498
 
---update OrdemEmbarque set TipoDispositivoValePedagio = 0 where NumOrdemEmbarque = 78029340
+--update OrdemEmbarque set TipoDispositivoValePedagio = 0, NumCartaoValePedagio = Null where NumOrdemEmbarque = 31118498
 --
---update OrdemEmbarque set NumCartaoValePedagio = null where NumOrdemEmbarque = 78029340
+--update OrdemEmbarque set NumCartaoValePedagio = null where NumOrdemEmbarque = 31118498
 --
 --Limpar a Roteirzação--
-SELECT CodOrdemEmbarque,CIOT, Pedagio,* from ConhecimentosTransporte where NumConhecto = 395257   and CodUF = 'MG'
+SELECT CodOrdemEmbarque,CIOT, Pedagio,* from ConhecimentosTransporte where NumConhecto = 400066 and CodUF = 'MG'
 --UPDATE ConhecimentosTransporte set Pedagio = 276.60 where Sequencial = 40000036424 -- 276.60
-	SELECT EmpresaValePedagio, NumCartaoValePedagio, RotaSemParar,ValorPedagioSemParar FROM OrdemEmbarque WHERE NumOrdemEmbarque = 30060345
+SELECT EmpresaValePedagio, NumCartaoValePedagio, RotaSemParar,ValorPedagioSemParar FROM OrdemEmbarque WHERE NumOrdemEmbarque = 98032534 
+--update OrdemEmbarque set EmpresaValePedagio = NULL , NumCartaoValePedagio = NULL, RotaSemParar = NULL, ValorPedagioSemParar = NULL  where  NumOrdemEmbarque = 98032534 
+---voltar os dados:
 --update OrdemEmbarque set EmpresaValePedagio = 'Banco Bradesco S/A' , NumCartaoValePedagio = 4417812013348815, RotaSemParar = 'UNAI MG X UBERLANDIA MG', ValorPedagioSemParar = 266.40  where  NumOrdemEmbarque = 30060345 
---update OrdemEmbarque set EmpresaValePedagio = NULL , NumCartaoValePedagio = NULL, RotaSemParar = NULL, ValorPedagioSemParar =NULL  where  NumOrdemEmbarque = 30060345 
+
+
+--98032534
+--EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Banco Bradesco S/A	00000000	0	228.60
+
+--85020325
+--EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Centro de Gestao de Meios de P	4198071136412942	SETE QUEDAS MS X RIO GRANDE RS	355.00
+
 
 --EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4417812013348815	UNAI MG X UBERLANDIA MG	266.40
+--Banco Bradesco S/A	4417812010804786	UBERLÂNDIA MG X LAGOA GRANDE MG	50.80
+
+
+--98032334
+--EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Centro de Gestao de Meios de P	00000000	0	355.20
+
+--ordem 94059468
+--EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Banco Bradesco S/A	4417812003383418	PATROCINIO-MG X UBERLANDIA-MG	152.40
 
 
 --EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	00000000	0	177.80
+--Centro de Gestao de Meios de P	00000000	0	113.40
 
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Roadcard Instituição de Pag. I	4417812006743972	1	276.60
-
---#13434 - Limpar roteirização
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---NULL	0733628018	SORRISO-MT X RODONOPOLIS-MT VIA MUTUM	353.70
-
---Novo ticket criado: #13380 - LIMPAR ROTEIRIZAÇÃO
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	0733628018	SORRISO-MT X RODONOPOLIS-MT VIA MUTUM	353.70
---Centro de Gestao de Meios de P	0733628686	SORRISO-MT X RODONOPOLIS-MT VIA MUTUM	353.70
---Centro de Gestao de Meios de P	0733627912	SORRISO-MT X RODONOPOLIS-MT VIA MUTUM	353.70
---Centro de Gestao de Meios de P	0729095419	SORRISO-MT X RODONOPOLIS-MT VIA MUTUM	353.70
---Centro de Gestao de Meios de P	0733628245	SORRISO-MT X RODONOPOLIS-MT VIA MUTUM	353.70
---Centro de Gestao de Meios de P	0735074156	SORRISO-MT X RODONOPOLIS-MT VIA MUTUM	353.70
---Centro de Gestao de Meios de P	0733627994	SORRISO-MT X RODONOPOLIS-MT VIA MUTUM	353.70
---Centro de Gestao de Meios de P	0734402834	SORRISO-MT X RODONOPOLIS-MT VIA MUTUM	353.70
-
---Novo ticket criado: #13314 - ROTEIRIZAÇÃO PEDAGIO CTE: 192980
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---NULL	4198071020115015	GUAIRA-MS X RIO GRANDE-RS	418.00
-
---#13207 - ROTEIRIZAÇÃO PEDAGIO CTE: 192980
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	0732721958	GUAIRA-MS X RIO GRANDE-RS	284.40
-
---#13038 - Mudança de Dispositivo de Pedágio CTe 692469-MT
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	0735486746	IPIRANGA DO NORTE - MT X MIRITITUBA - MT (VIA IPIRANGA)	944.19
-
-
---#13135 - Limpar roteirização
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4417812016490424	CAMPO GRANDE X SANTOS	1224.90
-
-
---#12734 - EXCLUSAO DE ROTERIZACAO DE CTE 604910 E CTE 604911
-
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4417812015519264	0	0.00
-
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4198071136422446	0	0.00
-
- --#12626 - EXCLUIR ROTERIZAÇÃO OC 4030275
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4417812015773234	SAPEZAL/MT X  RONDONOPOLIS/MT	293.40
-
---plantao 17/10
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4417812014411182	NULL	NULL
-
---#12227 - Alterar pedágio ct-e DF-16542
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4417812000660016	BRASILIA/DF X ARAGUARI/MG	218.70
-
-
---# 11770 - SOLICITO SUPORTE DE EMBARQUE CONHECIMENTO 687459
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	00000000	0	682.50
-
---#11692 - ERRO INTEGRAÇÃO PEDAGIO
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4417812013828154	0	0.00
-
---#11703 - VERIFICAR PEDAGIO CTE 686343 FILIAL SORRISO
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	0730310348	SORRISO X MIRITITUBA - NOVO	818.19
-
---#11571 - ERRO AO PAGAR PEDÁGIO SEM PARAR CT-E 14651
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	00000000	2	772.20
-
---#11567 - TROCA DE PEDAGIO - TAG PARA PAMCARD - FILIAL CAMPO NOVO DO PARECIS-MT
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	0736213769	Campo Novo do Parecis, MT X Imbituba, SC	673.40
-
---#11226 - Alterar dispositivo de pedágio
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	0736397043	CARLINDA-MT ITAITUBA-PA	831.60
-
---#10966 com Assunto: "FAVOR VERIFICAR REFERENTE PAGAMENTO DE PEDAGIO CTE 683079".
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	00000000	1	287.10
-
---#10421 - Pedágio ct-e GO-588052
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---		NULL			  4417812011092605			 0					90.00
 
 
 SELECT RotaSemParar, ValorPedagioSemParar, TipoDispositivoValePedagio,EmpresaValePedagio,NumCartaoValePedagio FROM OrdemEmbarque WHERE NumOrdemEmbarque = 24076776
@@ -155,7 +81,7 @@ INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 INNER JOIN CartaFrete CF ON CF.NumOrdemEmbarque = oe.NumOrdemEmbarque
 inner join AdmPagamentoFrete APF on  CF.CodAdmPagtoFrete = APF.CodAdmFrete
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'SP' AND CTRC.Numconhecto = 119777                                 
+WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'MT' AND CTRC.Numconhecto = 705798                                  
 ORDER BY O.DataCriacao DESC, O.NumSeq DESC, O.SeqConsulta DESC
 	
 select NumeroCartao,* from OrdemEmbarque where NumOrdemEmbarque = 7037862 
@@ -203,17 +129,11 @@ SELECT * FROM CartaFrete_Ocorrencia WHERE IdCartaFrete = 1507337 AND NumSeq = 19
 --IdCartaFrete	NumSeq	SeqConsulta	DataCriacao	CodUsuarioCriacao	CodFilialCriacao	DescricaoOcorrencia	ConteudoXml	tipoOcorrencia	Erro	Valido	CodAdmPagtoFrete	Protocolo	CodViagemPamcard
 --1507337	19	1	2023-12-19 17:00:13.807	14102	CG	INSERIR VIAGEM	QPB5197	ENVIO		1	7	NULL	NULL
 --
-
-select * from LogRoteirizacaoPedagio where NumOrdemEmbarque =40014293
-
 ----------------------------------------------------------------------------------------------------------------------------------
 --REPOM
-
 --Erro ao Gerar CIOT
 --CÓDIGO: 728 - 'TOTALFREIGHTVALUE' SHOULD NOT BE EMPTY.; CÓDIGO: 728 - 'TOTALFREIGHTVALUE' MUST BE GREATER THAN '0'.;
 --Erro devido a ter saldo pago na guia 2 os CT-es do do chamado são complemento 
-
-
 -- Erro ao pagar Estadia REPOM 
 --Quando tiver ess retorno:
 --CÓDIGO: 728 - 'PAYMENT.EXPECTEDDELIVERYDATE' MUST BE GREATER THAN OR EQUAL TO '8/31/2023 12:00:00 AM'.; 
@@ -222,14 +142,6 @@ select * from LogRoteirizacaoPedagio where NumOrdemEmbarque =40014293
 SELECT DataEmissao,  * from ConhecimentosTransporte where NumConhecto = 180455   and CodUF = 'PR' --2023-08-24 00:00:00  -- EXEMPLO caso dia 31/08/2023
 --update ConhecimentosTransporte set DataEmissao = '2023-06-09 08:55:53.000' where sequencial = 430000005373 -- 2023-10-31 13:15:00
 
-
--- #12791 - ERRO AO PAGAR ESTADIA CTE 383807  --2023-07-14 19:09:00
-
-
-SELECT  * from ConhecimentosTransporte CTRC --where DataEmissao <> DataCriacao order by DataEmissao desc
-inner join LONTANO_GSe.dbo.cte CTE on CTE.Sequencial = CTRC.Sequencial
-
-where CTRC.DataEmissao <> CTE.DataCriacao order by CTE.DataCriacao desc
 
 
 

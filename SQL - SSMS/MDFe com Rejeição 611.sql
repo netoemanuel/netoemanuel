@@ -1,19 +1,19 @@
 --ORDEM COM 611:
-EXEC MonitoraMDFe 24080574
---exec MonitoraMDFe 24080574	--> 52240111455829000367580030003716061014736303
---update Lontano_GSe.dbo.mdfe set Id = '52240111455829000367580030003716061014736303', cDV = 3, nMDF = 371606, cMDF = '01473630' where Sequencial = 1594534
---update Lontano_GSe.dbo.mdfe set Id = '50230211595217000108580000000900641004533589', cDV = 9, nMDF = 090064, cMDF = '00453358' where Sequencial = 439839  exemplo
+EXEC MonitoraMDFe 54001728
+--exec MonitoraMDFe 24080574	--> 51240211595217000299580040000766771006281143
+--update Rodomaior_GSe.dbo.mdfe set Id = '51240211595217000299580040000766771006281143', cDV = 3, nMDF = 667710, cMDF = '00628114' where Sequencial = 568711
+--update Rodomaior_GSe.dbo.mdfe set Id = '50230211595217000108580000000900641004533589', cDV = 9, nMDF = 090064, cMDF = '00453358' where Sequencial = 439839  exemplo
 
---update Lontano_GSe.dbo.mdfe_LOG set cStat = 204 where ID = 24385309 -- Usar ID mais recente
---delete from Lontano_GSe.dbo.mdfe where Sequencial in (515255,515247,515246,515241,515240,515238,515235,515234) --in (419024,419015,419009,419008)
+--update Rodomaior_GSe.dbo.mdfe_LOG set cStat = 204 where ID = 6547254 -- Usar ID mais recente
+--delete from Rodomaior_GSe.dbo.mdfe where Sequencial in (515255,515247,515246,515241,515240,515238,515235,515234) --in (419024,419015,419009,419008)
 
 --ORDEM COM MDFE ERRADO!
 --exec MonitoraMDFe 7014840
---delete from Lontano_GSe.dbo.mdfe where Sequencial in( 555073,555072,555071,555065,555063,555060,555057)
---exec Lontano_GSe.dbo.geramdfeviagem 7014840, 10005, 'CG'
+--delete from Rodomaior_GSe.dbo.mdfe where Sequencial in( 568702,568660)
+--exec Rodomaior_GSe.dbo.geramdfeviagem 7014840, 10005, 'CG'
 
 
---update Lontano_GSe.dbo.mdfe set Status = 0 where Sequencial = 1594533
+--update Rodomaior_GSe.dbo.mdfe set Status = 0 where Sequencial = 1594533
 
 
 EXEC MonitoraMDFe 7018902

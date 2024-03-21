@@ -2,10 +2,10 @@
 
 use RODOMAIOR
 
-SELECT 
+SELECT -- format(ctrc.ValorTotalFrete 'N2','pt-br')
 	ctrc.coduf 'UF'
 	,ctrc.CodFilialComissao 'Filial Comissão'
-	,ctrc.CodfilialEmitente as 'Filial Emitente'
+--	,ctrc.CodfilialEmitente as 'Filial Emitente'
 	,ctrc.numconhecto 'Num CTRC'
 	,ctrc.dataemissao 'Data Emissão'
 	,ctrc.SituacaoConhecto 'Situação Conhecimento'
@@ -14,9 +14,9 @@ SELECT
 	,Fornc.ClassifFiscal 'Classif. Fiscal'
 	,Fornc.IndAutonomo 'TAC'
 	,PF.IndEmissaoCartaFreteCTe 'Carta Frete'
-	,ctrc.desconto 'Desc. Cartão'
-	,risco.valortotal 'Desc. GR'
-	,oe.valortotal 'Desc.GR Ordem'
+	,isnull (format(ctrc.desconto,'N2','pt-br'), 0.00)  'Desc. Cartão'
+	,isnull (format(risco.valortotal,'N2','pt-br'), 0.00) 'Desc. GR'
+	,isnull (format( oe.valortotal,'N2','pt-br'), 0.00) 'Desc.GR Ordem'
 	,(ISNULL(CTRC.Desconto,0)+ISNULL(Risco.ValorTotal,ISNULL(OE.ValorTotal,0))+ISNULL(CTRC.DescontoTaxaAdm,0)) AS DESCONTO
 FROM 
 	ConhecimentosTransporte ctrc
@@ -26,9 +26,12 @@ FROM
 	INNER JOIN PedidosFrete PF on ctrc.CodPedidoFrete = PF.CodPedidoFrete
 WHERE 
 	--ctrc.CodFilialComissao = 'OSV' and
-	ctrc.DataEmissao between '2023-09-01' and '2023-09-30 23:59:29'
+		ctrc.DataEmissao between '2024-02-01' and '2024-02-29 23:59:29'
 	and ctrc.SituacaoConhecto <> 'Cancelado'
 	and ctrc.TipoConhecimento = 'Normal'
 	and (ISNULL(CTRC.Desconto,0)+ISNULL(Risco.ValorTotal,ISNULL(OE.ValorTotal,0))+ISNULL(CTRC.DescontoTaxaAdm,0)) > 0
 order by  
-	[Filial Comissão] asc
+	[OE].[DataCriacao] asc
+
+
+

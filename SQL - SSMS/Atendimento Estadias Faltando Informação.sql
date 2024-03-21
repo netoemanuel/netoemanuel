@@ -10,14 +10,14 @@ select * from ConhecimentosTransporte where NumConhecto = 1934200 and CodUF = 'M
 
 
 
-select * from ConhecimentosTransporte where NumConhecto = 604785
+select * from ConhecimentosTransporte where NumConhecto = 396380 and CodUF = 'MG'
 
 
-SELECT Sequencial,CodUF,Numconhecto, TipoConhecimento, ModeloDocumento, * FROM ConhecimentosTransporte WHERE CodUF = 'MG' AND SerieConhecto = '0' AND Numconhecto = 391206
-select * from ComplementoConhecimento where NumSeqConhecto = 530000158359
-select DataEntradaDesembarque,DataSaidaDesembarque,IndFaturaEstadia,IndPagtoEstadia,IndQtdeEstadia,ValorEstadia  from ComplementoConhecimento where NumSeqConhecto = 530000158359
-select DataEntradaDesembarque,DataSaidaDesembarque,IndFaturaEstadia,IndPagtoEstadia,IndQtdeEstadia,ValorEstadia , TempoEstadiaACobrar,TempoEstadiaACobrar,   * from ComplementoConhecimento_Log where NumSeqConhecto = 530000158359 ORDER by DataLog desc
---update ComplementoConhecimento SET DataEntradaDesembarque ='2023-10-21 20:10:00.000',DataSaidaDesembarque='2023-10-24 16:37:00.000' ,ValorEstadia = 0.88, TempoEstadiaACobrar = '56:27'  where NumSeqConhecto = 530000158359
+SELECT Sequencial,CodUF,Numconhecto, TipoConhecimento, ModeloDocumento, * FROM ConhecimentosTransporte WHERE CodUF = 'MG' AND SerieConhecto = '0' AND Numconhecto = 396380
+select * from ComplementoConhecimento where NumSeqConhecto = 530000161162
+select DataEntradaDesembarque,DataSaidaDesembarque,IndFaturaEstadia,IndPagtoEstadia,IndQtdeEstadia,ValorEstadia  from ComplementoConhecimento where NumSeqConhecto = 530000161162
+select DataEntradaDesembarque,DataSaidaDesembarque,IndFaturaEstadia,IndPagtoEstadia,IndQtdeEstadia,ValorEstadia , TempoEstadiaACobrar,TempoEstadiaACobrar,   * from ComplementoConhecimento_Log where NumSeqConhecto = 530000161162 ORDER by DataLog desc
+----update ComplementoConhecimento SET DataEntradaDesembarque ='2024-01-29 18:41:00.000',DataSaidaDesembarque='2024-02-01 14:34:00.000' ,ValorEstadia = 0.88, TempoEstadiaACobrar = '55:53'  where NumSeqConhecto = 530000161162
 
 
 -- Exemplo

@@ -20,7 +20,24 @@ SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where SequencialConhecime
 --UPDATE NotasFiscaisConhecimento set ChaveAcessoNFe = null where SequencialConhecimento in  (180000014330,180000014329,180000014326,180000014342,180000014386,180000014387,180000014385)
 
 
+
+--EXCLUSÃO DA CHAVE DE ACESSO DA NF-E 60704
+SELECT Sequencial,* from ConhecimentosTransporte where NumConhecto = 51104 and CodUF = 'MT'
+SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where SequencialConhecimento in(40000038384)  --51240302937632003801550010000607041329240708
+SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where ChaveAcessoNFe in ( '51240302937632003801550010000607041329240708') -- 40000038384 
+--UPDATE NotasFiscaisConhecimento SET ChaveAcessoNFe = Null WHERE SequencialConhecimento in (40000038384)
+
+SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where SequencialConhecimento in(780000004074)
+SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where ChaveAcessoNFe in ( '31240312006181003672550010000542841000315320') -- 780000004074 /  novo 740000004292
+--UPDATE NotasFiscaisConhecimento SET ChaveAcessoNFe = '31240312006181003672550010000542841000315320' WHERE SequencialConhecimento in (780000004074)
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where SequencialConhecimento in(40000037962,40000037959)
+SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where ChaveAcessoNFe in ( '51240202937632003712550010000600631233462922') -- 40000037962
+SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where ChaveAcessoNFe in ( '51240202937632003712550010000600621116261842') -- 40000037959
+--UPDATE NotasFiscaisConhecimento SET ChaveAcessoNFe = Null WHERE SequencialConhecimento in (40000037962,40000037959)
+
+
 --Exclusão da Chave de acesso
 --670000001128 - 31231207571116001282550010000487091633070704 -  NF 48709
 

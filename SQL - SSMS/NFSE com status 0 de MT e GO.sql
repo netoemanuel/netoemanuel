@@ -1,0 +1,5 @@
+--NFSE com status 0 só para casos de MT e GO
+--Verificar na procedures se estão retornando algo.
+--Caso não retorne nada DEBUGAR a procedure
+--se for MT: EXEC LONTANO_GSe.dbo.ListarNFSeRO_EnvioPendente
+--se for GO: EXEC LONTANO_GSe.dbo.ListarNFSeGO_EnvioPendente

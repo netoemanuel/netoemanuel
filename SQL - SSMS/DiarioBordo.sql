@@ -32,6 +32,8 @@ SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 1104730 AND MesAno = '11
 SELECT * FROM DiarioBordoMotorista WHERE dia = 31 AND MesAno = '11/2023' ORDER BY Dia
 
 
+SELECT * FROM DiarioBordoMotorista_log WHERE CodMotorista = 7000017  order by DataLog desc AND MesAno = '02/2024'
+
 ----DELETE FROM DiarioBordoMotorista WHERE Sequencial = 7024679
 --DELETE FROM DiarioBordoMotorista WHERE Sequencial = 6997264
 
