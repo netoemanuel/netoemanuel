@@ -1,24 +1,56 @@
 	--
-SELECT CodOrdemEmbarque,CIOT, * from ConhecimentosTransporte where NumConhecto = 614469 and CodUF = 'GO' --2023-05-02 20:20:00
+SELECT CodOrdemEmbarque,CIOT, * from ConhecimentosTransporte where NumConhecto = 713585 and CodUF = 'MT' --2023-05-02 20:20:00
 --update ConhecimentosTransporte set DataEmissao = '2023-05-02 20:20:00' where sequencial = 450000023531
 --
-SELECT CodOrdemEmbarque FROM ConhecimentosTransporte WHERE CodUF = 'SP' AND NumConhecto = 179355
+SELECT CodOrdemEmbarque FROM ConhecimentosTransporte WHERE CodUF = 'MG' AND NumConhecto = 406391
 --
 --Alterar dispositivo
-select TipoDispositivoValePedagio,NumCartaoValePedagio  from OrdemEmbarque where NumOrdemEmbarque = 31118498 -- 0 / 07384514
---update OrdemEmbarque set TipoDispositivoValePedagio = 1 where NumOrdemEmbarque = 31118498
+select TipoDispositivoValePedagio,NumCartaoValePedagio  from OrdemEmbarque where NumOrdemEmbarque = 98033392 -- 0 / 53106799
+--update OrdemEmbarque set TipoDispositivoValePedagio = 0 where NumOrdemEmbarque = 98033392
 
 --update OrdemEmbarque set TipoDispositivoValePedagio = 0, NumCartaoValePedagio = Null where NumOrdemEmbarque = 31118498
 --
 --update OrdemEmbarque set NumCartaoValePedagio = null where NumOrdemEmbarque = 31118498
 --
 --Limpar a Roteirzação--
-SELECT CodOrdemEmbarque,CIOT, Pedagio,* from ConhecimentosTransporte where NumConhecto = 400066 and CodUF = 'MG'
+SELECT CodOrdemEmbarque,CIOT, Pedagio,* from ConhecimentosTransporte where NumConhecto = 406391   and CodUF = 'MG'
 --UPDATE ConhecimentosTransporte set Pedagio = 276.60 where Sequencial = 40000036424 -- 276.60
-SELECT EmpresaValePedagio, NumCartaoValePedagio, RotaSemParar,ValorPedagioSemParar FROM OrdemEmbarque WHERE NumOrdemEmbarque = 98032534 
---update OrdemEmbarque set EmpresaValePedagio = NULL , NumCartaoValePedagio = NULL, RotaSemParar = NULL, ValorPedagioSemParar = NULL  where  NumOrdemEmbarque = 98032534 
+	SELECT EmpresaValePedagio, NumCartaoValePedagio, RotaSemParar,ValorPedagioSemParar FROM OrdemEmbarque WHERE NumOrdemEmbarque = 98033392 
+--update OrdemEmbarque set EmpresaValePedagio = NULL , NumCartaoValePedagio = NULL, RotaSemParar = NULL, ValorPedagioSemParar = NULL  where  NumOrdemEmbarque = 98033392 
 ---voltar os dados:
 --update OrdemEmbarque set EmpresaValePedagio = 'Banco Bradesco S/A' , NumCartaoValePedagio = 4417812013348815, RotaSemParar = 'UNAI MG X UBERLANDIA MG', ValorPedagioSemParar = 266.40  where  NumOrdemEmbarque = 30060345 
+
+--98033392
+--EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Banco Bradesco S/A	4417812018524501	PATOS DE MINAS-MG X UBERLANDIA-MG	50.80
+
+--EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
+--NULL	4417812019073821	NULL	NULL
+
+--EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Banco Bradesco S/A	07307269	SORRISO X RONDONOPOLIS (VIA CAMPO VERDE)	63.00
+
+--53106799
+--EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
+--NULL	4417812019073821	0	68.40
+
+--28184524
+--EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Centro de Gestao de Meios de P	00000000	0	1541.40
+
+
+--31122118
+--NULL 0735570393	URUAÇU GO X GUARUJA SP - ANP	103.36
+--EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Banco Bradesco S/A	4417812018384641	NOVO PLANALTO GO X ANAPOLIS GO BR 153	100.70
+
+--43011932
+--EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Banco Bradesco S/A	4417812018816782	0	0.00
+
+--43011869
+--EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Banco Bradesco S/A	4417812010475231	0	0.00
 
 
 --98032534
@@ -63,9 +95,19 @@ SELECT TOP(1000) oe.CIOT,CTRC.TipoConhecimento,  CTRC.CodOrdemEmbarque, CTRC.Seq
 INNER JOIN CartaFrete CF ON CF.Sequencial = CTRC.Sequencial
 INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'MS' AND CTRC.Numconhecto = 191137 
+WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'GO' AND CTRC.Numconhecto = 599399 
 ORDER BY O.NumSeq DESC, O.SeqConsulta DESC
 --update OrdemEmbarque set CIOT ='REPOM' where NumOrdemEmbarque = 84025247
+
+SELECT * from RelacaoFretes where CodRelacaoFrete = 23007695
+select top (50)Observacoes, * from RelacaoFretes where  DataCriacao > '2024-05-30' and CodFornecedor = 1001300
+
+SELECT TOP(20)NumConhecto, * FROM ConhecimentosRelacaoFretes crf
+INNER JOIN ConhecimentosTransporte ct ON ct.Sequencial = crf.NumSeqConhecto
+INNER JOIN OrdemEmbarque oe ON oe.NumOrdemEmbarque = ct.CodOrdemEmbarque
+WHERE oe.CIOT = 'REPOM' 
+ORDER BY crf.DataCriacao DESC
+
 
 -- quando for olhar apenas um CTRC, no caso for complemento usar essa SQL:
 --SELECT TOP(100) oe.TipoDispositivoValePedagio,CTRC.DataEmissao, CTRC.SituacaoConhecto, oe.CIOT, CF.Ciot,apf.Descricao, oe.CodNaturezaCarga,  CTRC.CodOrdemEmbarque, CTRC.Sequencial, ctrc.CodUF + '-' + CONVERT(varchar(12), CTRC.NumConhecto) as 'CTRC', CTRC.CIOT, O.* FROM ConhecimentosTransporte CTRC
@@ -81,9 +123,22 @@ INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 INNER JOIN CartaFrete CF ON CF.NumOrdemEmbarque = oe.NumOrdemEmbarque
 inner join AdmPagamentoFrete APF on  CF.CodAdmPagtoFrete = APF.CodAdmFrete
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'MT' AND CTRC.Numconhecto = 705798                                  
+WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'MS' AND CTRC.Numconhecto = 200489                                  
 ORDER BY O.DataCriacao DESC, O.NumSeq DESC, O.SeqConsulta DESC
-	
+
+ --SQL RDM para verificar cancelamento CIOT pois as NFSes lá, não tem intagração ou seja nao é cancelada como na Lontano
+SELECT count(*)
+FROM ConhecimentosTransporte CTRC
+INNER JOIN CartaFrete CF ON CF.Sequencial = CTRC.Sequencial
+INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
+LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
+WHERE 
+CTRC.SerieConhecto = 'E' AND CTRC.CodUF = 'MS' AND CTRC.Numconhecto in (10135) 
+--nova validação paa encontrar somente CIOT CANCELADOS
+and DescricaoOcorrencia = 'CANCELAR CIOT' AND ConteudoXml LIKE '%StatusCode":200%' AND ConteudoXml LIKE '%canceled successfully%' AND tipoOcorrencia = 'RETORNO'
+
+
+
 select NumeroCartao,* from OrdemEmbarque where NumOrdemEmbarque = 7037862 
 --UPDATE OrdemEmbarque set NumeroCartao = 751781147 where NumOrdemEmbarque = 7037862 -- NUMERO CARTÃO REPOM ANTIGO 751781287
 select CIOT, * from OrdemEmbarque_log where NumOrdemEmbarque = 72049216 order by DataLog desc

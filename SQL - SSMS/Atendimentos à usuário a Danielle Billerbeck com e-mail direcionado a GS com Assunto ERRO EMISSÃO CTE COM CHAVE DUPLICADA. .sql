@@ -88,10 +88,13 @@ SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where ChaveAcessoNFe in (
 -- E-mail - RETIRAR CHAVE DE ACESSO NF 29/11/2022
 --72229.
 --770000001099 - 31220760498706013488550640000104091024516344
-
-
 select * from NotasFiscaisConhecimento where ChaveAcessoNFe = '50231260498706028752550500000692501044524740'
 
+
+--EXCLUIR CHAVE DA  NF - 17/05
+SELECT * from ConhecimentosTransporte where NumConhecto = 117353 and CodUF = 'GO'
+SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where SequencialConhecimento in(220000023301)  --52240500012377000160550030010040001653567410
+--UPDATE NotasFiscaisConhecimento SET ChaveAcessoNFe = Null WHERE SequencialConhecimento in (220000023301)
 
 
 

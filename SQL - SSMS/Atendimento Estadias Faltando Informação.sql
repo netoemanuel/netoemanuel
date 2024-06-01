@@ -13,11 +13,11 @@ select * from ConhecimentosTransporte where NumConhecto = 1934200 and CodUF = 'M
 select * from ConhecimentosTransporte where NumConhecto = 396380 and CodUF = 'MG'
 
 
-SELECT Sequencial,CodUF,Numconhecto, TipoConhecimento, ModeloDocumento, * FROM ConhecimentosTransporte WHERE CodUF = 'MG' AND SerieConhecto = '0' AND Numconhecto = 396380
-select * from ComplementoConhecimento where NumSeqConhecto = 530000161162
-select DataEntradaDesembarque,DataSaidaDesembarque,IndFaturaEstadia,IndPagtoEstadia,IndQtdeEstadia,ValorEstadia  from ComplementoConhecimento where NumSeqConhecto = 530000161162
-select DataEntradaDesembarque,DataSaidaDesembarque,IndFaturaEstadia,IndPagtoEstadia,IndQtdeEstadia,ValorEstadia , TempoEstadiaACobrar,TempoEstadiaACobrar,   * from ComplementoConhecimento_Log where NumSeqConhecto = 530000161162 ORDER by DataLog desc
-----update ComplementoConhecimento SET DataEntradaDesembarque ='2024-01-29 18:41:00.000',DataSaidaDesembarque='2024-02-01 14:34:00.000' ,ValorEstadia = 0.88, TempoEstadiaACobrar = '55:53'  where NumSeqConhecto = 530000161162
+SELECT Sequencial,CodUF,Numconhecto, TipoConhecimento, ModeloDocumento, * FROM ConhecimentosTransporte WHERE CodUF = 'GO' AND SerieConhecto = '0' AND Numconhecto = 619976 
+select * from ComplementoConhecimento where NumSeqConhecto = 310000097636
+select DataEntradaDesembarque,DataSaidaDesembarque,IndFaturaEstadia,IndPagtoEstadia,IndQtdeEstadia,ValorEstadia  from ComplementoConhecimento where NumSeqConhecto = 310000097636
+select DataEntradaDesembarque,DataSaidaDesembarque,IndFaturaEstadia,IndPagtoEstadia,IndQtdeEstadia,ValorEstadia , TempoEstadiaACobrar,TempoEstadiaACobrar,   * from ComplementoConhecimento_Log where NumSeqConhecto = 310000097636 ORDER by DataLog desc
+--update ComplementoConhecimento SET DataEntradaDesembarque ='2024-04-02 23:34:00.000',DataSaidaDesembarque='2024-04-02 23:34:00.000' ,ValorEstadia = 1.20, TempoEstadiaACobrar = '36:16'  where NumSeqConhecto = 310000097636
 
 
 -- Exemplo
