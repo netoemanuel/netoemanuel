@@ -3,10 +3,10 @@
 use RODOMAIOR
 
 SELECT -- format(ctrc.ValorTotalFrete 'N2','pt-br')
-	ctrc.coduf 'UF'
+	ctrc.numconhecto 'Num CTRC'
+	,ctrc.coduf 'UF'
 	,ctrc.CodFilialComissao 'Filial Comissão'
---	,ctrc.CodfilialEmitente as 'Filial Emitente'
-	,ctrc.numconhecto 'Num CTRC'
+--	,ctrc.CodfilialEmitente as 'Filial Emitente'	
 	,ctrc.dataemissao 'Data Emissão'
 	,ctrc.SituacaoConhecto 'Situação Conhecimento'
 	,ctrc.TipoConhecimento 'Tipo Conhecimento'
@@ -26,12 +26,12 @@ FROM
 	INNER JOIN PedidosFrete PF on ctrc.CodPedidoFrete = PF.CodPedidoFrete
 WHERE 
 	--ctrc.CodFilialComissao = 'OSV' and
-		ctrc.DataEmissao between '2024-02-01' and '2024-02-29 23:59:29'
+		ctrc.DataEmissao between '2024-05-01' and '2024-05-31 23:59:29'
 	and ctrc.SituacaoConhecto <> 'Cancelado'
 	and ctrc.TipoConhecimento = 'Normal'
 	and (ISNULL(CTRC.Desconto,0)+ISNULL(Risco.ValorTotal,ISNULL(OE.ValorTotal,0))+ISNULL(CTRC.DescontoTaxaAdm,0)) > 0
 order by  
-	[OE].[DataCriacao] asc
+	ctrc.[DataCriacao] 
 
 
 

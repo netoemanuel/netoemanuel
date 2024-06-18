@@ -95,7 +95,7 @@ SELECT TOP(1000) oe.CIOT,CTRC.TipoConhecimento,  CTRC.CodOrdemEmbarque, CTRC.Seq
 INNER JOIN CartaFrete CF ON CF.Sequencial = CTRC.Sequencial
 INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'GO' AND CTRC.Numconhecto = 599399 
+WHERE CTRC.SerieConhecto = 'NE' AND CTRC.CodUF = 'MT' AND CTRC.Numconhecto =2755  
 ORDER BY O.NumSeq DESC, O.SeqConsulta DESC
 --update OrdemEmbarque set CIOT ='REPOM' where NumOrdemEmbarque = 84025247
 
@@ -123,8 +123,9 @@ INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 INNER JOIN CartaFrete CF ON CF.NumOrdemEmbarque = oe.NumOrdemEmbarque
 inner join AdmPagamentoFrete APF on  CF.CodAdmPagtoFrete = APF.CodAdmFrete
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'MS' AND CTRC.Numconhecto = 200489                                  
+WHERE CTRC.SerieConhecto = 'E' AND CTRC.CodUF = 'GO' AND CTRC.Numconhecto = 8332                                 
 ORDER BY O.DataCriacao DESC, O.NumSeq DESC, O.SeqConsulta DESC
+
 
  --SQL RDM para verificar cancelamento CIOT pois as NFSes lá, não tem intagração ou seja nao é cancelada como na Lontano
 SELECT count(*)

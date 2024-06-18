@@ -29,12 +29,13 @@ SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 1105666 AND MesAno = '11
 SELECT * FROM DiarioBordoMotorista WHERE MesAno = '11/2023' and Dia = 31 ORDER BY Dia
 SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 1105835 AND MesAno = '11/2023' ORDER BY Dia
 SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 1104730 AND MesAno = '11/2023' ORDER BY Dia
+SELECT * FROM DiarioBordoMotorista WHERE CodMotorista = 28005869 AND MesAno = '06/2024' ORDER BY Dia
 SELECT * FROM DiarioBordoMotorista WHERE dia = 31 AND MesAno = '11/2023' ORDER BY Dia
 
 
-SELECT * FROM DiarioBordoMotorista_log WHERE CodMotorista = 7000017  order by DataLog desc AND MesAno = '02/2024'
+SELECT * FROM DiarioBordoMotorista_log WHERE CodMotorista = 28005869  order by DataLog desc AND MesAno = '02/2024'
 
-----DELETE FROM DiarioBordoMotorista WHERE Sequencial = 7024679
+----DELETE FROM DiarioBordoMotorista WHERE Sequencial = 7612151
 --DELETE FROM DiarioBordoMotorista WHERE Sequencial = 6997264
 
 --update DiarioBordoMotorista  set dia = 30 WHERE Sequencial = 7024679

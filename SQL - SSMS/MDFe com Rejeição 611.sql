@@ -1,10 +1,10 @@
 --ORDEM COM 611:
-EXEC MonitoraMDFe 54001728
+exec MonitoraMDFe 66025901
 --exec MonitoraMDFe 24080574	--> 51240211595217000299580040000766771006281143
---update Rodomaior_GSe.dbo.mdfe set Id = '51240211595217000299580040000766771006281143', cDV = 3, nMDF = 667710, cMDF = '00628114' where Sequencial = 568711
+--update Rodomaior_GSe.dbo.mdfe set Id = '31240511595217000612580030000747561006716092', cDV = 2, nMDF = 074756, cMDF = '00671609' where Sequencial = 608884
 --update Rodomaior_GSe.dbo.mdfe set Id = '50230211595217000108580000000900641004533589', cDV = 9, nMDF = 090064, cMDF = '00453358' where Sequencial = 439839  exemplo
 
---update Rodomaior_GSe.dbo.mdfe_LOG set cStat = 204 where ID = 6547254 -- Usar ID mais recente
+--update Rodomaior_GSe.dbo.mdfe_LOG set cStat = 204 where ID = 6881083 -- Usar ID mais recente
 --delete from Rodomaior_GSe.dbo.mdfe where Sequencial in (515255,515247,515246,515241,515240,515238,515235,515234) --in (419024,419015,419009,419008)
 
 --ORDEM COM MDFE ERRADO!
