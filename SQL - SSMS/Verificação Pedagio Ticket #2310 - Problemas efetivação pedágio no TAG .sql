@@ -5,97 +5,66 @@ SELECT CodOrdemEmbarque,CIOT, * from ConhecimentosTransporte where NumConhecto =
 SELECT CodOrdemEmbarque FROM ConhecimentosTransporte WHERE CodUF = 'MG' AND NumConhecto = 406391
 --
 --Alterar dispositivo
-select TipoDispositivoValePedagio,NumCartaoValePedagio  from OrdemEmbarque where NumOrdemEmbarque = 98033392 -- 0 / 53106799
---update OrdemEmbarque set TipoDispositivoValePedagio = 0 where NumOrdemEmbarque = 98033392
+select TipoDispositivoValePedagio,NumCartaoValePedagio  from OrdemEmbarque where NumOrdemEmbarque = 48009188 -- 1 / 48009188
+--update OrdemEmbarque set TipoDispositivoValePedagio = 1 where NumOrdemEmbarque = 48009188
 
 --update OrdemEmbarque set TipoDispositivoValePedagio = 0, NumCartaoValePedagio = Null where NumOrdemEmbarque = 31118498
 --
 --update OrdemEmbarque set NumCartaoValePedagio = null where NumOrdemEmbarque = 31118498
 --
 --Limpar a Roteirzação--
-SELECT CodOrdemEmbarque,CIOT, Pedagio,* from ConhecimentosTransporte where NumConhecto = 406391   and CodUF = 'MG'
+SELECT CodOrdemEmbarque,CIOT, Pedagio,* from ConhecimentosTransporte where NumConhecto = 208734 and CodUF = 'PR'
 --UPDATE ConhecimentosTransporte set Pedagio = 276.60 where Sequencial = 40000036424 -- 276.60
-	SELECT EmpresaValePedagio, NumCartaoValePedagio, RotaSemParar,ValorPedagioSemParar FROM OrdemEmbarque WHERE NumOrdemEmbarque = 98033392 
---update OrdemEmbarque set EmpresaValePedagio = NULL , NumCartaoValePedagio = NULL, RotaSemParar = NULL, ValorPedagioSemParar = NULL  where  NumOrdemEmbarque = 98033392 
+SELECT EmpresaValePedagio, NumCartaoValePedagio, RotaSemParar,ValorPedagioSemParar FROM OrdemEmbarque WHERE NumOrdemEmbarque = 64076347 
+--update OrdemEmbarque set  RotaSemParar = NULL, ValorPedagioSemParar = NULL  where  NumOrdemEmbarque = 64076347 
+--update OrdemEmbarque set EmpresaValePedagio = '' , NumCartaoValePedagio = NULL, RotaSemParar = NULL, ValorPedagioSemParar = NULL  where  NumOrdemEmbarque = 64076347 
 ---voltar os dados:
 --update OrdemEmbarque set EmpresaValePedagio = 'Banco Bradesco S/A' , NumCartaoValePedagio = 4417812013348815, RotaSemParar = 'UNAI MG X UBERLANDIA MG', ValorPedagioSemParar = 266.40  where  NumOrdemEmbarque = 30060345 
 
---98033392
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4417812018524501	PATOS DE MINAS-MG X UBERLANDIA-MG	50.80
 
+--64076347
 --EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---NULL	4417812019073821	NULL	NULL
+--Centro de Gestao de Meios de P	0730364594	IBIPORA XSAO FRANCISCO DO SUL	130.66
 
 --EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	07307269	SORRISO X RONDONOPOLIS (VIA CAMPO VERDE)	63.00
+--Centro de Gestao de Meios de P	0730802734	CONFRESA-MT X SANTOS-SP	1285.72
 
---53106799
+--64076147
 --EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---NULL	4417812019073821	0	68.40
+--Banco Bradesco S/A	4417812010804034	0	281.70
 
---28184524
+--8087806
 --EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	00000000	0	1541.40
+--Banco Bradesco S/A	4417812020599756	0	190.80
 
-
---31122118
---NULL 0735570393	URUAÇU GO X GUARUJA SP - ANP	103.36
+--24083819
 --EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4417812018384641	NOVO PLANALTO GO X ANAPOLIS GO BR 153	100.70
+--Banco Bradesco S/A	4417812013913394	BURITI ALEGRE-GO X UBERABA-MG	113.40
 
---43011932
+--10087126
 --EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4417812018816782	0	0.00
-
---43011869
+--Centro de Gestao de Meios de P	0736892394	ARAGUARI-MG  x NOVA UBIRATÃ-MT	299.40
+--4031030
 --EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4417812010475231	0	0.00
-
-
---98032534
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	00000000	0	228.60
-
---85020325
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	4198071136412942	SETE QUEDAS MS X RIO GRANDE RS	355.00
-
-
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4417812010804786	UBERLÂNDIA MG X LAGOA GRANDE MG	50.80
-
-
---98032334
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	00000000	0	355.20
-
---ordem 94059468
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4417812003383418	PATROCINIO-MG X UBERLANDIA-MG	152.40
-
-
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	00000000	0	113.40
-
+--Banco Bradesco S/A	4417812006683392	NULL	NULL
 
 
 SELECT RotaSemParar, ValorPedagioSemParar, TipoDispositivoValePedagio,EmpresaValePedagio,NumCartaoValePedagio FROM OrdemEmbarque WHERE NumOrdemEmbarque = 24076776
  --UPDATE ConhecimentosTransporte set TipoDispositivoValePedagio = null, NumCartaoValePedagio = null where Sequencial = 140000003034
 
-SELECT * FROM LogRoteirizacaoPedagio WHERE NumOrdemEmbarque = 19037203
+SELECT * FROM LogRoteirizacaoPedagio WHERE NumOrdemEmbarque = 24083819
 --
-SELECT RotaSemParar, ValorPedagioSemParar,EmpresaValePedagio , TipoDispositivoValePedagio, NumCartaoValePedagio, Situacao, DataLog
-from OrdemEmbarque_Log where NumOrdemEmbarque = 81011801 ORDER BY datalog desc
+
+
 --
 SELECT RotaSemParar, ValorPedagioSemParar,EmpresaValePedagio , TipoDispositivoValePedagio, NumCartaoValePedagio, Situacao
-from OrdemEmbarque where NumOrdemEmbarque = 40014293
+from OrdemEmbarque where NumOrdemEmbarque = 24083819
 --
 SELECT TOP(1000) oe.CIOT,CTRC.TipoConhecimento,  CTRC.CodOrdemEmbarque, CTRC.Sequencial, ctrc.CodUF + '-' + CONVERT(varchar(12), CTRC.NumConhecto) as 'CTRC', CTRC.CIOT, O.* FROM ConhecimentosTransporte CTRC
 INNER JOIN CartaFrete CF ON CF.Sequencial = CTRC.Sequencial
 INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = 'NE' AND CTRC.CodUF = 'MT' AND CTRC.Numconhecto =2755  
+WHERE oe.NumOrdemEmbarque = 8087806
 ORDER BY O.NumSeq DESC, O.SeqConsulta DESC
 --update OrdemEmbarque set CIOT ='REPOM' where NumOrdemEmbarque = 84025247
 
@@ -123,9 +92,12 @@ INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 INNER JOIN CartaFrete CF ON CF.NumOrdemEmbarque = oe.NumOrdemEmbarque
 inner join AdmPagamentoFrete APF on  CF.CodAdmPagtoFrete = APF.CodAdmFrete
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = 'E' AND CTRC.CodUF = 'GO' AND CTRC.Numconhecto = 8332                                 
+WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'PR' AND CTRC.Numconhecto = 207816                                 
 ORDER BY O.DataCriacao DESC, O.NumSeq DESC, O.SeqConsulta DESC
 
+
+SELECT RotaSemParar, ValorPedagioSemParar, EixosSemParar, TipoDispositivoValePedagio 
+from OrdemEmbarque_Log where NumOrdemEmbarque = 64075944 ORDER BY datalog desc
 
  --SQL RDM para verificar cancelamento CIOT pois as NFSes lá, não tem intagração ou seja nao é cancelada como na Lontano
 SELECT count(*)
@@ -138,6 +110,8 @@ CTRC.SerieConhecto = 'E' AND CTRC.CodUF = 'MS' AND CTRC.Numconhecto in (10135)
 --nova validação paa encontrar somente CIOT CANCELADOS
 and DescricaoOcorrencia = 'CANCELAR CIOT' AND ConteudoXml LIKE '%StatusCode":200%' AND ConteudoXml LIKE '%canceled successfully%' AND tipoOcorrencia = 'RETORNO'
 
+
+select * FROM CartaFrete_Parcela_Pamcard where NumOrdemEmbarque = 8087806
 
 
 select NumeroCartao,* from OrdemEmbarque where NumOrdemEmbarque = 7037862 
@@ -153,8 +127,7 @@ SELECT * FROM CartaFrete_Parcela WHERE IdCartaFrete = 778459
 --
 select CIOT,* from OrdemEmbarque where NumOrdemEmbarque = 41057445
 --
-SELECT RotaSemParar, ValorPedagioSemParar, EixosSemParar, TipoDispositivoValePedagio 
-from OrdemEmbarque_Log where NumOrdemEmbarque = 11020034 ORDER BY datalog desc
+
 --
 SELECT * FROM CartaFrete_Ocorrencia WHERE IdCartaFrete = 1388581 -- 73906459
 --

@@ -1,12 +1,14 @@
 --Emanuel/José Ricardo/Clóvis:
-Declare @DataInicio as varchar(25) set @DataInicio = '2022-01-01 00:00:00'
-Declare @DataFim as varchar(25) set @DataFim = '2022-12-31 23:59:29'
-select  --count(*)  -->  140.396// 131.733// 125.758  // 126.769
+Declare @DataInicio as varchar(25) set @DataInicio = '2020-01-01 00:00:00'
+Declare @DataFim as varchar(25) set @DataFim = '2021-12-31 23:59:29'
+select  
 	  convert(VARCHAR(44),cte.ID) AS 'Chave CT-e'
 	, ctrc.CodUF AS 'UF'
 	, ctrc.NumConhecto AS 'Nº CT-e'
 	, ctrc.SerieConhecto as 'Série'
 	, CONVERT(varchar(8),ctrc.DataEmissao,3) AS 'Data Emissão'
+	, format(ctrc.TotalFreteMotorista,'N2','pt-br') AS 'Frete Motorista'
+	--, format(ctrc.TarifaFreteMotorista,'N2','pt-br') AS 'Frete Motorista'
 	, format(ctrc.ValorTotalFrete,'N2','pt-br') AS 'Valor Serviço'
 	, dbo.CNPJ_CPF_Masc(cte.CNPJ) AS 'CNPJ Emitente'
 	, cli.cnpj_cpf AS 'CNPJ Tomador'

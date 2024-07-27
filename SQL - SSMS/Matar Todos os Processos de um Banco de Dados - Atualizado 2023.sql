@@ -32,20 +32,20 @@ DECLARE @banco			VARCHAR(50) = '',		--> nome do banco a filtrar
 
 
 --> PADRÃO MAIS COMUM PARA LONTANO:
-SET @banco			= 'LONTANO'
-SET @login			= 'Manutencao'
-SET @login_nao		= ''	--> nenhuma exceção de login; e isso só vai funcionar se setar o @login = ''
-SET @hostname_nao1	= 'SITEGS%'
-SET @hostname_nao2	= '%GR%'
-SET @programa		= 'Embarque%'
+--SET @banco			= 'LONTANO'
+--SET @login			= 'Manutencao'
+--SET @login_nao		= ''	--> nenhuma exceção de login; e isso só vai funcionar se setar o @login = ''
+--SET @hostname_nao1	= 'SITEGS%'
+--SET @hostname_nao2	= '%GR%'
+--SET @programa		= 'Embarque%'
 
 --Matar TODOS usando o banco LONTANO (fins específicos), exceto os processos do SITEGS e exceto o usuário "Laercio" (cê é loco!)
---SET @banco			= 'LONTANO'
---SET @login			= ''
---SET @login_nao		= 'Laercio'
---SET @hostname_nao1	= 'SITEGS%'
---SET @hostname_nao2	= ''
---SET @programa		= ''
+SET @banco			= 'LONTANO'
+SET @login			= ''
+SET @login_nao		= 'Laercio'
+SET @hostname_nao1	= 'SITEGS%'
+SET @hostname_nao2	= ''
+SET @programa		= ''
 
 
 
@@ -59,7 +59,7 @@ SET @programa		= 'Embarque%'
 
 --Altamente recomendável rodar com 'N' ANTES!!! Ninguém morre! Dá tempo de rever os critérios!
 --SET @elimina = 'N'
-SET @elimina = 'S'	
+--SET @elimina = 'S'	
 
 --Setando tempo mínimo de atividade com valor ZERADO (ou negativo), que é o padrão, vai pegar TODOS os processos; manipular essa variável caso queira matar apenas processos inativos a X minutos
 --SET @min_ult_proc = 1

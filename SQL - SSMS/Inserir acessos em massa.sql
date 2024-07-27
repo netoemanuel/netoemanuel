@@ -1,0 +1,37 @@
+--INSERT INTO [dbo].[PermissoesAcesso]
+--           ([CodUsuario], [CodPrograma], [TipoInclusao], [TipoAlteracao], [TipoExclusao], [TipoConsulta], [TipoImprimir], [TipoEspecial], [CodUsuarioCriacao], [CodFilialCriacao], [DataCriacao], CodUsuarioAlteracao, CodFilialAlteracao, DataAlteracao, CodUsuarioDuplicado)
+--SELECT DISTINCT 
+--    P.CodUsuario, 
+--    'RetirarContaCargobank', 
+--    'N', 
+--    'N', 
+--    'N', 
+--    'N', 
+--    'N', 
+--    'S', 
+--    14102, 
+--    'CG', 
+--    GETDATE(),
+--    NULL,
+--    NULL,
+--    NULL,
+--    NULL
+--FROM 
+--    Usuarios U 
+--JOIN 
+--    PermissoesAcesso P ON P.CodUsuario = U.CodUsuario 
+--WHERE 
+--    U.SituacaoUsuario = 'A' 
+--    AND U.CodFilial <> 'CG' 
+--    AND U.CodFilial <> '99'
+--    AND NOT EXISTS (
+--        SELECT 1 
+--        FROM PermissoesAcesso PA 
+--        WHERE PA.CodUsuario = P.CodUsuario 
+--          AND PA.CodPrograma = 'RetirarContaCargobank')
+
+
+--Tem que ter:
+--- App_Dashboard (menuzão do portal WEB da GS)
+--- App_ConsultarCTe (inserir documentos/imagens)
+--- App_ConferenciaDocCte (consultar/aprovar imagens)
