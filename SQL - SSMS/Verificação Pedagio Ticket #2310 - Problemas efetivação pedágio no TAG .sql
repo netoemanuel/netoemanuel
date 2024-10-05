@@ -2,26 +2,33 @@
 SELECT CodOrdemEmbarque,CIOT, * from ConhecimentosTransporte where NumConhecto = 713585 and CodUF = 'MT' --2023-05-02 20:20:00
 --update ConhecimentosTransporte set DataEmissao = '2023-05-02 20:20:00' where sequencial = 450000023531
 --
-SELECT CodOrdemEmbarque FROM ConhecimentosTransporte WHERE CodUF = 'MG' AND NumConhecto = 406391
+SELECT CodOrdemEmbarque,* FROM ConhecimentosTransporte WHERE CodUF = 'MS' AND NumConhecto = 534616
 --
 --Alterar dispositivo
-select TipoDispositivoValePedagio,NumCartaoValePedagio  from OrdemEmbarque where NumOrdemEmbarque = 48009188 -- 1 / 48009188
---update OrdemEmbarque set TipoDispositivoValePedagio = 1 where NumOrdemEmbarque = 48009188
+select TipoDispositivoValePedagio,NumCartaoValePedagio  from OrdemEmbarque_log where NumOrdemEmbarque = 85022322 -- 1 / 48009188
+--update OrdemEmbarque set TipoDispositivoValePedagio = 0 where NumOrdemEmbarque = 85022322
 
---update OrdemEmbarque set TipoDispositivoValePedagio = 0, NumCartaoValePedagio = Null where NumOrdemEmbarque = 31118498
+--update OrdemEmbarque set TipoDispositivoValePedagio = 0, NumCartaoValePedagio = '4417812020196629',EmpresaValePedagio = 'Banco Bradesco S/A' where NumOrdemEmbarque = 6037236
 --
 --update OrdemEmbarque set NumCartaoValePedagio = null where NumOrdemEmbarque = 31118498
 --
+--48009188
+--TipoDispositivoValePedagio	NumCartaoValePedagio
+--1	4417812015934893
+
+
 --Limpar a Roteirzação--
-SELECT CodOrdemEmbarque,CIOT, Pedagio,* from ConhecimentosTransporte where NumConhecto = 208734 and CodUF = 'PR'
+SELECT CodOrdemEmbarque,CIOT, Pedagio,* from ConhecimentosTransporte where NumConhecto = 728938  and CodUF = 'MT'
 --UPDATE ConhecimentosTransporte set Pedagio = 276.60 where Sequencial = 40000036424 -- 276.60
-SELECT EmpresaValePedagio, NumCartaoValePedagio, RotaSemParar,ValorPedagioSemParar FROM OrdemEmbarque WHERE NumOrdemEmbarque = 64076347 
---update OrdemEmbarque set  RotaSemParar = NULL, ValorPedagioSemParar = NULL  where  NumOrdemEmbarque = 64076347 
---update OrdemEmbarque set EmpresaValePedagio = '' , NumCartaoValePedagio = NULL, RotaSemParar = NULL, ValorPedagioSemParar = NULL  where  NumOrdemEmbarque = 64076347 
+SELECT EmpresaValePedagio, NumCartaoValePedagio, RotaSemParar,ValorPedagioSemParar FROM OrdemEmbarque WHERE NumOrdemEmbarque = 85022322 
+----update OrdemEmbarque set  RotaSemParar = NULL, ValorPedagioSemParar = NULL  where  NumOrdemEmbarque = 22088850 
+--update OrdemEmbarque set EmpresaValePedagio = '' , NumCartaoValePedagio = NULL, RotaSemParar = NULL, ValorPedagioSemParar = NULL  where  NumOrdemEmbarque = 6037236 
 ---voltar os dados:
 --update OrdemEmbarque set EmpresaValePedagio = 'Banco Bradesco S/A' , NumCartaoValePedagio = 4417812013348815, RotaSemParar = 'UNAI MG X UBERLANDIA MG', ValorPedagioSemParar = 266.40  where  NumOrdemEmbarque = 30060345 
 
-
+---6037236
+--EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
+--NULL	00000000	NULL	NULL
 --64076347
 --EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
 --Centro de Gestao de Meios de P	0730364594	IBIPORA XSAO FRANCISCO DO SUL	130.66
@@ -58,7 +65,7 @@ SELECT * FROM LogRoteirizacaoPedagio WHERE NumOrdemEmbarque = 24083819
 
 --
 SELECT RotaSemParar, ValorPedagioSemParar,EmpresaValePedagio , TipoDispositivoValePedagio, NumCartaoValePedagio, Situacao
-from OrdemEmbarque where NumOrdemEmbarque = 24083819
+from OrdemEmbarque where NumOrdemEmbarque = 36019859
 --
 SELECT TOP(1000) oe.CIOT,CTRC.TipoConhecimento,  CTRC.CodOrdemEmbarque, CTRC.Sequencial, ctrc.CodUF + '-' + CONVERT(varchar(12), CTRC.NumConhecto) as 'CTRC', CTRC.CIOT, O.* FROM ConhecimentosTransporte CTRC
 INNER JOIN CartaFrete CF ON CF.Sequencial = CTRC.Sequencial
@@ -92,7 +99,7 @@ INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 INNER JOIN CartaFrete CF ON CF.NumOrdemEmbarque = oe.NumOrdemEmbarque
 inner join AdmPagamentoFrete APF on  CF.CodAdmPagtoFrete = APF.CodAdmFrete
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'PR' AND CTRC.Numconhecto = 207816                                 
+WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'MS' AND CTRC.Numconhecto = 533517                                   
 ORDER BY O.DataCriacao DESC, O.NumSeq DESC, O.SeqConsulta DESC
 
 
@@ -152,7 +159,7 @@ SELECT RotaSemParar, ValorPedagioSemParar  FROM OrdemEmbarque_log WHERE NumOrdem
 
 --Quando nao aparecer nada na grid, ver a conversa com Jhonny dia 19/12/2023 msg "deve ter perdido o log que mostra que a viagem foi comprada"
 --#14244 < ERRO GS - ENVIAR PEDAGIO SEM PARAR CTE 610937 >
-SELECT * FROM CartaFrete_Ocorrencia WHERE IdCartaFrete = 1507337 AND NumSeq = 19
+SELECT * FROM CartaFrete_Ocorrencia WHERE IdCartaFrete = 1027744 AND NumSeq = 19
 --UPDATE CartaFrete_Ocorrencia SET CodViagemPamcard = 62094996, tipoOcorrencia = 'SUCESSO', Erro = '0 - OPERAÇÃO REALIZADA COM SUCESSO' WHERE IdCartaFrete = 1507337 AND NumSeq = 19
 
 --IdCartaFrete	NumSeq	SeqConsulta	DataCriacao	CodUsuarioCriacao	CodFilialCriacao	DescricaoOcorrencia	ConteudoXml	tipoOcorrencia	Erro	Valido	CodAdmPagtoFrete	Protocolo	CodViagemPamcard

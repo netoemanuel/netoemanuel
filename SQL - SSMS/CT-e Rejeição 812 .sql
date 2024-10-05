@@ -2,13 +2,13 @@
 --812 - Rejeicao: A UF de fim da prestacao deve ser igual ao informado no CT-e complementado.
 --Conferir cMunFim,xMunFim,UFFim devem estar iguais ao CT-e de origem.
 
-select CodigoCFOP, * from ConhecimentosTransporte where NumConhecto in (717448)  and CodUF= 'MT' and SerieConhecto = '0'
-Select * from ConhecimentosComplementados where 260000025057 in (SeqConhecimentoComplementar,SeqConhecimentoComplementado)
+select CodigoCFOP, * from ConhecimentosTransporte where NumConhecto in (724816 )  and CodUF= 'MT' and SerieConhecto = '0'
+Select * from ConhecimentosComplementados where 10000025055 in (SeqConhecimentoComplementar,SeqConhecimentoComplementado)
 
-Select cMunFim, xMunFim, UFFim,cMunIni,xMunIni,UFIni, * from LONTANO_GSe.dbo.cte where sequencial in (260000025057, 120000025595) -- Sequencial dos dois CTEs
---UPDATE LONTANO_GSe.dbo.cte SET cMunFim = 1715705, xMunFim = 'PALMEIRANTE', UFFim = 'TO', cMunIni = 5107354 , xMunIni = 'SAO JOSE DO XINGU',UFIni = 'MT' where Sequencial = 260000025057
---UPDATE LONTANO_GSe.dbo.cte SET Status = 0 where Sequencial = 260000025057
-exec VerificaCTe 260000025057
+Select cMunFim, xMunFim, UFFim,cMunIni,xMunIni,UFIni, * from LONTANO_GSe.dbo.cte where sequencial in (10000025055, 120000025595) -- Sequencial dos dois CTEs
+--UPDATE LONTANO_GSe.dbo.cte SET cMunFim = 1715705, xMunFim = 'PALMEIRANTE', UFFim = 'TO', cMunIni = 5107354 , xMunIni = 'SAO JOSE DO XINGU',UFIni = 'MT' where Sequencial = 10000025055
+--UPDATE LONTANO_GSe.dbo.cte SET Status = 0 where Sequencial = 10000025055
+exec VerificaCTe 10000025055
 --delete from LONTANO_GSe.dbo.cte where sequencial in (220000075496)
 --EXEC Grava_CTe 220000075496
 

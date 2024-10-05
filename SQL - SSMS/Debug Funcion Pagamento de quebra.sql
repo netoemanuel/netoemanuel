@@ -1,3 +1,4 @@
+
 	--VARIÁVEIS GERAIS:
 	DECLARE @Quebra AS DECIMAL(12,2),
 			@ValorQuebra AS DECIMAL(14,2),
@@ -8,15 +9,16 @@
 			@QuantCalculo AS DECIMAL(12,2),
 			@cocamar AS BIT,
 			@tarifa AS DECIMAL(9,2),
-			 @Sequencial DECIMAL(12,0) = 890000031454,		--> Sequencial do CTRC
+			 @Sequencial DECIMAL(12,0) = 480000006860,		--> Sequencial do CTRC
 			 --@QuantChegada DECIMAL(8,0) = 49585,	--> Quantidade de Chegada a ser utilizada no cálculo
-			 @QuantChegada DECIMAL(8,0) = 49710,	--> Quantidade de Chegada a ser utilizada no cálculo
-			 @QuantSaida DECIMAL(8,0) = 49710,		--> Quantidade de Saída do CTRC
-			 @ValorNF DECIMAL(14,2) = 49420.43,		--> Valor da NF (mercadoria) do CTRC
+			 @QuantChegada DECIMAL(8,0) = 49480,	--> Quantidade de Chegada a ser utilizada no cálculo
+			 @QuantSaida DECIMAL(8,0) = 49540,		--> Quantidade de Saída do CTRC
+			 @ValorNF DECIMAL(14,2) =  49008.17,		--> Valor da NF (mercadoria) do CTRC
 			 @Tipo VARCHAR(10) = 'Saída',		--> Se o cálculo vai partir da Quantidade de 'Saída' ou da Quantidade de 'Chegada' (normal é 'Saída')
 			 @Retorno VARCHAR(15) = 'ValorQuebra' 	--> 'Quebra' = retorna a quant  idade da quebra; 'ValorQuebra' = retorna o valor
-     
---(dbo.CalculoQuebra(890000031454, 49710, 49710, 49420.43, 'Saída', 'ValorQuebra') > 0)
+ 
+  --(dbo.CalculoQuebra(480000006860, 0, 49420, 49008.17, 'Saída', 'ValorQuebra') > 0)	
+	
 
 
 	--INICIAR VARIÁVEIS:
@@ -83,5 +85,5 @@
 	 SELECT @CalculoQuebra 
 
 
-select QuantidadeSaida,QuantidadeChegada, * from ConhecimentosTransporte where Sequencial = 890000031454 -- 49710.000
+select QuantidadeSaida,QuantidadeChegada, * from ConhecimentosTransporte where Sequencial = 480000006860 -- 49710.000
 --UPDATE  ConhecimentosTransporte SET QuantidadeSaida = 49710, QuantidadeChegada = 47170 where Sequencial = 890000031454
