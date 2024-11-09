@@ -2,11 +2,11 @@
 SELECT CodOrdemEmbarque,CIOT, * from ConhecimentosTransporte where NumConhecto = 713585 and CodUF = 'MT' --2023-05-02 20:20:00
 --update ConhecimentosTransporte set DataEmissao = '2023-05-02 20:20:00' where sequencial = 450000023531
 --
-SELECT CodOrdemEmbarque,* FROM ConhecimentosTransporte WHERE CodUF = 'MS' AND NumConhecto = 534616
+SELECT CodOrdemEmbarque,* FROM ConhecimentosTransporte WHERE CodUF = 'MT' AND NumConhecto = 737412 
 --
 --Alterar dispositivo
-select TipoDispositivoValePedagio,NumCartaoValePedagio  from OrdemEmbarque_log where NumOrdemEmbarque = 85022322 -- 1 / 48009188
---update OrdemEmbarque set TipoDispositivoValePedagio = 0 where NumOrdemEmbarque = 85022322
+-- 1 / 48009188
+--update OrdemEmbarque set TipoDispositivoValePedagio = 0 where NumOrdemEmbarque = 38009561
 
 --update OrdemEmbarque set TipoDispositivoValePedagio = 0, NumCartaoValePedagio = '4417812020196629',EmpresaValePedagio = 'Banco Bradesco S/A' where NumOrdemEmbarque = 6037236
 --
@@ -17,14 +17,84 @@ select TipoDispositivoValePedagio,NumCartaoValePedagio  from OrdemEmbarque_log w
 --1	4417812015934893
 
 
+
+
+
+  --MS-537191
 --Limpar a Roteirzação--
-SELECT CodOrdemEmbarque,CIOT, Pedagio,* from ConhecimentosTransporte where NumConhecto = 728938  and CodUF = 'MT'
+SELECT CodOrdemEmbarque,CIOT, Pedagio,* from ConhecimentosTransporte where NumConhecto = 137691     and CodUF = 'SP'
 --UPDATE ConhecimentosTransporte set Pedagio = 276.60 where Sequencial = 40000036424 -- 276.60
-SELECT EmpresaValePedagio, NumCartaoValePedagio, RotaSemParar,ValorPedagioSemParar FROM OrdemEmbarque WHERE NumOrdemEmbarque = 85022322 
-----update OrdemEmbarque set  RotaSemParar = NULL, ValorPedagioSemParar = NULL  where  NumOrdemEmbarque = 22088850 
---update OrdemEmbarque set EmpresaValePedagio = '' , NumCartaoValePedagio = NULL, RotaSemParar = NULL, ValorPedagioSemParar = NULL  where  NumOrdemEmbarque = 6037236 
+SELECT EmpresaValePedagio, NumCartaoValePedagio,TipoDispositivoValePedagio, RotaSemParar,ValorPedagioSemParar,DataContratoValePedagio FROM OrdemEmbarque WHERE NumOrdemEmbarque = 19040049  
+--update OrdemEmbarque set  RotaSemParar = NULL, ValorPedagioSemParar = NULL,TipoDispositivoValePedagio = 0 where  NumOrdemEmbarque = 25125144 
+--update OrdemEmbarque set EmpresaValePedagio = '' , NumCartaoValePedagio = NULL, RotaSemParar = NULL, ValorPedagioSemParar = NULL  where  NumOrdemEmbarque = 35008516 
 ---voltar os dados:
---update OrdemEmbarque set EmpresaValePedagio = 'Banco Bradesco S/A' , NumCartaoValePedagio = 4417812013348815, RotaSemParar = 'UNAI MG X UBERLANDIA MG', ValorPedagioSemParar = 266.40  where  NumOrdemEmbarque = 30060345 
+--update OrdemEmbarque set EmpresaValePedagio = 'Banco Bradesco S/A' , NumCartaoValePedagio = NULL, RotaSemParar = Null, ValorPedagioSemParar = null ,TipoDispositivoValePedagio = 0  where  NumOrdemEmbarque = 19040049 --PAMCARD
+--update OrdemEmbarque set EmpresaValePedagio = 'Centro de Gestao de Meios de P' , NumCartaoValePedagio = '00000000', RotaSemParar = null, ValorPedagioSemParar = null ,TipoDispositivoValePedagio = 1, DataContratoValePedagio = '2024-12-12 00:00:00'  where  NumOrdemEmbarque = 4031468 -- TAG 
+
+
+--19040049
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
+--Repom Sa	000000000	5	NULL	NULL	2024-12-31 00:00:00
+--19040048
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
+--Repom Sa	000000000	5	NULL	NULL	2024-12-30 00:00:00
+
+--35008878
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
+--Repom Sa	0000000000000000	5	2	500.50	2030-11-11 00:00:00
+
+--35008516
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
+--Banco Bradesco S/A	4417812011915409	0	0	643.50	2026-08-01 00:00:00
+
+--4031468
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
+--NULL	NULL	NULL	SAPEZAL P/ CUBATÃO	1618.25
+
+--10088275
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
+--NULL						4417812019708780				0					NULL				NULL
+
+--25125144
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
+--NULL	NULL	NULL	DOURADOS/MS X ARAUCARIA/PR	74.39
+
+
+--69013612
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Repom Sa	751700113	5	NULL	NULL
+
+--69013607
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Repom Sa	747235422	5	NULL	NULL
+
+--99005140
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Repom Sa	755537115	5	2	302.80
+--5024489
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Repom Sa	752271015	5	NULL	NULL
+--15023928
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Repom Sa	752263582	5	NULL	NULL
+--15023924
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Repom Sa	752263590	5	NULL	NULL
+
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Repom Sa	754325322	5	0	412.50
+
+--42026598
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Centro de Gestao de Meios de P	0742835735	1	MARINGÁ, PR X PARANAGUÁ, PR 24	208.15
+
+--63019369
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Centro de Gestao de Meios de P	0739535267	1	ALTO PARAGUAI X RONDONOPOLIS	293.40
+
+--64079026
+--EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
+--Centro de Gestao de Meios de P	0741384401	SANTA MARIANA PR, X PARANAGUA PR,	0.00
 
 ---6037236
 --EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
@@ -94,13 +164,24 @@ ORDER BY crf.DataCriacao DESC
 --WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'MG' AND CTRC.Numconhecto = 387207                     
 --ORDER BY O.DataCriacao DESC, O.NumSeq DESC, O.SeqConsulta DESC 
 --
+SELECT * FROM CartaFrete_Parcela WHERE IdCartaFrete	=1066051
 SELECT TOP(100) oe.TipoDispositivoValePedagio,CTRC.DataEmissao, CTRC.SituacaoConhecto, oe.CIOT, CF.Ciot,apf.Descricao, oe.CodNaturezaCarga,  CTRC.CodOrdemEmbarque, CTRC.Sequencial, ctrc.CodUF + '-' + CONVERT(varchar(12), CTRC.NumConhecto) as 'CTRC', CTRC.CIOT, O.* FROM ConhecimentosTransporte CTRC
 INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 INNER JOIN CartaFrete CF ON CF.NumOrdemEmbarque = oe.NumOrdemEmbarque
 inner join AdmPagamentoFrete APF on  CF.CodAdmPagtoFrete = APF.CodAdmFrete
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'MS' AND CTRC.Numconhecto = 533517                                   
+WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'PR' AND CTRC.Numconhecto = 91053                                    
 ORDER BY O.DataCriacao DESC, O.NumSeq DESC, O.SeqConsulta DESC
+
+SELECT TOP(100) oe.TipoDispositivoValePedagio,CTRC.DataEmissao, CTRC.SituacaoConhecto, oe.CIOT, CF.Ciot,apf.Descricao, oe.CodNaturezaCarga,  CTRC.CodOrdemEmbarque, CTRC.Sequencial, ctrc.CodUF + '-' + CONVERT(varchar(12), CTRC.NumConhecto) as 'CTRC', CTRC.CIOT, O.* FROM ConhecimentosTransporte CTRC
+INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
+INNER JOIN CartaFrete CF ON CF.NumOrdemEmbarque = oe.NumOrdemEmbarque
+inner join AdmPagamentoFrete APF on  CF.CodAdmPagtoFrete = APF.CodAdmFrete
+LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
+WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'PR' AND CTRC.Numconhecto = 90510                                    
+ORDER BY O.DataCriacao DESC, O.NumSeq DESC, O.SeqConsulta DESC
+
+select * FROM Usuarios where CodUsuario = 12434
 
 
 SELECT RotaSemParar, ValorPedagioSemParar, EixosSemParar, TipoDispositivoValePedagio 

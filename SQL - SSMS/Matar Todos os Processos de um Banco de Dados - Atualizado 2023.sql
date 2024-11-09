@@ -58,8 +58,8 @@ SET @programa		= ''
 
 
 --Altamente recomendável rodar com 'N' ANTES!!! Ninguém morre! Dá tempo de rever os critérios!
-SET @elimina = 'N'
---SET @elimina = 'S'			
+--SET @elimina = 'N'
+SET @elimina = 'S'			
 
 --Setando tempo mínimo de atividade com valor ZERADO (ou negativo), que é o padrão, vai pegar TODOS os processos; manipular essa variável caso queira matar apenas processos inativos a X minutos
 --SET @min_ult_proc = 1

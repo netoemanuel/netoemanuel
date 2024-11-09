@@ -21,9 +21,32 @@ SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where SequencialConhecime
 
 
 
+
+
+--RETIRAR DADOS E CHAVE DE ACESSO DA NF 165994 DO CTE MS-173807 / CANCELAMENTO DACTE RODOMAIOR
+SELECT * from ConhecimentosTransporte where NumConhecto = 91554 and CodUF = 'PR'
+SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where SequencialConhecimento in(870000000947)  --50241003902129002046551200000231631919408431
+--UPDATE NotasFiscaisConhecimento SET ChaveAcessoNFe = null WHERE SequencialConhecimento in (870000000947)
+
+
+--RETIRAR DADOS E CHAVE DE ACESSO DA NF 165994 DO CTE MS-173807 / CANCELAMENTO DACTE RODOMAIOR
+SELECT Sequencial,* from ConhecimentosTransporte where NumConhecto = 173807 and CodUF = 'MS'
+SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where SequencialConhecimento in(20000028993)  --50150760498706028752550500000206191550850308
+--UPDATE NotasFiscaisConhecimento SET ChaveAcessoNFe = null WHERE SequencialConhecimento in (20000028993)
+
+SELECT Sequencial,* from ConhecimentosTransporte where NumConhecto = 208072 and CodUF = 'MS'
+SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where SequencialConhecimento in(20000038496)  --50150760498706028752550500000206191550850308
+--UPDATE NotasFiscaisConhecimento SET ChaveAcessoNFe = null WHERE SequencialConhecimento in (20000028993)
+--DELETE from NotasFiscaisConhecimento where SequencialConhecimento in(20000038496) 
+--INSERT INTO NotasFiscaisConhecimento VALUES (20000038496,165994,1,'2023-04-19 00:00:00',128866.62,37020.000,NULL,10337,'DOU','2024-10-17 14:00:11.000',NULL,NULL,NULL,008,NULL,NULL,NULL,109209.00,6352,NULL,'50150760498706028752550500000206191550850308',01,'Não')
+
+--ChaveAcessoNFe	SequencialConhecimento	NumeroNF	Sequencial	DataEmissaoNF	ValorNF	PesoNF	ValorICMS	CodUsuarioCriacao	CodFilialCriacao	DataCriacao	CodUsuarioAlteracao	CodFilialAlteracao	DataAlteracao	SerieNF	BaseCalculoICMS	BaseCalcSubstTributaria	ValorICMSSubstTributaria	ValorProdutos	CodigoCFOP	PINSuframa	ChaveAcessoNFe	CodModelo	UtilizacaoNFe
+--50150760498706028752550500000206191550850308	20000038496	165994	1	2023-04-19 00:00:00	128866.62	37020.000	NULL	10337	DOU	2024-10-17 14:00:11.000	NULL	NULL	NULL	008	NULL	NULL	NULL	109209.00	6352	NULL	NULL	01	Não
+
+
 --EXCLUSÃO DA CHAVE DE ACESSO DA NF-E 60704
 SELECT Sequencial,* from ConhecimentosTransporte where NumConhecto = 51104 and CodUF = 'MT'
-SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where SequencialConhecimento in(40000038384)  --51240302937632003801550010000607041329240708
+SELECT  * from NotasFiscaisConhecimento where SequencialConhecimento in(40000038384)  --51240302937632003801550010000607041329240708
 SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where ChaveAcessoNFe in ( '51240302937632003801550010000607041329240708') -- 40000038384 
 --UPDATE NotasFiscaisConhecimento SET ChaveAcessoNFe = Null WHERE SequencialConhecimento in (40000038384)
 

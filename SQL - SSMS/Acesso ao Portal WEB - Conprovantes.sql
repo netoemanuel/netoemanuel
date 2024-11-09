@@ -1,12 +1,15 @@
 
 SELECT * from Usuarios where NomeUsuario LIKE '%Bergam%'
-select * from Usuarios where CodUsuario = 13151
-SELECT CodUsuarioDuplicado,DataAlteracao,CodUsuarioAlteracao,* from PermissoesAcesso where CodUsuario in (11803 ) ORDER BY CodPrograma desc
+select * from Usuarios where CodUsuario = 10366
+SELECT CodUsuarioDuplicado,DataAlteracao,CodUsuarioAlteracao,* from PermissoesAcesso where CodUsuario in (10366 ) ORDER BY CodPrograma desc
 --SELECT * FROM RegistroAcessoProgramas where CodUsuario = 12233 AND DataAcesso BETWEEN '2024-08-24 10:10:45.000' and '2024-08-24 12:15:45.000'
-SELECT * from PermissoesAcesso where CodUsuario in (10732,13151 ) AND CodPrograma IN ('App_ConferenciaDocCte','App_Dashboard')
+SELECT * from PermissoesAcesso where CodUsuario in (10732,10366 ) AND CodPrograma IN ('App_ConferenciaDocCte','App_Dashboard')
+SELECT * from PermissoesAcesso where CodUsuario in (12988,10366 ) AND CodPrograma IN ('App_ConferenciaDocCte','App_Dashboard')
+--SELECT * from Colaboradores where CodColaborador in (12988,10366 )
+select * from Usuarios where CodUsuario = 122
 
 --INSERT INTO PermissoesAcesso (CodUsuario,CodPrograma,TipoInclusao,TipoAlteracao,TipoExclusao,TipoConsulta,TipoImprimir,TipoEspecial,CodUsuarioCriacao,CodFilialCriacao,DataCriacao,CodUsuarioAlteracao,CodFilialAlteracao,DataAlteracao,CodUsuarioDuplicado)
---select 11803,'App_ConferenciaDocCte','S','S','S','S','S','N',12451,	'CG',GETDATE(),NULL,	NULL,	NULL,	NULL
+--select 12988,'App_ConferenciaDocCte','S','S','S','S','S','N',12451,	'CG',GETDATE(),NULL,	NULL,	NULL,	NULL
 
 --Tem que ter:
 --- App_Dashboard (menuzão do portal WEB da GS)

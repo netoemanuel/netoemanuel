@@ -26,7 +26,7 @@ FROM
 	INNER JOIN PedidosFrete PF on ctrc.CodPedidoFrete = PF.CodPedidoFrete
 WHERE 
 	--ctrc.CodFilialComissao = 'OSV' and
-		ctrc.DataEmissao between '2024-08-01' and '2024-08-31 23:59:29'
+		ctrc.DataEmissao between '2024-10-01' and '2024-10-31 23:59:29'
 	AND ctrc.SituacaoConhecto <> 'Cancelado'
 	AND ctrc.TipoConhecimento = 'Normal'
 	AND (ISNULL(CTRC.Desconto,0)+ISNULL(Risco.ValorTotal,ISNULL(OE.ValorTotal,0))+ISNULL(CTRC.DescontoTaxaAdm,0)) > 0
