@@ -3,13 +3,13 @@
  SELECT COUNT(*), MIN(DataCriacao), MAX(DataCriacao) FROM LONTANO_GSe.dbo.CTeDistribuicao WHERE ISNULL(SituacaoDistribuicao, '') IN ('Pendente','Falha') OR ISNULL(SituacaoCancelamento, '') IN ('Pendente','Falha') OR ISNULL(SituacaoCCe, '') IN ('Pendente','Falha')
  SELECT * FROM LONTANO_GSe.dbo.CTeDistribuicao WHERE ISNULL(SituacaoDistribuicao, '') IN ('Pendente','Falha') OR ISNULL(SituacaoCancelamento, '') IN ('Pendente','Falha') OR ISNULL(SituacaoCCe, '') IN ('Pendente','Falha')
  exec VerificaCTe 730000136438
- select * FROM LONTANO_GSe.dbo.CTeDistribuicao where Sequencial in (730000136438)
- --delete FROM LONTANO_GSe.dbo.CTeDistribuicao where Sequencial in (730000136438)-- Caso precise inserir na tabela de novo.
- --update LONTANO_GSe.dbo.CTeDistribuicao set SituacaoCancelamento = 'Enviado' where Sequencial in (20000157184) -- Forçar o reenvio
+ select * FROM LONTANO_GSe.dbo.CTeDistribuicao where Sequencial in (10000026228)
+ --delete FROM LONTANO_GSe.dbo.CTeDistribuicao where Sequencial in (10000026228)-- Caso precise inserir na tabela de novo.
+ --update LONTANO_GSe.dbo.CTeDistribuicao set SituacaoCancelamento = 'Enviado' where Sequencial in (10000026228) -- Forçar o reenvio
  SELECT status, XML_Enviado, XML_Retorno, NO_Protocolo, DT_Alteracao, * from LONTANO_GSe.dbo.CTe where Sequencial IN (570000005069)
  SELECT status, * from LONTANO_GSe.dbo.CTe_LOG where Sequencial IN (20000157184)
  SELECT NumConhecto,CodUF,* from ConhecimentosTransporte where Sequencial IN (20000157184)
- select * from LONTANO_GSe.dbo.ContatosCTe(570000005069)
+ select * from LONTANO_GSe.dbo.ContatosCTe(10000026228)
  select * from LONTANO_GSe.dbo.CTeDistribuicao_Contatos where Sequencial = 100000002762 and Destinatario = '1'
  --UPDATE LONTANO_GSe.dbo.CTeDistribuicao_Contatos set Email = 'fabiomedeiros@lontano.com.br' where Sequencial = 350000006059 and Destinatario = '1'
  --DELETE from LONTANO_GSe.dbo.CTeDistribuicao_Contatos where Sequencial = 570000005069  -- Caso precise inserir na tabela de novo.

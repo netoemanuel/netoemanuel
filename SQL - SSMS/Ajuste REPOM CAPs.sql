@@ -1,18 +1,20 @@
-select * from Fatura_Repom where ID = 191 -- valor maior
-select (   1855777.32 - 1851560.88  ) -- 4216.44
-select * from Fatura_Repom_Itens where IDFatura_REPOM = 191 and ValorTransacao = 4216.44
-select * from Fatura_Repom_Itens where IDFatura_REPOM = 191 and ISNULL(LocalQuitacao, '') not IN ('F','P')
+select * from Fatura_Repom where ID = 201 --
+select (    1848610.84 - 1850626.31  ) -- 2015.47
+select * from Fatura_Repom_Itens where IDFatura_REPOM = 201 and ValorTransacao = 2015.47
+select * from Fatura_Repom_Itens where  ValorTransacao = 2015.47
+select * from Fatura_Repom_Itens where IDFatura_REPOM = 201 and ISNULL(LocalQuitacao, '') not IN ('F','P')
+select SituacaoConhecto,ValorAdiantamento,* from ConhecimentosTransporte where Sequencial in (530000172401,60000031958,980000029991,980000029981)
 --EXEC VerificaCTe 640000067528
 --select * from Fatura_Repom_Itens where ValorTransacao = 39715.79 ORDER BY DataCriacao desc
 
- select * from ContasPagar where CodContasPagar = 1979679 -- 2148808.19 valor original
+ select * from ContasPagar where CodContasPagar = 1990037 -- 2148808.19 valor original
  --UPDATE ContasPagar set ValorDocumento = (ValorDocumento + 3280.37), ValorPagar =  (ValorPagar + 3280.37), Saldo = (Saldo + 3280.37) where CodContasPagar = 1979679
 
 
 --select * from Fatura_Repom_Itens where IDFatura_REPOM = 183 and Sequencial_CTRC in (230000044384,230000044383)
---select SituacaoConhecto,* from ConhecimentosTransporte where Sequencial in (230000044384,230000044383)
---EXEC VerificaCTe 640000067528
---select * from Fatura_Repom_Itens where IDFatura_REPOM = 90 and Sequencial_CTRC is null
+select SituacaoConhecto,ValorAdiantamento,* from ConhecimentosTransporte where Sequencial in (530000172401,60000031958,980000029991,980000029981)
+--EXEC VerificaCTe 530000172401
+select * from Fatura_Repom_Itens where IDFatura_REPOM = 201 and Sequencial_CTRC is null
 --select * from Fatura_Repom_Itens where ValorTransacao = 3330.00  AND Sequencial = 350000004138 ORDER BY DataCriacao desc
 
 EXEC VerificaCTe 980000029791

@@ -1,36 +1,58 @@
-	--
+ 	--
 SELECT CodOrdemEmbarque,CIOT, * from ConhecimentosTransporte where NumConhecto = 713585 and CodUF = 'MT' --2023-05-02 20:20:00
 --update ConhecimentosTransporte set DataEmissao = '2023-05-02 20:20:00' where sequencial = 450000023531
 --
 SELECT CodOrdemEmbarque,* FROM ConhecimentosTransporte WHERE CodUF = 'MT' AND NumConhecto = 737412 
 --
---Alterar dispositivo
--- 1 / 48009188
 --update OrdemEmbarque set TipoDispositivoValePedagio = 0 where NumOrdemEmbarque = 38009561
-
 --update OrdemEmbarque set TipoDispositivoValePedagio = 0, NumCartaoValePedagio = '4417812020196629',EmpresaValePedagio = 'Banco Bradesco S/A' where NumOrdemEmbarque = 6037236
---
 --update OrdemEmbarque set NumCartaoValePedagio = null where NumOrdemEmbarque = 31118498
---
---48009188
---TipoDispositivoValePedagio	NumCartaoValePedagio
---1	4417812015934893
 
-
-
-
-
-  --MS-537191
 --Limpar a Roteirzação--
-SELECT CodOrdemEmbarque,CIOT, Pedagio,* from ConhecimentosTransporte where NumConhecto = 137691     and CodUF = 'SP'
+SELECT CodOrdemEmbarque,CIOT, Pedagio,* from ConhecimentosTransporte where NumConhecto = 137936   and CodUF = 'SP'
 --UPDATE ConhecimentosTransporte set Pedagio = 276.60 where Sequencial = 40000036424 -- 276.60
-SELECT EmpresaValePedagio, NumCartaoValePedagio,TipoDispositivoValePedagio, RotaSemParar,ValorPedagioSemParar,DataContratoValePedagio FROM OrdemEmbarque WHERE NumOrdemEmbarque = 19040049  
---update OrdemEmbarque set  RotaSemParar = NULL, ValorPedagioSemParar = NULL,TipoDispositivoValePedagio = 0 where  NumOrdemEmbarque = 25125144 
---update OrdemEmbarque set EmpresaValePedagio = '' , NumCartaoValePedagio = NULL, RotaSemParar = NULL, ValorPedagioSemParar = NULL  where  NumOrdemEmbarque = 35008516 
+SELECT EmpresaValePedagio, NumCartaoValePedagio,TipoDispositivoValePedagio, RotaSemParar,ValorPedagioSemParar,DataContratoValePedagio FROM OrdemEmbarque WHERE NumOrdemEmbarque = 7040052  
+--update OrdemEmbarque set  RotaSemParar = NULL, ValorPedagioSemParar = NULL where  NumOrdemEmbarque = 9042502 
+--update OrdemEmbarque set EmpresaValePedagio = '' , NumCartaoValePedagio = NULL, RotaSemParar = NULL, ValorPedagioSemParar = NULL  where  NumOrdemEmbarque = 50014345 
 ---voltar os dados:
---update OrdemEmbarque set EmpresaValePedagio = 'Banco Bradesco S/A' , NumCartaoValePedagio = NULL, RotaSemParar = Null, ValorPedagioSemParar = null ,TipoDispositivoValePedagio = 0  where  NumOrdemEmbarque = 19040049 --PAMCARD
---update OrdemEmbarque set EmpresaValePedagio = 'Centro de Gestao de Meios de P' , NumCartaoValePedagio = '00000000', RotaSemParar = null, ValorPedagioSemParar = null ,TipoDispositivoValePedagio = 1, DataContratoValePedagio = '2024-12-12 00:00:00'  where  NumOrdemEmbarque = 4031468 -- TAG 
+--update OrdemEmbarque set EmpresaValePedagio = 'Banco Bradesco S/A' , NumCartaoValePedagio = 0000000000000000, RotaSemParar = Null, ValorPedagioSemParar = null ,TipoDispositivoValePedagio = 0  where  NumOrdemEmbarque = 7040052 --PAMCARD
+--update OrdemEmbarque set EmpresaValePedagio = 'Centro de Gestao de Meios de P' , NumCartaoValePedagio = '00000000', RotaSemParar = null, ValorPedagioSemParar = null ,TipoDispositivoValePedagio = 1, DataContratoValePedagio = '2026-01-01 00:00:00'  where  NumOrdemEmbarque = 81016322 -- TAG 
+--update OrdemEmbarque set EmpresaValePedagio = 'Repom Sa' , NumCartaoValePedagio = 752770537, RotaSemParar = null, ValorPedagioSemParar = null ,TipoDispositivoValePedagio = 5  where  NumOrdemEmbarque = 26038452 --REPOM
 
+
+--7040052
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
+--Centro de Gestao de Meios de P	0741840099	1	MORRO AGUDO X GUARUJA	1287.86	2025-01-01 00:00:00
+
+--81016322
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
+--Banco Bradesco S/A		00000000						0						2				888.30				2026-01-01 00:00:00
+
+--26038452
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
+--Banco Bradesco S/A			752770537				0						0					693.00				2025-12-30 00:00:00
+--95033729
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
+--Banco Bradesco S/A	000000000						0						0						43.40			2027-06-30 00:00:00
+
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
+--Repom Sa	754691590	5	NULL	NULL	2024-12-31 00:00:00
+
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
+--Repom Sa	755092186	5	NULL	NULL	2025-01-01 00:00:00
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
+--Repom Sa	754996569	5	NULL	NULL	2024-12-31 00:00:00
+
+--9042502
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
+--Repom Sa					751690256					5						0					442.80				2024-11-30 00:00:00
+
+--6038522
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
+--Centro de Gestao de Meios de P	0739439366	1	CUBATAO-SP X RONDONOPOLIS-MT ALTERADA 2024	478.98	2024-12-31 00:00:00
+--6038521
+--EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
+--Centro de Gestao de Meios de P	0743351111	1	cubatão x rondonopolis-mt nova 2024 americana	478.98	2024-12-31 00:00:00
 
 --19040049
 --EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
@@ -39,101 +61,13 @@ SELECT EmpresaValePedagio, NumCartaoValePedagio,TipoDispositivoValePedagio, Rota
 --EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
 --Repom Sa	000000000	5	NULL	NULL	2024-12-30 00:00:00
 
---35008878
---EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
---Repom Sa	0000000000000000	5	2	500.50	2030-11-11 00:00:00
-
---35008516
---EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar	DataContratoValePedagio
---Banco Bradesco S/A	4417812011915409	0	0	643.50	2026-08-01 00:00:00
-
---4031468
---EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
---NULL	NULL	NULL	SAPEZAL P/ CUBATÃO	1618.25
-
---10088275
---EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
---NULL						4417812019708780				0					NULL				NULL
-
---25125144
---EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
---NULL	NULL	NULL	DOURADOS/MS X ARAUCARIA/PR	74.39
-
-
---69013612
---EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
---Repom Sa	751700113	5	NULL	NULL
-
---69013607
---EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
---Repom Sa	747235422	5	NULL	NULL
-
---99005140
---EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
---Repom Sa	755537115	5	2	302.80
---5024489
---EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
---Repom Sa	752271015	5	NULL	NULL
---15023928
---EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
---Repom Sa	752263582	5	NULL	NULL
---15023924
---EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
---Repom Sa	752263590	5	NULL	NULL
-
---EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
---Repom Sa	754325322	5	0	412.50
-
---42026598
---EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	0742835735	1	MARINGÁ, PR X PARANAGUÁ, PR 24	208.15
-
---63019369
---EmpresaValePedagio	NumCartaoValePedagio	TipoDispositivoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	0739535267	1	ALTO PARAGUAI X RONDONOPOLIS	293.40
-
---64079026
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	0741384401	SANTA MARIANA PR, X PARANAGUA PR,	0.00
-
----6037236
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---NULL	00000000	NULL	NULL
---64076347
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	0730364594	IBIPORA XSAO FRANCISCO DO SUL	130.66
-
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	0730802734	CONFRESA-MT X SANTOS-SP	1285.72
-
---64076147
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4417812010804034	0	281.70
-
---8087806
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4417812020599756	0	190.80
-
---24083819
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4417812013913394	BURITI ALEGRE-GO X UBERABA-MG	113.40
-
---10087126
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Centro de Gestao de Meios de P	0736892394	ARAGUARI-MG  x NOVA UBIRATÃ-MT	299.40
---4031030
---EmpresaValePedagio	NumCartaoValePedagio	RotaSemParar	ValorPedagioSemParar
---Banco Bradesco S/A	4417812006683392	NULL	NULL
-
 
 SELECT RotaSemParar, ValorPedagioSemParar, TipoDispositivoValePedagio,EmpresaValePedagio,NumCartaoValePedagio FROM OrdemEmbarque WHERE NumOrdemEmbarque = 24076776
  --UPDATE ConhecimentosTransporte set TipoDispositivoValePedagio = null, NumCartaoValePedagio = null where Sequencial = 140000003034
-
+--
 SELECT * FROM LogRoteirizacaoPedagio WHERE NumOrdemEmbarque = 24083819
 --
 
-
---
 SELECT RotaSemParar, ValorPedagioSemParar,EmpresaValePedagio , TipoDispositivoValePedagio, NumCartaoValePedagio, Situacao
 from OrdemEmbarque where NumOrdemEmbarque = 36019859
 --
@@ -164,13 +98,15 @@ ORDER BY crf.DataCriacao DESC
 --WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'MG' AND CTRC.Numconhecto = 387207                     
 --ORDER BY O.DataCriacao DESC, O.NumSeq DESC, O.SeqConsulta DESC 
 --
-SELECT * FROM CartaFrete_Parcela WHERE IdCartaFrete	=1066051
+SELECT * FROM CartaFrete_Parcela WHERE IdCartaFrete	=1713296
+SELECT * FROM CartaFrete_Ocorrencia WHERE IdCartaFrete	=1713297
+
 SELECT TOP(100) oe.TipoDispositivoValePedagio,CTRC.DataEmissao, CTRC.SituacaoConhecto, oe.CIOT, CF.Ciot,apf.Descricao, oe.CodNaturezaCarga,  CTRC.CodOrdemEmbarque, CTRC.Sequencial, ctrc.CodUF + '-' + CONVERT(varchar(12), CTRC.NumConhecto) as 'CTRC', CTRC.CIOT, O.* FROM ConhecimentosTransporte CTRC
 INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 INNER JOIN CartaFrete CF ON CF.NumOrdemEmbarque = oe.NumOrdemEmbarque
 inner join AdmPagamentoFrete APF on  CF.CodAdmPagtoFrete = APF.CodAdmFrete
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'PR' AND CTRC.Numconhecto = 91053                                    
+WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'MT' AND CTRC.Numconhecto = 50777                                     
 ORDER BY O.DataCriacao DESC, O.NumSeq DESC, O.SeqConsulta DESC
 
 SELECT TOP(100) oe.TipoDispositivoValePedagio,CTRC.DataEmissao, CTRC.SituacaoConhecto, oe.CIOT, CF.Ciot,apf.Descricao, oe.CodNaturezaCarga,  CTRC.CodOrdemEmbarque, CTRC.Sequencial, ctrc.CodUF + '-' + CONVERT(varchar(12), CTRC.NumConhecto) as 'CTRC', CTRC.CIOT, O.* FROM ConhecimentosTransporte CTRC
@@ -178,8 +114,13 @@ INNER JOIN OrdemEmbarque oe on oe.numordemembarque = ctrc.codordemembarque
 INNER JOIN CartaFrete CF ON CF.NumOrdemEmbarque = oe.NumOrdemEmbarque
 inner join AdmPagamentoFrete APF on  CF.CodAdmPagtoFrete = APF.CodAdmFrete
 LEFT OUTER JOIN CartaFrete_Ocorrencia O ON O.IdCartaFrete = CF.Id
-WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'PR' AND CTRC.Numconhecto = 90510                                    
+WHERE CTRC.SerieConhecto = '0' AND CTRC.CodUF = 'MT' AND CTRC.Numconhecto = 50777                                   
 ORDER BY O.DataCriacao DESC, O.NumSeq DESC, O.SeqConsulta DESC
+
+SELECT * from CartaFrete_Ocorrencia where IdCartaFrete = 1721646 and NumSeq = 8
+--delete from CartaFrete_Ocorrencia where IdCartaFrete = 1721646 and NumSeq = 8
+--IdCartaFrete	NumSeq	SeqConsulta	DataCriacao	CodUsuarioCriacao	CodFilialCriacao	DescricaoOcorrencia	ConteudoXml	tipoOcorrencia	Erro	Valido	CodAdmPagtoFrete	Protocolo	CodViagemPamcard
+--1721646	8	1	2024-12-06 18:52:27.400	14102	CG	INSERIR VIAGEM	EFU2G01	ERRO	FALHA AO CARREGAR O RELATÓRIO.	1	7	NULL	NULL
 
 select * FROM Usuarios where CodUsuario = 12434
 
