@@ -1,6 +1,8 @@
-select --COUNT(*) 
---CT.Sequencial, NF.ChaveAcessoNFe AS 'NomeArquivo' , cte.XML_Enviado, cte.XML_Retorno, 'Autorizado' AS status 
- nfe.CodVenda AS 'NomeArquivo', NF.ChaveAcessoNFe 
+SELECT ChaveAcessoNFe AS NomeArquivo, NFe.CodVenda
+FROM NotasFiscaisConhecimento NF 
+LEFT OUTER JOIN Lontano_GSe.dbo.NFe NFe ON NFe.ID COLLATE Latin1_General_CI_AI = NF.ChaveAcessoNFe
+WHERE (NF.SequencialConhecimento in (select
+CT.Sequencial 
 from ConhecimentosTransporte CT 
 JOIN NotasFiscaisConhecimento NF ON CT.Sequencial = nf.SequencialConhecimento 
 JOIN Rotas on rotas.CodRota = CT.CodRota
@@ -11,18 +13,10 @@ JOIN PedidosFrete ped ON ped.CodPedidoFrete = CT.CodPedidoFrete
 JOIN Clientes_Complemento comp ON comp.CodCliente = CT.CodClientePagto
 JOIN Clientes cli ON cli.CodCliente = CT.CodClientePagto
 JOIN LONTANO_GSe.dbo.NFe NFe ON NFe.ID = NF.ChaveAcessoNFe
-where CT.DataEmissao BETWEEN '2023-08-01' AND '2023-08-01 23:59:29' 
-and CT.SerieConhecto = '0' 
---and isnull(ped.IndExportacao,'') = 'S'
-and CT.SituacaoConhecto NOT IN ('Cancelado','Substituído') 
-and CT.TipoConhecimento = 'Normal'
-
-
-SELECT * from NotasFiscaisConhecimento
-
-
-SELECT NF.SequencialConhecimento, c (NF.SerieNF + '/' + LTRIM(NF.NumeroNF)) AS SerieNumNF, NF.ChaveAcessoNFe, NF.DataEmissaoNF, NF.ValorNF, NF.CodModelo, NF.CodigoCFOP, NF.ValorProdutos,
-NF.BaseCalculoICMS , NF.ValorICMS, NF.BaseCalcSubstTributaria, NF.ValorICMSSubstTributaria, NF.NumeroNF, NF.UtilizacaoNFe,NFe.DT_Alteracao,NFe.CodVenda, NFe.IndProcedenciaXML, NFe.DataCriacao
-FROM NotasFiscaisConhecimento NF 
-LEFT OUTER JOIN Lontano_GSe.dbo.NFe NFe ON NFe.ID COLLATE Latin1_General_CI_AI = NF.ChaveAcessoNFe
-WHERE (NF.SequencialConhecimento = 590000003873) ORDER BY NF.SerieNF, NF.NumeroNF
+WHERE CT.SerieConhecto = '0' 
+AND CT.DataEmissao BETWEEN '12/01/2024 00:00:00' AND '12/31/2024 23:59:29'
+AND (CT.SituacaoConhecto <> 'Cancelado' AND CT.SituacaoConhecto <> 'Substituído')
+and CodVenda is not null
+and ChaveAcessoNFe is not null
+--and CodVenda in (3306975, 3317052)
+ORDER BY NF.SerieNF, NF.NumeroNF

@@ -1,14 +1,20 @@
-select * from Fatura_Repom where ID = 201 --
-select (    1848610.84 - 1850626.31  ) -- 2015.47
-select * from Fatura_Repom_Itens where IDFatura_REPOM = 201 and ValorTransacao = 2015.47
-select * from Fatura_Repom_Itens where  ValorTransacao = 2015.47
-select * from Fatura_Repom_Itens where IDFatura_REPOM = 201 and ISNULL(LocalQuitacao, '') not IN ('F','P')
+select * from Fatura_Repom where ID = 238 --
+EXEC VerificaCTe 610000001945
+select * from Fatura_Repom_Itens where IDFatura_REPOM = 238 and ValorTransacao = 118.49
+select * from Fatura_Repom_Itens where  ValorTransacao = 118.49 
+select * from Fatura_Repom_Itens where IDFatura_REPOM = 238 and ISNULL(LocalQuitacao, '') not IN ('F','P')
 select SituacaoConhecto,ValorAdiantamento,* from ConhecimentosTransporte where Sequencial in (530000172401,60000031958,980000029991,980000029981)
---EXEC VerificaCTe 640000067528
+EXEC VerificaCTe 610000001945
 --select * from Fatura_Repom_Itens where ValorTransacao = 39715.79 ORDER BY DataCriacao desc
 
- select * from ContasPagar where CodContasPagar = 1990037 -- 2148808.19 valor original
- --UPDATE ContasPagar set ValorDocumento = (ValorDocumento + 3280.37), ValorPagar =  (ValorPagar + 3280.37), Saldo = (Saldo + 3280.37) where CodContasPagar = 1979679
+select (    100891.85 - 100093.85  ) -- 798.00
+select * from Fatura_Repom where ID = 231 --
+select * from Fatura_Repom_Itens where IDFatura_REPOM = 231 and ISNULL(LocalQuitacao, '') not IN ('F','P')
+select * from Fatura_Repom_Itens where IDFatura_REPOM = 231 and Sequencial_CTRC = 47000003696
+EXEC VerificaCTe 47000003696
+
+ select * from ContasPagar where CodContasPagar = 10015455 -- 2148808.19 valor original
+ --UPDATE ContasPagar set ValorDocumento = (ValorDocumento - 236.98 ), ValorPagar =  (ValorPagar - 236.98), Saldo = (Saldo - 236.98) where CodContasPagar = 10015455
 
 
 --select * from Fatura_Repom_Itens where IDFatura_REPOM = 183 and Sequencial_CTRC in (230000044384,230000044383)
@@ -17,10 +23,11 @@ select SituacaoConhecto,ValorAdiantamento,* from ConhecimentosTransporte where S
 select * from Fatura_Repom_Itens where IDFatura_REPOM = 201 and Sequencial_CTRC is null
 --select * from Fatura_Repom_Itens where ValorTransacao = 3330.00  AND Sequencial = 350000004138 ORDER BY DataCriacao desc
 
-EXEC VerificaCTe 980000029791
-EXEC VerificaCTe 430000010706
+SELECT * FROM ConhecimentosTransporte where Sequencial IN (530000173764,530000173778) -- verificar com Thiago depois das ferias dele
 
 SELECT (4445.44 - 1165.07)
+
+399.00
 
 
 

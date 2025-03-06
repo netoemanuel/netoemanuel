@@ -1,14 +1,15 @@
 --Milvus #4341 - CTE REJEITADO / AJUSTE com Rejeição 
 --812 - Rejeicao: A UF de fim da prestacao deve ser igual ao informado no CT-e complementado.
 --Conferir cMunFim,xMunFim,UFFim devem estar iguais ao CT-e de origem.
+select CodigoCFOP, * from ConhecimentosTransporte where NumConhecto in (543510 )  and CodUF= 'MS' and SerieConhecto = '0'
 
-select CodigoCFOP, * from ConhecimentosTransporte where NumConhecto in (724816 )  and CodUF= 'MT' and SerieConhecto = '0'
-Select * from ConhecimentosComplementados where 10000025055 in (SeqConhecimentoComplementar,SeqConhecimentoComplementado)
+select CodigoCFOP, * from ConhecimentosTransporte where NumConhecto in (425626 )  and CodUF= 'MG' and SerieConhecto = '0'
+Select * from ConhecimentosComplementados where 530000175198 in (SeqConhecimentoComplementar,SeqConhecimentoComplementado)
 
-Select cMunFim, xMunFim, UFFim,cMunIni,xMunIni,UFIni, * from LONTANO_GSe.dbo.cte where sequencial in (10000025055, 120000025595) -- Sequencial dos dois CTEs
---UPDATE LONTANO_GSe.dbo.cte SET cMunFim = 1715705, xMunFim = 'PALMEIRANTE', UFFim = 'TO', cMunIni = 5107354 , xMunIni = 'SAO JOSE DO XINGU',UFIni = 'MT' where Sequencial = 10000025055
---UPDATE LONTANO_GSe.dbo.cte SET Status = 0 where Sequencial = 10000025055
-exec VerificaCTe 10000025055
+Select cMunFim, xMunFim, UFFim,cMunIni,xMunIni,UFIni, * from LONTANO_GSe.dbo.cte where sequencial in (270000080415, 530000175198) -- Sequencial dos dois CTEs
+--UPDATE LONTANO_GSe.dbo.cte SET cMunFim = 5107602, xMunFim = 'RONDONOPOLIS', UFFim = 'MT', cMunIni = 3170107 , xMunIni = 'UBERABA',UFIni = 'MG' where Sequencial = 530000175198
+--UPDATE LONTANO_GSe.dbo.cte SET Status = 0 where Sequencial = 530000175198
+exec VerificaCTe 530000175198
 --delete from LONTANO_GSe.dbo.cte where sequencial in (220000075496)
 --EXEC Grava_CTe 220000075496
 

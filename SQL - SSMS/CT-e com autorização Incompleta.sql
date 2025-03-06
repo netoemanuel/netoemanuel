@@ -22,23 +22,23 @@ select * from ConhecimentosTransporte where NumConhecto = 700266 and CodUF = 'MT
 select * from LONTANO_GSe.dbo.AverbacaoFrete where SequencialCTe = 120000024263
 
 -- Autorização
-exec verificacte 190000037790
+EXEC VerificaCTe 90000035843
 --update LONTANO_GSe.dbo.CTe_LOG set Status = 1, cStat = 100, xMotivo = 'Autorizado o uso da CT-e', tpLog = 'RETORNO ENVIO LOTE',
---nProt = 151240741471136, codLog = 22, ID_Servidor = 14, xmlEnvolvido ='	<protCTe versao="4.00" xmlns="http://www.portalfiscal.inf.br/cte">
---		<infProt>
---			<tpAmb>1</tpAmb>
---			<verAplic>MT150423003</verAplic>
---			<chCTe>51240311455829000286570000007058431007058438</chCTe>
---			<dhRecbto>2024-03-14T12:37:55-04:00</dhRecbto>
---			<nProt>151240695533886</nProt>
---			<digVal>ttJPTvS1xhtrH2+hzjj6BR+ox48=</digVal>
---			<cStat>100</cStat>
---			<xMotivo>Autorizado o Uso do CT-e</xMotivo>
---		</infProt>
---	</protCTe>'  where sequencial = 190000037790 and ID = 22587782
+--nProt = 151250768144638, codLog = 22, ID_Servidor = 14, xmlEnvolvido ='	<protCTe versao="4.00" xmlns="http://www.portalfiscal.inf.br/cte">
+--<infProt>
+--<tpAmb>1</tpAmb>
+--<verAplic>MT150423003</verAplic>
+--<chCTe>51250111455829000286570000007450761007450768</chCTe>
+--<dhRecbto>2025-01-29T16:27:51-04:00</dhRecbto>
+--<nProt>151250768144638</nProt>
+--<digVal>+mfETNjHuk3a3nMZQ1xea0qXiWA=</digVal>
+--<cStat>100</cStat>
+--<xMotivo>Autorizado o Uso do CT-e</xMotivo>
+--</infProt>
+--	</protCTe>'  where sequencial = 90000035843 and ID = 23187263
 
 --update LONTANO_GSe.dbo.cte set NO_Retorno = 100, DS_Retorno = 'Autorizado o uso da CT-e', 
---NO_Protocolo = 151240695533886, dt_alteracao = GETDATE(),Status = 1  where sequencial = 190000037790
+--NO_Protocolo = 151250768144638, dt_alteracao = GETDATE(),Status = 1  where sequencial = 90000035843
 
 -- Cancelamento
 

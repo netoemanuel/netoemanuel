@@ -26,11 +26,11 @@ FROM
 	INNER JOIN PedidosFrete PF on ctrc.CodPedidoFrete = PF.CodPedidoFrete
 WHERE 
 	--ctrc.CodFilialComissao = 'OSV' and
-		ctrc.DataEmissao between '2024-11-01' and '2024-11-30 23:59:29'
+		ctrc.DataEmissao between '2024-12-01' and '2024-12-31 23:59:29'
 	AND ctrc.SituacaoConhecto <> 'Cancelado'
 	AND ctrc.TipoConhecimento = 'Normal'
 	AND (ISNULL(CTRC.Desconto,0)+ISNULL(Risco.ValorTotal,ISNULL(OE.ValorTotal,0))+ISNULL(CTRC.DescontoTaxaAdm,0)) > 0
-	--AND Fornc.IndAutonomo = 'S'
+	AND Fornc.IndAutonomo = 'S'
 order by  
 	ctrc.[DataCriacao] 
 

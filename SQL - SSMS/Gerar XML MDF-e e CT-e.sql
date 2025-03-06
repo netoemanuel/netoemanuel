@@ -14,7 +14,8 @@ select * from LONTANO_GSe.dbo.MDFe
 
 -- Baixar XML ou PDF CT-e
 
-SELECT ctrc.Sequencial, cte.ID AS 'NomeArquivo' , cte.XML_Enviado, cte.XML_Retorno, 'Autorizado' AS status -- 264709
+SELECT count (cte.Sequencial) 
+--ctrc.Sequencial, cte.ID AS 'NomeArquivo' , cte.XML_Enviado, cte.XML_Retorno, 'Autorizado' AS status -- 264709
 from ConhecimentosTransporte ctrc
 JOIN Rotas on rotas.CodRota = ctrc.CodRota
 JOIN Cidades dest1 ON dest1.CodCidade = Rotas.CodCidadeDestino
@@ -24,15 +25,14 @@ JOIN NotasFiscaisConhecimento nf ON nf.SequencialConhecimento = ctrc.Sequencial
 JOIN PedidosFrete ped ON ped.CodPedidoFrete = ctrc.CodPedidoFrete
 JOIN Clientes_Complemento comp ON comp.CodCliente = ctrc.CodClientePagto
 JOIN Clientes cli ON cli.CodCliente = ctrc.CodClientePagto
-where ctrc.DataEmissao BETWEEN '2021-01-01' AND '2021-03-31 23:59:29' 
-	and ctrc.ModeloDocumento = 'CT-e'
-	and ctrc.SerieConhecto = '0' 
-	and isnull(ped.IndExportacao,'') = 'S'
-	and ctrc.SituacaoConhecto NOT IN ('Cancelado','Substituído') 
-	and ctrc.TipoConhecimento = 'Normal' 
+WHERE
+ctrc.SerieConhecto = '0' AND ctrc.DataEmissao BETWEEN '12/01/2024 00:00:00' AND '12/31/2024 23:59:29' 
+AND (ctrc.SituacaoConhecto <> 'Cancelado' AND ctrc.SituacaoConhecto <> 'Substituído')
 order by ctrc.DataEmissao
 
-
-blk
-
---feito  01-01 à 30/06
+--Janeiro OK  / Julho
+--Fevereiro OK  /
+--Março OK  /
+--Abril OK  /
+--Maio OK  /
+--Junho OK  /

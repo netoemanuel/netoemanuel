@@ -1,10 +1,10 @@
 -- Gerar nova MDF-e MS-450745 - Novo Motorista, Novo Veiculo!
 
 -- 1 º Mudar o Codigo da Rota em ConhecimentosTransporte e PedidosFrete
-SELECT CodRota,CodPedidoFrete, CodOrdemEmbarque, * from ConhecimentosTransporte where NumConhecto = 218895 and CodUF = 'PR' -- antigo cod rota 115568
---UPDATE ConhecimentosTransporte SET CodRota = 115615 WHERE Sequencial = 640000069407
-SELECT CodRota, * from PedidosFrete where CodPedidoFrete = 64012705
---UPDATE PedidosFrete SET CodRota = 115615 WHERE CodPedidoFrete = 64012705
+SELECT CodRota,CodPedidoFrete, CodOrdemEmbarque, * from ConhecimentosTransporte where NumConhecto = 424541 and CodUF = 'MG' -- antigo cod rota 116875
+--UPDATE ConhecimentosTransporte SET CodRota = 118079 WHERE Sequencial = 650000024815
+SELECT CodRota, * from PedidosFrete where CodPedidoFrete = 65001000
+--UPDATE PedidosFrete SET CodRota = 118079 WHERE CodPedidoFrete = 65001000
 --
 --SELECT * from Veiculos where PlacaVeiculo = '45024463'
 --Apos isso, usar o SQL para substituir o mototista e o veiculo e depois seguir o passo a passo abaixo
@@ -13,23 +13,23 @@ SELECT CodRota, * from PedidosFrete where CodPedidoFrete = 64012705
 --update OrdemEmbarque set CodFornecedor = 62000991 where NumOrdemEmbarque  in (62018685, 62018687)
 --select * from Fornecedores where RazaoSocial = 'MEJADO TRANSPORTES LTDA'
 --
-EXEC MonitoraMDFe 64081512
+EXEC MonitoraMDFe 27086556
 --
 -- Caso dê a Rejeição "612"	Necessario Trocar o	Codigo do Municipio de Descarga e o nome do municipio
 --
-select * from Lontano_GSe.dbo.Descarga_MDFe where Sequencial = 1766022	 --and SeqDescarga = 1 -- para saber qual está (DESCARGA)
-select CodUFIBGE,* from Lontano_GSe.dbo.Cidades_e where NomeMunicipioIBGE like '%Mariana%'  -- colocar o destino de descarga
+select * from Lontano_GSe.dbo.Descarga_MDFe where Sequencial = 1795759	 --and SeqDescarga = 1 -- para saber qual está (DESCARGA)
+select CodUFIBGE,* from Lontano_GSe.dbo.Cidades_e where NomeMunicipioIBGE like '%Uberaba%'  -- colocar o destino de descarga
 select * FROM Lontano_GSe.dbo.Cidades_e where CodMunicipioIBGE =  5107925
---update Lontano_GSe.dbo.Descarga_MDFe set cMunDescarga = 4123907, xMunDescarga = 'Santa Mariana' where Sequencial = 1766022	
+--update Lontano_GSe.dbo.Descarga_MDFe set cMunDescarga = 3170107, xMunDescarga = 'Uberaba' where Sequencial = 1797402	
 --
 --Casos precise mexer no percurso, alterar o mesmo no prtojeto e depois deletar e gerar uma nova MDF-e
 --
---DELETE FROM Lontano_GSe.dbo.MDFe where Sequencial in ( 614263)
+--DELETE FROM Lontano_GSe.dbo.MDFe where Sequencial in ( 1796998)
 --
 --Reenviar para autorizar	
 EXEC MonitoraMDFe 22089056
-SELECT STATUS, * FROM Lontano_GSe.dbo.MDFe WHERE Sequencial = 1730114
---update Lontano_GSe.dbo.MDFe set status = 0 where Sequencial = 1766022
+SELECT STATUS, * FROM Lontano_GSe.dbo.MDFe WHERE Sequencial = 1796998
+--update Lontano_GSe.dbo.MDFe set status = 0 where Sequencial = 1797402
 --
 --744 Rejeição: O tipo de transportador deve ser ETC ou CTC quando informado CNPJ do proprietário do veículo de tração
 --Caso de a rejeição abaixo apenas alterar o campo "tpTransp" para 1 ou 3--

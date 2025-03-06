@@ -20,7 +20,15 @@ SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where SequencialConhecime
 --UPDATE NotasFiscaisConhecimento set ChaveAcessoNFe = null where SequencialConhecimento in  (180000014330,180000014329,180000014326,180000014342,180000014386,180000014387,180000014385)
 
 
-
+SELECT * from ConhecimentosTransporte where NumConhecto = 88037 and CodUF = 'PR'
+SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where SequencialConhecimento in(340000027420)  --41240892660604012865550500000994501964651304
+--UPDATE NotasFiscaisConhecimento SET ChaveAcessoNFe = null WHERE SequencialConhecimento in (340000027420)
+SELECT * from ConhecimentosTransporte where NumConhecto = 88038 and CodUF = 'PR'
+SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where SequencialConhecimento in(340000027421)  --41240892660604012865550500000994521643955273
+--UPDATE NotasFiscaisConhecimento SET ChaveAcessoNFe = null WHERE SequencialConhecimento in (340000027421)
+SELECT * from ConhecimentosTransporte where NumConhecto = 88463  and CodUF = 'PR'
+SELECT ChaveAcessoNFe, * from NotasFiscaisConhecimento where SequencialConhecimento in(340000027504)  --41240892660604012865550500000999081479686863
+--UPDATE NotasFiscaisConhecimento SET ChaveAcessoNFe = null WHERE SequencialConhecimento in (340000027504)
 
 
 --RETIRAR DADOS E CHAVE DE ACESSO DA NF 165994 DO CTE MS-173807 / CANCELAMENTO DACTE RODOMAIOR

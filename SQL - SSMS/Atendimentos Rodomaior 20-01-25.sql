@@ -1,0 +1,6 @@
+select * from RODOMAIOR_GSe.dbo.cte where ID = '51191211595217000299570000000116071000116073'
+
+EXEC VerificaCTe 810000001093
+SELECT * from ConhecimentosTransporte where Sequencial = 810000001093
+
+EXEC MonitoraMDFe 81001126
