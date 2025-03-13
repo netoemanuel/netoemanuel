@@ -1,12 +1,12 @@
 SELECT * FROM PermissoesAcesso WHERE (CodUsuario = 15563) AND (CodPrograma = 'frmPermissoesAcesso')
-SELECT * FROM PermissoesAcesso WHERE CodUsuario in (15563,10650) AND (CodPrograma = 'frmContasPagar')
+SELECT * FROM PermissoesAcesso WHERE CodUsuario in (15563,10650,15598) AND (CodPrograma = 'frmContasPagar')
 --UPDATE PermissoesAcesso set TipoInclusao = 'N',TipoAlteracao = 'N', TipoExclusao = 'N', TipoConsulta = 'N', TipoImprimir = 'S', TipoEspecial = 'N' WHERE (CodUsuario = 15563) AND (CodPrograma = 'frmContasPagar')
 SELECT * FROM PermissoesAcesso_log WHERE (CodUsuario = 15563)
 SELECT * from LONTANO_GSe.dbo.NFe where ID = '51250348903821000407550010000118481000165065'
 SELECT * from Usuarios where CodUsuario = 15563
 select * from Usuarios where CodFilial = 'AGB' and SituacaoUsuario = 'A'
 SELECT * FROM PermissoesAcesso where  (CodPrograma = 'frmContasPagar')
---INSERT INTO PermissoesAcesso values (15563,'frmContasPagar','S','S','N','S','S','N',14102,'CG','2009-03-30 08:14:42.000',null,null,null,NULL)
+--INSERT INTO PermissoesAcesso values (15598,'frmContasPagar','N','N','N','N','S','N',14102,'CG',GETDATE (),null,null,null,NULL)
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------

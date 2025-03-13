@@ -83,7 +83,7 @@ OUTER APPLY (
     ORDER BY ChaveAcessoNFe DESC
 ) NF_Chave
 WHERE 
-    ctrc.SerieConhecto = '2' 
+    ctrc.SerieConhecto = 'NE' 
 	--and ctrc.NumConhecto = 699950
-    AND ctrc.DataEmissao BETWEEN '01/01/2023 00:00:00' AND '12/31/2023 23:59:29'
+    AND ctrc.DataEmissao BETWEEN '02/01/2025 00:00:00' AND '02/28/2025 23:59:29'
 ORDER BY ctrc.Sequencial;

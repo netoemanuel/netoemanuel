@@ -1,7 +1,7 @@
 
 SELECT * from Usuarios where NomeUsuario LIKE '%Bergam%'
 select * from Usuarios where CodUsuario = 10366
-SELECT perf* from PermissoesAcesso where CodUsuario in (15455 ) ORDER BY CodPrograma desc
+SELECT * from PermissoesAcesso where CodUsuario in (15455 ) ORDER BY CodPrograma desc
 --SELECT * FROM RegistroAcessoProgramas where CodUsuario = 12233 AND DataAcesso BETWEEN '2024-08-24 10:10:45.000' and '2024-08-24 12:15:45.000'
 SELECT * from PermissoesAcesso where CodUsuario in (10732,10366 ) AND CodPrograma IN ('App_ConferenciaDocCte','App_Dashboard')
 SELECT * from PermissoesAcesso where CodUsuario in (12988,10366 ) AND CodPrograma IN ('App_ConferenciaDocCte','App_Dashboard')
